@@ -67,6 +67,26 @@ jobs:
       - name: schemacheck
         working-directory: .tools
         run: go run ./schema/cmd/schemacheck -root .. -above ../.above
+  #	the ruleset of main on GitHub against .github/rulesets/main.json; read only, the token: with it the
+  #	limit of requests to the API is higher
+  rulesetcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7
+        with:
+          repository: treporting/tools
+          ref: ${{ env.TOOLS_REF }}
+          path: .tools
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: .tools/go.mod
+          cache-dependency-path: .tools/go.sum
+      - name: rulesetcheck
+        working-directory: .tools
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: go run ./ruleset/cmd/rulesetcheck -root .. -repo treporting/specs-and-deploy-product
   #	the whole history: the requirements are read as they stand in the base commit
   annotationcheck:
     runs-on: ubuntu-latest
