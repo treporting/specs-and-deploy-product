@@ -9,7 +9,7 @@ system does it is left to the architecture (r3). The document is written for who
 architecture (r3) and the tests from the requirements.
 
 The requirements themselves - ids `SYS_nn` - are in [system-requirements.yaml](system-requirements.yaml),
-in the format of [formats.md](https://github.com/treporting/specs-and-deploy/blob/main/formats.md); this file holds what explains them.
+in the format of [formats.md](https://github.com/treporting/specs-and-deploy-process/blob/main/formats.md); this file holds what explains them.
 
 Each feature is named by a short keyword - the field `feature` of a requirement. A
 requirement carries the functions of the needs it comes from - the classes of `user-needs.md`.
@@ -133,3 +133,4 @@ against criteria; the verification method says how its realization is shown to m
 | 2.1.1 | 2026-11-11 | Feature Hazards and threats; classes instead of roles | #613 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 3.1.1 | 2026-11-12 | Features Structure and Verification | #615 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 4.1.1 | 2026-11-12 | Links to specs-and-deploy, from the repo of its own | specs-and-deploy#640 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 5.1.1 | 2026-11-13 | specs-and-deploy is named specs-and-deploy-process | specs-and-deploy-process#641 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
