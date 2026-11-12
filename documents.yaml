@@ -1,0 +1,47 @@
+# Every Markdown file of this repo, each with its type, its level where it explains one, and a
+# version and a status of its own.
+# Format: formats.md of specs-and-deploy, section Documents
+schema: schemas/documents.schema.json
+type: documents
+documents:
+- name: README.md
+  type: document
+  object_version: '1.1.1'
+  object_hash: ''
+  status: draft
+  verification_method: [review]
+- name: requirements/user-needs.md
+  type: explanation
+  level: r1
+  object_version: '6.1.1'
+  object_hash: 'e6516f2'
+  status: draft
+  verification_method: [review]
+- name: requirements/system-requirements.md
+  type: explanation
+  level: r2
+  object_version: '3.1.1'
+  object_hash: '81dec59'
+  status: draft
+  verification_method: [review]
+- name: architecture/system-architecture.md
+  type: explanation
+  level: r3
+  object_version: '2.1.1'
+  object_hash: 'f0989d8'
+  status: draft
+  verification_method: [review]
+- name: architecture/attributes.md
+  type: explanation
+  level: r3
+  object_version: '4.1.1'
+  object_hash: '2d19106'
+  status: draft
+  verification_method: [review]
+- name: safety/hazard-and-risk-analysis.md
+  type: explanation
+  level: h1
+  object_version: '1.1.1'
+  object_hash: '7812027'
+  status: draft
+  verification_method: [review]

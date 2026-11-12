@@ -6,8 +6,8 @@ and reporter over the interfaces ARC_12, ARC_13 and ARC_18.
 Every attribute of the model, type by type: what it means, where it comes from, whether it has an
 intermediate (`I`) or a mapped (`M`) value, how it is carried down the trace, and which system
 requirements use it. The names are those of the gel schema of the model and of the YAML
-([formats.md](../formats.md)). The terms are those of
-[definitions.md](../definitions.md).
+([formats.md](https://github.com/treporting/specs-and-deploy/blob/main/formats.md)). The terms are those of
+[definitions.md](https://github.com/treporting/specs-and-deploy/blob/main/definitions.md).
 It is written for whoever builds the converter, the storage or the reporter, and for whoever maps
 the data of a customer to the model.
 
@@ -441,3 +441,4 @@ the generator is taken over.
 | 2.1.1 | 2026-10-30 | Hazard | #338 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 3.1.1 | 2026-10-30 | Requirement | #334 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 4.1.1 | 2026-10-30 | Requirement | #320 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 5.1.1 | 2026-11-12 | Links to specs-and-deploy, from the repo of its own | specs-and-deploy#640 | Claude Opus 5.5, author; Mathias Fischer, reviewer |

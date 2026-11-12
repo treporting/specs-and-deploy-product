@@ -5,7 +5,7 @@ itself. The document is written for everyone, above all for whoever derives the 
 requirements (r2) from them.
 
 The needs themselves - ids `UN_<class>_nn` - are in [user-needs.yaml](user-needs.yaml), in the
-format of [formats.md](../formats.md); the field `function` of a need names its class.
+format of [formats.md](https://github.com/treporting/specs-and-deploy/blob/main/formats.md); the field `function` of a need names its class.
 
 ## Classes
 
@@ -140,3 +140,4 @@ branch below the requirement reaches it. The rule is fixed; no user can choose a
 | 4.1.1 | 2026-11-12 | Terms: finding | #614 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 5.1.1 | 2026-11-12 | Terms: report | #617, #611 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 6.1.1 | 2026-11-12 | Terms: gap, maturity | #619, #611 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 7.1.1 | 2026-11-12 | Links to specs-and-deploy, from the repo of its own | specs-and-deploy#640 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
