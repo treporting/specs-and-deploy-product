@@ -7,41 +7,41 @@ documents:
 - name: README.md
   type: document
   object_version: '1.1.1'
-  object_hash: ''
-  status: draft
+  object_hash: 'd0ff7e8'
+  status: approved
   verification_method: [review]
 - name: requirements/user-needs.md
   type: explanation
   level: r1
-  object_version: '6.1.1'
-  object_hash: 'e6516f2'
-  status: draft
+  object_version: '7.1.1'
+  object_hash: 'f058230'
+  status: approved
   verification_method: [review]
 - name: requirements/system-requirements.md
   type: explanation
   level: r2
-  object_version: '3.1.1'
-  object_hash: '81dec59'
-  status: draft
+  object_version: '4.1.1'
+  object_hash: 'c095e54'
+  status: approved
   verification_method: [review]
 - name: architecture/system-architecture.md
   type: explanation
   level: r3
-  object_version: '2.1.1'
-  object_hash: 'f0989d8'
-  status: draft
+  object_version: '3.1.1'
+  object_hash: '8f54f56'
+  status: approved
   verification_method: [review]
 - name: architecture/attributes.md
   type: explanation
   level: r3
-  object_version: '4.1.1'
-  object_hash: '2d19106'
-  status: draft
+  object_version: '5.1.1'
+  object_hash: 'b67a3fb'
+  status: approved
   verification_method: [review]
 - name: safety/hazard-and-risk-analysis.md
   type: explanation
   level: h1
-  object_version: '1.1.1'
-  object_hash: '7812027'
-  status: draft
+  object_version: '2.1.1'
+  object_hash: '05a93d4'
+  status: approved
   verification_method: [review]
