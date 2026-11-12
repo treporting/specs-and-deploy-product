@@ -29,10 +29,10 @@ system requirement (r2) that realizes it.
 
 The threats of security share level h1, with the ids `THR_nn`. Each threat is controlled by a
 control on level h2, with the ids `THRC_nn`. Whether treporting gets a threat analysis is not
-decided yet - see Open in [harness.md](https://github.com/treporting/specs-and-deploy/blob/main/harness.md).
+decided yet - see Open in [harness.md](https://github.com/treporting/specs-and-deploy-process/blob/main/harness.md).
 
 The hazards and their controls are in [hazards.yaml](hazards.yaml), in the format of
-[formats.md](https://github.com/treporting/specs-and-deploy/blob/main/formats.md). If treporting gets a tool qualification, its analysis of tool errors
+[formats.md](https://github.com/treporting/specs-and-deploy-process/blob/main/formats.md). If treporting gets a tool qualification, its analysis of tool errors
 builds on this file. The document is written for whoever derives the system requirements from the
 controls, and for an assessor.
 
@@ -55,3 +55,4 @@ requirement defines.
 |---|---|---|---|---|
 | 1.1.1 | 2026-10-30 | - | #329 | Claude Opus 5.5 and Mathias Fischer, authors; Mathias Fischer, reviewer |
 | 2.1.1 | 2026-11-12 | Links to specs-and-deploy, from the repo of its own | specs-and-deploy#640 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 3.1.1 | 2026-11-13 | specs-and-deploy is named specs-and-deploy-process | specs-and-deploy-process#641 | Claude Opus 5.5, author; Mathias Fischer, reviewer |

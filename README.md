@@ -15,8 +15,8 @@ the product, and for the auditor who looks for the evidence.
 | [documents.yaml](documents.yaml) | every Markdown file, with its version and status |
 
 The rules of the work, the formats, the schemas and the regulatory requirements lie in
-[specs-and-deploy](https://github.com/treporting/specs-and-deploy), the repo above. The tools that
+[specs-and-deploy-process](https://github.com/treporting/specs-and-deploy-process), the repo above. The tools that
 check this repo lie in [tools](https://github.com/treporting/tools); its CI runs them against both.
 
-Until 2026-11-12 these files lay in specs-and-deploy; their reviews up to then are there, as the
-evidence of the history they name (specs-and-deploy#637).
+Until 2026-11-12 these files lay in specs-and-deploy-process; their reviews up to then are there, as the
+evidence of the history they name (specs-and-deploy-process#637).

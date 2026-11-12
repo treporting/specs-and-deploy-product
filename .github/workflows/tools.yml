@@ -1,6 +1,6 @@
 # The checks of this repo on every pull request, made with the tools of treporting/tools against
-# specs-and-deploy as the repo above: its schemas, its rules and its regulatory requirements
-# (specs-and-deploy#637). Both at a fixed revision; a pull request raises them.
+# specs-and-deploy-process as the repo above: its schemas, its rules and its regulatory requirements
+# (specs-and-deploy-process#637). Both at a fixed revision; a pull request raises them.
 name: tools
 
 on:
@@ -34,7 +34,7 @@ jobs:
           path: .tools
       - uses: actions/checkout@v7
         with:
-          repository: treporting/specs-and-deploy
+          repository: treporting/specs-and-deploy-process
           ref: ${{ env.ABOVE_REF }}
           path: .above
       - uses: actions/setup-go@v7
@@ -57,7 +57,7 @@ jobs:
           path: .tools
       - uses: actions/checkout@v7
         with:
-          repository: treporting/specs-and-deploy
+          repository: treporting/specs-and-deploy-process
           ref: ${{ env.ABOVE_REF }}
           path: .above
       - uses: actions/setup-go@v7
@@ -101,7 +101,7 @@ jobs:
           path: .tools
       - uses: actions/checkout@v7
         with:
-          repository: treporting/specs-and-deploy
+          repository: treporting/specs-and-deploy-process
           ref: ${{ env.ABOVE_REF }}
           path: .above
       - uses: actions/setup-go@v7
@@ -128,7 +128,7 @@ jobs:
           path: .tools
       - uses: actions/checkout@v7
         with:
-          repository: treporting/specs-and-deploy
+          repository: treporting/specs-and-deploy-process
           ref: ${{ env.ABOVE_REF }}
           path: .above
       - uses: actions/setup-go@v7
@@ -151,7 +151,7 @@ jobs:
           path: .tools
       - uses: actions/checkout@v7
         with:
-          repository: treporting/specs-and-deploy
+          repository: treporting/specs-and-deploy-process
           ref: ${{ env.ABOVE_REF }}
           path: .above
       - uses: actions/setup-go@v7
@@ -173,7 +173,7 @@ jobs:
           path: .tools
       - uses: actions/checkout@v7
         with:
-          repository: treporting/specs-and-deploy
+          repository: treporting/specs-and-deploy-process
           ref: ${{ env.ABOVE_REF }}
           path: .above
       - uses: actions/setup-go@v7

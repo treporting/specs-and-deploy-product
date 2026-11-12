@@ -60,21 +60,21 @@ There are two kinds of system:
 Every system has an extractor of its own that lists and fetches what it holds. Converter,
 storage and reporter speak one language, the information model (ARC_21), whose contract is
 [attributes.md](attributes.md). Our own data in YAML has the schemas of ARC_22 as its contract, in
-[schemas/](https://github.com/treporting/specs-and-deploy/tree/main/schemas); each schema names it as `@refines ARC_22`, and is a draft of the gel schema. Both ways end in
+[schemas/](https://github.com/treporting/specs-and-deploy-process/tree/main/schemas); each schema names it as `@refines ARC_22`, and is a draft of the gel schema. Both ways end in
 the import of the storage, which works the same for every system. Each subsystem is a repo of
 its own. r4 is the allocation in this file: the system requirements allocated to a subsystem are
 its requirements, derived directly from r2, with no ids of their own. The document is written
 for whoever derives the software requirements of a subsystem (r5) from it.
 
 The terms - system, item, content, work product, release, library, baseline - are those of
-[definitions.md](https://github.com/treporting/specs-and-deploy/blob/main/definitions.md). The levels follow ISO/IEC/IEEE 12207 as set out in the section
-Process of [harness.md](https://github.com/treporting/specs-and-deploy/blob/main/harness.md); this file is r3, the architecture definition of
+[definitions.md](https://github.com/treporting/specs-and-deploy-process/blob/main/definitions.md). The levels follow ISO/IEC/IEEE 12207 as set out in the section
+Process of [harness.md](https://github.com/treporting/specs-and-deploy-process/blob/main/harness.md); this file is r3, the architecture definition of
 ISO/IEC/IEEE 12207, 6.4.4.
 
 The ids are `ARC_nn` for the subsystems and interfaces, `ARCR_nn` for the rationale and
 `ARCD_nn` for the decisions; a requirement that a decision made possible names it as its
 uplink. The elements, the allocation and the ids of rationale and decisions are in
-[system-architecture.yaml](system-architecture.yaml), in the format of [formats.md](https://github.com/treporting/specs-and-deploy/blob/main/formats.md).
+[system-architecture.yaml](system-architecture.yaml), in the format of [formats.md](https://github.com/treporting/specs-and-deploy-process/blob/main/formats.md).
 
 ## Rationale
 
@@ -244,3 +244,4 @@ The allocation of every system requirement to the subsystems is the field `alloc
 | 1.1.1 | 2026-10-30 | - | #327 | Claude Opus 5.5 and Mathias Fischer, authors; Mathias Fischer, reviewer |
 | 2.1.1 | 2026-10-30 | System architecture; Decisions | #334 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 3.1.1 | 2026-11-12 | Links to specs-and-deploy, from the repo of its own | specs-and-deploy#640 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 4.1.1 | 2026-11-13 | specs-and-deploy is named specs-and-deploy-process | specs-and-deploy-process#641 | Claude Opus 5.5, author; Mathias Fischer, reviewer |

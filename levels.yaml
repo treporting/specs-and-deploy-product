@@ -1,7 +1,7 @@
 # The levels of the product, each with its name. Tools read the name of a level from here; the
 # repos of the subsystems take theirs from this file. The regulatory requirements (n1) lie in
-# specs-and-deploy, above.
-# Format: formats.md of specs-and-deploy, section Levels
+# specs-and-deploy-process, above.
+# Format: formats.md of specs-and-deploy-process, section Levels
 schema: schemas/levels.schema.json
 type: levels
 levels:
