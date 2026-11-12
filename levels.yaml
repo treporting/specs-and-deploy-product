@@ -70,6 +70,18 @@ levels:
   description: a function or a package
   reference: ISO29119
   data: made in the test
+- key: r7tp
+  part: [product]
+  name: unit test procedure
+  abbreviation: MT TP
+  description: the test procedures that carry out the test cases of r7tc, or verify a requirement directly
+  reference: ISO29119
+- key: r7tr
+  part: [product]
+  name: unit test result
+  abbreviation: MT TR
+  description: the result of a run of a test procedure of r7tp, or of a test case of r7tc run by hand
+  reference: ISO29119
 - key: r6tc
   part: [product]
   name: integration test
@@ -77,6 +89,18 @@ levels:
   description: a subsystem, through its API and its model
   reference: ISO29119
   data: synthetic, in memory
+- key: r6tp
+  part: [product]
+  name: integration test procedure
+  abbreviation: SwIT TP
+  description: the test procedures that carry out the test cases of r6tc, or verify a requirement directly
+  reference: ISO29119
+- key: r6tr
+  part: [product]
+  name: integration test result
+  abbreviation: SwIT TR
+  description: the result of a run of a test procedure of r6tp, or of a test case of r6tc run by hand
+  reference: ISO29119
 - key: r5tc
   part: [product]
   name: subsystem test
@@ -84,11 +108,35 @@ levels:
   description: a subsystem against its SR, through its API and its model
   reference: ISO29119
   data: from gel
+- key: r5tp
+  part: [product]
+  name: subsystem test procedure
+  abbreviation: SwVal TP
+  description: the test procedures that carry out the test cases of r5tc, or verify a requirement directly
+  reference: ISO29119
+- key: r5tr
+  part: [product]
+  name: subsystem test result
+  abbreviation: SwVal TR
+  description: the result of a run of a test procedure of r5tp, or of a test case of r5tc run by hand
+  reference: ISO29119
 - key: r3tc
   part: [product]
   name: system integration test
   abbreviation: SysIT
   description: the containers built and working together
+  reference: ISO29119
+- key: r3tp
+  part: [product]
+  name: system integration test procedure
+  abbreviation: SysIT TP
+  description: the test procedures that carry out the test cases of r3tc, or verify a requirement directly
+  reference: ISO29119
+- key: r3tr
+  part: [product]
+  name: system integration test result
+  abbreviation: SysIT TR
+  description: the result of a run of a test procedure of r3tp, or of a test case of r3tc run by hand
   reference: ISO29119
 - key: r2tc
   part: [product]
@@ -97,6 +145,18 @@ levels:
   description: the system against SYS
   reference: ISO29119
   data: the containers with demo data
+- key: r2tp
+  part: [product]
+  name: system test procedure
+  abbreviation: SysQT TP
+  description: the test procedures that carry out the test cases of r2tc, or verify a requirement directly
+  reference: ISO29119
+- key: r2tr
+  part: [product]
+  name: system test result
+  abbreviation: SysQT TR
+  description: the result of a run of a test procedure of r2tp, or of a test case of r2tc run by hand
+  reference: ISO29119
 - key: r1tc
   part: [product]
   name: acceptance test
@@ -104,3 +164,15 @@ levels:
   description: the system against the user needs
   reference: ISO29119
   data: the containers with reference data
+- key: r1tp
+  part: [product]
+  name: acceptance test procedure
+  abbreviation: Val TP
+  description: the test procedures that carry out the test cases of r1tc, or verify a requirement directly
+  reference: ISO29119
+- key: r1tr
+  part: [product]
+  name: acceptance test result
+  abbreviation: Val TR
+  description: the result of a run of a test procedure of r1tp, or of a test case of r1tc run by hand
+  reference: ISO29119
