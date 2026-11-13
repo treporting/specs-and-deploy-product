@@ -575,10 +575,11 @@ requirements:
   object_text: import a data set of size large, with the checks of Integrity, within the time given
   measured: open
   target: open
-  source_ids: [UN_SETUP_01@1.1.1]
+  rationale: derived from the view of the system - the data of a project grows with its sources and
+    its baselines
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_54
@@ -660,30 +661,30 @@ requirements:
   source_ids: [UN_SETUP_02@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_61
   object_version: '1.1.1'
   feature: Configuration
-  object_text: check a configuration against the data of its system, and name every attribute and every
-    value it does not map
+  object_text: check a configuration against the data of its system before it is used, and name every
+    attribute and every value it does not map
   source_ids: [UN_SETUP_03@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_62
   object_version: '1.1.1'
   feature: Configuration
-  object_text: read the configurations and the catalogues of the customer - such as the mapping of the
-    clauses of a standard to work products - from a place the operator sets, outside the installation
-    of the product
+  object_text: read the configurations and the catalogues of each customer - such as the mapping of the
+    clauses of a standard to work products - from a place of their own the operator sets, apart from those
+    of other customers and outside the installation of the product
   source_ids: [UN_SETUP_04@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_63
@@ -1013,6 +1014,17 @@ requirements:
   object_text: hand on with every release, in each container too, the licence texts and notices of every
     component it contains
   source_ids: [REG_Licences_01@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: SYS_94
+  object_version: '1.1.1'
+  feature: Configuration
+  object_text: take the levels of the process of a customer, their names and the chain of their steps
+    from a configuration, and use them in every view instead of those of a reference model
+  source_ids: [UN_SETUP_05@1.1.1]
   priority: 'medium'
   safety: ''
   status: approved
