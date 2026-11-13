@@ -220,7 +220,7 @@ requirements:
   source_ids: [UN_OPERATE_02@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_21
@@ -230,7 +230,7 @@ requirements:
   source_ids: [UN_OPERATE_01@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_22
@@ -378,7 +378,7 @@ requirements:
   source_ids: [UN_OPERATE_03@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_36
@@ -390,7 +390,7 @@ requirements:
   source_ids: [UN_OPERATE_04@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_37
@@ -400,7 +400,7 @@ requirements:
   source_ids: [UN_OPERATE_05@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_38
@@ -410,7 +410,7 @@ requirements:
   source_ids: [UN_OPERATE_06@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_39
@@ -554,7 +554,7 @@ requirements:
     its baselines
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_52
@@ -591,7 +591,7 @@ requirements:
     users waiting
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_55
@@ -605,7 +605,7 @@ requirements:
   rationale: runs the demo and the tests, which no user need asks for; their hosts set the limits
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_56
@@ -639,7 +639,7 @@ requirements:
   source_ids: [UN_OPERATE_07@1.1.1]
   priority: 'later'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 4_selfhosted
 - object_key: SYS_59
@@ -649,7 +649,7 @@ requirements:
   source_ids: [UN_OPERATE_07@1.1.1]
   priority: 'later'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 4_selfhosted
 - object_key: SYS_60
@@ -694,7 +694,7 @@ requirements:
   source_ids: [UN_OPERATE_08@1.1.1, REG_EU2024-2847_01@1.1.1, REG_EU2024-2847_02@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_64
@@ -994,7 +994,7 @@ requirements:
   source_ids: [UN_OPERATE_08@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_92
@@ -1004,7 +1004,7 @@ requirements:
   source_ids: [UN_OPERATE_09@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_93
@@ -1015,6 +1015,6 @@ requirements:
   source_ids: [REG_Licences_01@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
