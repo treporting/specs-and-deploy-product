@@ -62,7 +62,7 @@ levels:
 - key: document
   part: [product]
   name: documents
-  description: a document without a level, in Markdown, such as user-needs.md
+  description: a document that explains no level of requirements or tests, in Markdown, such as README.md
 - key: r7tc
   part: [product]
   name: unit test
