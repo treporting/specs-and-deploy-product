@@ -20,8 +20,8 @@ documents:
 - name: requirements/system-requirements.md
   type: explanation
   level: r2
-  object_version: '6.1.1'
-  object_hash: 'e1a325f'
+  object_version: '7.1.1'
+  object_hash: '2ff798f'
   status: approved
   verification_method: [review]
 - name: architecture/system-architecture.md
