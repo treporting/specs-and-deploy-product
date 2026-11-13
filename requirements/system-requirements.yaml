@@ -419,7 +419,7 @@ requirements:
   source_ids: [UN_SECURITY_01@1.1.1, REG_CFR21-11_02@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 3_selfhosted
 - object_key: SYS_40
@@ -453,7 +453,7 @@ requirements:
   source_ids: [UN_SECURITY_03@1.1.1, REG_CFR21-11_04@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 3_selfhosted
 - object_key: SYS_43
@@ -475,7 +475,7 @@ requirements:
   source_ids: [UN_SECURITY_06@1.1.1, REG_EU2016-679_01@1.1.1, REG_BetrVG_01@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 3_selfhosted
 - object_key: SYS_45
@@ -613,7 +613,7 @@ requirements:
     Performance sets the numbers
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_57
@@ -711,7 +711,7 @@ requirements:
   rationale: a release with the fix alone keeps the change traceable, and adds no new problem
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_66
@@ -721,7 +721,7 @@ requirements:
   source_ids: [UN_SECURITY_04@1.1.1, REG_EU2024-2847_04@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_67
@@ -732,7 +732,7 @@ requirements:
   source_ids: [UN_SECURITY_05@1.1.1, REG_EU2024-2847_02@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_68
@@ -959,7 +959,7 @@ requirements:
   source_ids: [UN_SECURITY_02@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 3_selfhosted
 - object_key: SYS_89
@@ -969,7 +969,7 @@ requirements:
   source_ids: [UN_SECURITY_06@1.1.1, REG_EU2016-679_01@1.1.1, REG_BetrVG_01@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 3_selfhosted
 - object_key: SYS_90
@@ -979,6 +979,6 @@ requirements:
   source_ids: [UN_SECURITY_06@1.1.1, REG_EU2016-679_01@1.1.1, REG_BetrVG_01@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 3_selfhosted
