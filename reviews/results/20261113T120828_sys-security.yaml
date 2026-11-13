@@ -1,0 +1,173 @@
+# Review of SYS_39, SYS_42, SYS_44, SYS_56, SYS_65, SYS_66, SYS_67, SYS_88, SYS_89, SYS_90 against the criteria of the level r2.
+# Made with reviewskeleton; a proposal of Claude Code - the reviewer decides.
+# Format: ../../formats.md, section Reviews.
+schema: schemas/review-result.schema.json
+type: review
+level: r2
+object_version: '1.1.1'
+status: open
+created_by: Mathias Fischer
+created_at: '2026-11-13T12:08:28+01:00'
+criteria: reviews/criteria-r2.yaml
+criteria_revision: '0196a95'
+results:
+- object_key: RR_01
+  target_ids: [SYS_39]
+  revision: '689a880'
+  criteria:
+    RC_01: passed
+    RC_02: passed
+    RC_03: passed
+    RC_04: passed
+    RC_05: passed
+    RC_06: passed
+    RC_07: passed
+    RC_08: passed
+    RC_09: passed
+    RC_10: passed
+    RC_11: passed
+  verdict: passed
+- object_key: RR_02
+  target_ids: [SYS_42]
+  revision: '689a880'
+  criteria:
+    RC_01: passed
+    RC_02: passed
+    RC_03: passed
+    RC_04: passed
+    RC_05: passed
+    RC_06: passed
+    RC_07: passed
+    RC_08: passed
+    RC_09: passed
+    RC_10: passed
+    RC_11: passed
+  verdict: passed
+- object_key: RR_03
+  target_ids: [SYS_44]
+  revision: '689a880'
+  criteria:
+    RC_01: passed
+    RC_02: passed
+    RC_03: passed
+    RC_04: passed
+    RC_05: passed
+    RC_06: passed
+    RC_07: passed
+    RC_08: passed
+    RC_09: passed
+    RC_10: passed
+    RC_11: passed
+  verdict: passed
+- object_key: RR_04
+  target_ids: [SYS_56]
+  revision: '689a880'
+  criteria:
+    RC_01: passed
+    RC_02: passed
+    RC_03: passed
+    RC_04: passed
+    RC_05: passed
+    RC_06: passed
+    RC_07: passed
+    RC_08: passed
+    RC_09: passed
+    RC_10: passed
+    RC_11: passed
+  verdict: passed
+- object_key: RR_05
+  target_ids: [SYS_65]
+  revision: '689a880'
+  criteria:
+    RC_01: passed
+    RC_02: passed
+    RC_03: passed
+    RC_04: passed
+    RC_05: passed
+    RC_06: passed
+    RC_07: passed
+    RC_08: passed
+    RC_09: passed
+    RC_10: passed
+    RC_11: passed
+  verdict: passed
+- object_key: RR_06
+  target_ids: [SYS_66]
+  revision: '689a880'
+  criteria:
+    RC_01: passed
+    RC_02: passed
+    RC_03: passed
+    RC_04: passed
+    RC_05: passed
+    RC_06: passed
+    RC_07: passed
+    RC_08: passed
+    RC_09: passed
+    RC_10: passed
+    RC_11: passed
+  verdict: passed
+- object_key: RR_07
+  target_ids: [SYS_67]
+  revision: '689a880'
+  criteria:
+    RC_01: passed
+    RC_02: passed
+    RC_03: passed
+    RC_04: passed
+    RC_05: passed
+    RC_06: passed
+    RC_07: passed
+    RC_08: passed
+    RC_09: passed
+    RC_10: passed
+    RC_11: passed
+  verdict: passed
+- object_key: RR_08
+  target_ids: [SYS_88]
+  revision: '689a880'
+  criteria:
+    RC_01: passed
+    RC_02: passed
+    RC_03: passed
+    RC_04: passed
+    RC_05: passed
+    RC_06: passed
+    RC_07: passed
+    RC_08: passed
+    RC_09: passed
+    RC_10: passed
+    RC_11: passed
+  verdict: passed
+- object_key: RR_09
+  target_ids: [SYS_89]
+  revision: '689a880'
+  criteria:
+    RC_01: passed
+    RC_02: passed
+    RC_03: passed
+    RC_04: passed
+    RC_05: passed
+    RC_06: passed
+    RC_07: passed
+    RC_08: passed
+    RC_09: passed
+    RC_10: passed
+    RC_11: passed
+  verdict: passed
+- object_key: RR_10
+  target_ids: [SYS_90]
+  revision: '689a880'
+  criteria:
+    RC_01: passed
+    RC_02: passed
+    RC_03: passed
+    RC_04: passed
+    RC_05: passed
+    RC_06: passed
+    RC_07: passed
+    RC_08: passed
+    RC_09: passed
+    RC_10: passed
+    RC_11: passed
+  verdict: passed
