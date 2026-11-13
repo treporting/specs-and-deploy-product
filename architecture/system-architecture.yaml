@@ -1,4 +1,4 @@
-# System architecture (r3) and the allocation (r4). What explains them is in system-architecture.md.
+# System architecture (r3) and the allocation. What explains them is in system-architecture.md.
 # Format: ../formats.md
 schema: schemas/system-architecture.schema.json
 type: architecture

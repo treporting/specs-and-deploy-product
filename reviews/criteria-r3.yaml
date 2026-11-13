@@ -43,7 +43,7 @@ criteria:
   object_text: correct - it states rightly what the system requirements allocated to it ask for
   question: Does it state rightly what its allocated system requirements ask for?
 - object_key: RC_10
-  source: treporting - traceable and allocated, the allocation r4
+  source: treporting - traceable and allocated, the allocation
   object_text: traceable - every system requirement allocated to it exists, and belongs to it
   question: Does every allocated system requirement exist, and belong to this element?
 - object_key: RC_11
