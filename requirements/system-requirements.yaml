@@ -192,14 +192,14 @@ requirements:
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_18
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   feature: Provenance
   object_text: show on every view which data set, which revision and which build of the system it
     answers from
   source_ids: [UN_USE_04@1.1.1, UN_SAFETY_06@1.1.1, REG_FDADI_01@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_19
@@ -357,7 +357,7 @@ requirements:
   source_ids: [UN_USE_01@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_34
@@ -368,7 +368,7 @@ requirements:
   source_ids: [UN_USE_03@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_35
@@ -567,7 +567,7 @@ requirements:
     shown
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_53
@@ -1039,7 +1039,7 @@ requirements:
   source_ids: [UN_SHARE_04@1.1.2, UN_SAFETY_06@1.1.1, REG_FDADI_01@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_96
@@ -1049,7 +1049,7 @@ requirements:
   source_ids: [UN_EVIDENCE_01@1.1.1, REG_FDADI_01@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_97
@@ -1059,7 +1059,7 @@ requirements:
   source_ids: [UN_EVIDENCE_01@1.1.1, REG_FDADI_01@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_98
@@ -1070,6 +1070,6 @@ requirements:
   source_ids: [UN_USE_05@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
