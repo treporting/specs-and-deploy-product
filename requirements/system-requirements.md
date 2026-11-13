@@ -32,7 +32,8 @@ requirement carries the functions of the needs it comes from - the classes of `u
 | Export | taking tables, charts and records out |
 | Usability | finding one's way, and seeing that data is still loading |
 | Operation | installing, updating and running it |
-| Audit | who did what and when: access, records and how long they are kept |
+| Access | who may see and do what: identity, roles, the data granted |
+| Audit | who did what and when: the records and how long they are kept |
 | Maturity | how maturity is computed - see the section below |
 | Performance | size, time, memory and the number of users - see the section below |
 | Constraints | a duty set from outside, not asked for by a role |
@@ -134,3 +135,4 @@ against criteria; the verification method says how its realization is shown to m
 | 3.1.1 | 2026-11-12 | Features Structure and Verification | #615 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 4.1.1 | 2026-11-12 | Links to specs-and-deploy, from the repo of its own | specs-and-deploy#640 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 5.1.1 | 2026-11-13 | specs-and-deploy is named specs-and-deploy-process | specs-and-deploy-process#641 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 6.1.1 | 2026-11-13 | Feature Access; Audit keeps the records | specs-and-deploy-process#620 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
