@@ -414,7 +414,7 @@ requirements:
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_39
   object_version: '1.1.1'
-  feature: Audit
+  feature: Access
   object_text: authenticate every user by an identity of their own, and grant access by role
   source_ids: [UN_SECURITY_01@1.1.1, REG_CFR21-11_02@1.1.1]
   priority: 'medium'
@@ -449,7 +449,7 @@ requirements:
 - object_key: SYS_42
   object_version: '1.1.1'
   feature: Audit
-  object_text: keep the records and their audit trail for a set period, readable throughout
+  object_text: keep the records and their audit trail (history) for a set period, readable throughout
   source_ids: [UN_SECURITY_03@1.1.1, REG_CFR21-11_04@1.1.1]
   priority: 'medium'
   safety: ''
@@ -471,8 +471,7 @@ requirements:
 - object_key: SYS_44
   object_version: '1.1.1'
   feature: Audit
-  object_text: use the record of what users did only for the purposes set, delete it after the period
-    set, and show it only to the roles allowed to see it
+  object_text: record what users did only for the purposes set, and use the record for nothing else
   source_ids: [UN_SECURITY_06@1.1.1, REG_EU2016-679_01@1.1.1, REG_BetrVG_01@1.1.1]
   priority: 'medium'
   safety: ''
@@ -610,7 +609,8 @@ requirements:
   object_text: serve the number of users given at once, each within the time of SYS_52
   measured: open
   target: open
-  source_ids: [UN_SECURITY_01@1.1.1]
+  rationale: derived from the view of the system - several users read at once; the section
+    Performance sets the numbers
   priority: 'medium'
   safety: ''
   status: draft
@@ -708,6 +708,7 @@ requirements:
   object_text: be updatable to a release that fixes a vulnerability, without other changes coming with
     it
   source_ids: [UN_SECURITY_04@1.1.1, REG_EU2024-2847_01@1.1.1, REG_EU2024-2847_02@1.1.1]
+  rationale: a release with the fix alone keeps the change traceable, and adds no new problem
   priority: 'medium'
   safety: ''
   status: draft
@@ -951,3 +952,33 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: SYS_88
+  object_version: '1.1.1'
+  feature: Access
+  object_text: show every user only the data of the organizations and projects their role grants
+  source_ids: [UN_SECURITY_02@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+  platform_launch: treporting = 3_selfhosted
+- object_key: SYS_89
+  object_version: '1.1.1'
+  feature: Audit
+  object_text: delete the record of what users did after the period set
+  source_ids: [UN_SECURITY_06@1.1.1, REG_EU2016-679_01@1.1.1, REG_BetrVG_01@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+  platform_launch: treporting = 3_selfhosted
+- object_key: SYS_90
+  object_version: '1.1.1'
+  feature: Access
+  object_text: show the record of what users did only to the roles allowed to see it
+  source_ids: [UN_SECURITY_06@1.1.1, REG_EU2016-679_01@1.1.1, REG_BetrVG_01@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+  platform_launch: treporting = 3_selfhosted
