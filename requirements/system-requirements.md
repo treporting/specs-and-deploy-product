@@ -93,6 +93,18 @@ so that 100 % can always be reached.
 | 13 | test case, test result of the system qualification test | SYS.5 | RG-SYS-TC, RG-SYS-TR |
 | 14 | test case, test result of the validation | VAL.1 | RG-SYS-TC, RG-SYS-TR |
 
+## Modes of operation
+
+treporting runs in one of four modes. Each serves the same API to the viewer; they differ in where
+the data lies.
+
+| Mode | Data | Used |
+|---|---|---|
+| a) database | a database server of its own, which the reporter reaches | the normal case |
+| b) database with the reporter | a database run together with the reporter | where a) is not possible |
+| c) file | a data file the reporter reads | where b) is not possible - no database server can be reached |
+| d) memory | synthetic data in the memory of the reporter | the demo and tests |
+
 ## Performance
 
 The non-functional requirements. Their figures are measured first on the prototype with generated
@@ -136,3 +148,4 @@ against criteria; the verification method says how its realization is shown to m
 | 4.1.1 | 2026-11-12 | Links to specs-and-deploy, from the repo of its own | specs-and-deploy#640 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 5.1.1 | 2026-11-13 | specs-and-deploy is named specs-and-deploy-process | specs-and-deploy-process#641 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 6.1.1 | 2026-11-13 | Feature Access; Audit keeps the records | specs-and-deploy-process#620 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 7.1.1 | 2026-11-13 | Modes of operation | specs-and-deploy-process#621 | Claude Opus 5.5, author; Mathias Fischer, reviewer |

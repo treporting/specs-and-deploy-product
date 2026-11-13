@@ -384,8 +384,9 @@ requirements:
 - object_key: SYS_36
   object_version: '1.1.1'
   feature: Operation
-  object_text: keep the data unchanged when moved to a new version, and say before the move which data
-    the new version cannot read
+  object_text: keep the content of the data unchanged when moved to a new version, also where the
+    information model changes; where it cannot, say before the move which data the new version cannot
+    read and that they must be read in again
   source_ids: [UN_OPERATE_04@1.1.1]
   priority: 'medium'
   safety: ''
@@ -549,7 +550,8 @@ requirements:
   object_text: answer from a data set of size large
   measured: open
   target: open
-  source_ids: [UN_SETUP_01@1.1.1, UN_OPERATE_02@1.1.1]
+  rationale: derived from the view of the system - the data of a project grows with its sources and
+    its baselines
   priority: 'medium'
   safety: ''
   status: draft
@@ -585,7 +587,8 @@ requirements:
   object_text: be ready to answer within the time given after it was started
   measured: open
   target: open
-  source_ids: [UN_OPERATE_03@1.1.1, UN_OPERATE_05@1.1.1]
+  rationale: derived from the view of the system - a restart after an update or a failure keeps the
+    users waiting
   priority: 'medium'
   safety: ''
   status: draft
@@ -594,10 +597,12 @@ requirements:
 - object_key: SYS_55
   object_version: '1.1.1'
   feature: Performance
-  object_text: run within the memory and the processor time given
+  object_text: run within the memory and the processor time given, where it answers from a data file
+    or from data in memory
   measured: open
   target: open
-  source_ids: [UN_OPERATE_01@1.1.1, UN_OPERATE_03@1.1.1]
+  source_ids: [UN_OPERATE_01@1.1.1]
+  rationale: runs the demo and the tests, which no user need asks for; their hosts set the limits
   priority: 'medium'
   safety: ''
   status: draft
@@ -629,8 +634,8 @@ requirements:
 - object_key: SYS_58
   object_version: '1.1.1'
   feature: Licensing
-  object_text: check, on every request to a licensed feature, the role and the rights of the user and
-    the licence of the installation, and refuse the request with the reason when one of them is missing
+  object_text: check, on every request to a licensed feature, the licence of the installation, and
+    refuse the request with the reason where it is missing
   source_ids: [UN_OPERATE_07@1.1.1]
   priority: 'later'
   safety: ''
@@ -684,9 +689,9 @@ requirements:
 - object_key: SYS_63
   object_version: '1.1.1'
   feature: Delivery
-  object_text: come with an SBOM in every release, naming each component, its version and its licence,
-    and with the licence texts and notices of the components
-  source_ids: [UN_OPERATE_08@1.1.1, REG_EU2024-2847_01@1.1.1, REG_EU2024-2847_02@1.1.1, REG_Licences_01@1.1.1]
+  object_text: come with an SBOM in every release, naming treporting itself and each component, each
+    with its version and its licence
+  source_ids: [UN_OPERATE_08@1.1.1, REG_EU2024-2847_01@1.1.1, REG_EU2024-2847_02@1.1.1]
   priority: 'medium'
   safety: ''
   status: draft
@@ -982,3 +987,34 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 3_selfhosted
+- object_key: SYS_91
+  object_version: '1.1.1'
+  feature: Delivery
+  object_text: show in every installation the version of treporting in use
+  source_ids: [UN_OPERATE_08@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: SYS_92
+  object_version: '1.1.1'
+  feature: Operation
+  object_text: back up its data while it runs, and restore them from a backup after a loss
+  source_ids: [UN_OPERATE_09@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: SYS_93
+  object_version: '1.1.1'
+  feature: Delivery
+  object_text: hand on with every release, in each container too, the licence texts and notices of every
+    component it contains
+  source_ids: [REG_Licences_01@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
