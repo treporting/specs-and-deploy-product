@@ -192,11 +192,11 @@ requirements:
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_18
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   feature: Provenance
-  object_text: show on every view and in every report which data set, which revision and which build of
-    the system it answers from, and how many objects of each kind
-  source_ids: [UN_SHARE_04@1.1.2, UN_EVIDENCE_01@1.1.1, UN_USE_04@1.1.1, UN_SAFETY_06@1.1.1, REG_FDADI_01@1.1.1]
+  object_text: show on every view which data set, which revision and which build of the system it
+    answers from
+  source_ids: [UN_USE_04@1.1.1, UN_SAFETY_06@1.1.1, REG_FDADI_01@1.1.1]
   priority: 'medium'
   safety: ''
   status: approved
@@ -357,7 +357,7 @@ requirements:
   source_ids: [UN_USE_01@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_34
@@ -368,7 +368,7 @@ requirements:
   source_ids: [UN_USE_03@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_35
@@ -522,12 +522,12 @@ requirements:
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_49
-  object_version: '1.1.1'
+  object_version: '1.2.1'
   feature: Maturity
   object_text: take the longest chain from the process reference model in use, with the code
     coverage levels coded for source code and object code - ASPICE with one level each, 20 steps,
     when none is chosen
-  source_ids: [UN_USE_02@1.1.1, UN_STATUS_01@1.1.1]
+  source_ids: [UN_STATUS_01@1.1.1]
   priority: 'medium'
   safety: ''
   status: approved
@@ -563,10 +563,11 @@ requirements:
   object_text: show a view of a data set of size large within the time given
   measured: open
   target: open
-  source_ids: [UN_USE_03@1.1.1]
+  rationale: derived from the view of the system - every view keeps its user waiting until it is
+    shown
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_53
@@ -1025,6 +1026,48 @@ requirements:
   object_text: take the levels of the process of a customer, their names and the chain of their steps
     from a configuration, and use them in every view instead of those of a reference model
   source_ids: [UN_SETUP_05@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: SYS_95
+  object_version: '1.1.1'
+  feature: Provenance
+  object_text: show in every report which data set, which revision and which build of the system it was
+    made from
+  source_ids: [UN_SHARE_04@1.1.2, UN_SAFETY_06@1.1.1, REG_FDADI_01@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: SYS_96
+  object_version: '1.1.1'
+  feature: Provenance
+  object_text: show on every view how many objects of each kind it answers from
+  source_ids: [UN_EVIDENCE_01@1.1.1, REG_FDADI_01@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: SYS_97
+  object_version: '1.1.1'
+  feature: Provenance
+  object_text: show in every report how many objects of each kind it was made from
+  source_ids: [UN_EVIDENCE_01@1.1.1, REG_FDADI_01@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: SYS_98
+  object_version: '1.1.1'
+  feature: Usability
+  object_text: drill down from each part of a chart to the table of the objects it counts, setting the
+    filters to them by itself
+  source_ids: [UN_USE_05@1.1.1]
   priority: 'medium'
   safety: ''
   status: approved
