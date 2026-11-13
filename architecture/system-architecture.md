@@ -62,7 +62,7 @@ storage and reporter speak one language, the information model (ARC_21), whose c
 [attributes.md](attributes.md). Our own data in YAML has the schemas of ARC_22 as its contract, in
 [schemas/](https://github.com/treporting/specs-and-deploy-process/tree/main/schemas); each schema names it as `@refines ARC_22`, and is a draft of the gel schema. Both ways end in
 the import of the storage, which works the same for every system. Each subsystem is a repo of
-its own. r4 is the allocation in this file: the system requirements allocated to a subsystem are
+its own. The allocation is in this file: the system requirements allocated to a subsystem are
 its requirements, derived directly from r2, with no ids of their own. The document is written
 for whoever derives the software requirements of a subsystem (r5) from it.
 
@@ -245,3 +245,4 @@ The allocation of every system requirement to the subsystems is the field `alloc
 | 2.1.1 | 2026-10-30 | System architecture; Decisions | #334 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 3.1.1 | 2026-11-12 | Links to specs-and-deploy, from the repo of its own | specs-and-deploy#640 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 4.1.1 | 2026-11-13 | specs-and-deploy is named specs-and-deploy-process | specs-and-deploy-process#641 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 5.1.1 | 2026-11-13 | The allocation: r4 gone | treporting/specs-and-deploy-process#653 | Claude Opus 5.5, author; Mathias Fischer, reviewer |

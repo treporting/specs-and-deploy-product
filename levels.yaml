@@ -35,12 +35,6 @@ levels:
   abbreviation: ARC
   description: system architecture (ARC)
   reference: ISO12207, clause 6.4.4 - architecture definition
-- key: r4
-  part: [product]
-  name: allocated system requirements
-  description: the system requirements allocated to the subsystems - derived directly from r2 by
-    the allocation in the system architecture, with no ids of their own
-  reference: ISO12207, clause 6.4.4 - architecture definition
 - key: r5
   part: [product]
   name: software requirements
@@ -59,6 +53,12 @@ levels:
   abbreviation: SD
   description: 'software design of a subsystem: its modules and units'
   reference: ISO12207, clause 6.4.5 - design definition
+- key: sc1
+  part: [product]
+  name: source code, function coverage
+  abbreviation: SC
+  description: the source code, measured by the share of its functions the tests call
+  reference: ISO29119-4, clause 5.3 - structure-based test design
 - key: document
   part: [product]
   name: documents
