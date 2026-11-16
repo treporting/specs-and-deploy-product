@@ -244,7 +244,7 @@ A test result is one run of a test case: its verdict, in a stream.
 |---|---|
 | Meaning | the verdict of the run |
 | Comes from | the source as it writes it - for a test in Go, `pass`, `fail` or `skip` of `go test -json` |
-| Variants | `mstatus` - mapped: `passed`, `failed`; only `passed` counts as reached in the maturity (SYS_47) |
+| Variants | `mstatus` - mapped: `passed`, `failed`, `skipped`; only `passed` counts as reached in the maturity (SYS_47) |
 | Prototype | same in the model; its generator leaves the original empty - see the deviations of the generator |
 
 ### mfeature, mfunction, msafety, mpriority
@@ -443,3 +443,4 @@ the generator is taken over.
 | 4.1.1 | 2026-10-30 | Requirement | #320 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 5.1.1 | 2026-11-12 | Links to specs-and-deploy, from the repo of its own | specs-and-deploy#640 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 6.1.1 | 2026-11-13 | specs-and-deploy is named specs-and-deploy-process | specs-and-deploy-process#641 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 7.1.1 | 2026-11-16 | status of a test result: `skip` is mapped to `skipped` | #15 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
