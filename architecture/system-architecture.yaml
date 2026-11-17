@@ -5,14 +5,14 @@ type: architecture
 level: r3
 documents: [architecture/system-architecture.md, architecture/attributes.md]
 elements:
-- object_key: ARC_01
+- object_key: ARC_1
   object_version: '1.1.1'
   kind: subsystem
   repo: viewer-trace
   object_text: 'single page application: shows what the reporter answers - tables, charts, the trace -
     with filters, and hands tables and charts on'
-  allocated: [SYS_01@1.1.1, SYS_02@1.1.1, SYS_03@1.1.1, SYS_04@1.1.1, SYS_05@1.1.1, SYS_06@1.1.1,
-    SYS_07@1.1.1, SYS_08@1.1.1, SYS_09@1.1.1, SYS_10@1.1.1, SYS_12@1.1.1, SYS_13@1.1.1,
+  allocated: [SYS_1@1.1.1, SYS_2@1.1.1, SYS_3@1.1.1, SYS_4@1.1.1, SYS_5@1.1.1, SYS_6@1.1.1,
+    SYS_7@1.1.1, SYS_8@1.1.1, SYS_9@1.1.1, SYS_10@1.1.1, SYS_12@1.1.1, SYS_13@1.1.1,
     SYS_14@1.1.1, SYS_15@1.1.1, SYS_16@1.1.1, SYS_17@1.1.1, SYS_18@1.1.1, SYS_26@1.1.1,
     SYS_27@1.1.1, SYS_28@1.1.1, SYS_29@1.1.1, SYS_30@1.1.1, SYS_31@1.1.1, SYS_33@1.1.1,
     SYS_34@1.1.1, SYS_35@1.1.1, SYS_37@1.1.1, SYS_38@1.1.1, SYS_39@1.1.1, SYS_52@1.1.1,
@@ -23,14 +23,14 @@ elements:
   safety: ''
   status: draft
   verification_method: [analysis]
-- object_key: ARC_02
+- object_key: ARC_2
   object_version: '1.1.1'
   kind: subsystem
   repo: reporter-trace
   object_text: 'REST API: answers trace, states, maturity and compliance from one data set; takes the
     identity from the proxy or the identity provider and checks the role; records every report'
-  allocated: [SYS_01@1.1.1, SYS_02@1.1.1, SYS_03@1.1.1, SYS_04@1.1.1, SYS_05@1.1.1, SYS_06@1.1.1,
-    SYS_07@1.1.1, SYS_08@1.1.1, SYS_09@1.1.1, SYS_10@1.1.1, SYS_11@1.1.1, SYS_12@1.1.1,
+  allocated: [SYS_1@1.1.1, SYS_2@1.1.1, SYS_3@1.1.1, SYS_4@1.1.1, SYS_5@1.1.1, SYS_6@1.1.1,
+    SYS_7@1.1.1, SYS_8@1.1.1, SYS_9@1.1.1, SYS_10@1.1.1, SYS_11@1.1.1, SYS_12@1.1.1,
     SYS_13@1.1.1, SYS_14@1.1.1, SYS_15@1.1.1, SYS_16@1.1.1, SYS_17@1.1.1, SYS_18@1.1.1,
     SYS_19@1.1.1, SYS_20@1.1.1, SYS_26@1.1.1, SYS_27@1.1.1, SYS_28@1.1.1, SYS_29@1.1.1,
     SYS_30@1.1.1, SYS_31@1.1.1, SYS_32@1.1.1, SYS_34@1.1.1, SYS_35@1.1.1, SYS_37@1.1.1,
@@ -44,7 +44,7 @@ elements:
   safety: ''
   status: draft
   verification_method: [analysis]
-- object_key: ARC_03
+- object_key: ARC_3
   object_version: '1.1.1'
   kind: subsystem
   repo: storages
@@ -64,13 +64,13 @@ elements:
   safety: ''
   status: draft
   verification_method: [analysis]
-- object_key: ARC_04
+- object_key: ARC_4
   object_version: '1.1.1'
   kind: subsystem
   repo: converter-trace
   object_text: maps the customized attributes of an attribute-based system to the model, by a configuration
     file of the customer; one general mechanism for all of them
-  allocated: [SYS_02@1.1.1, SYS_07@1.1.1, SYS_08@1.1.1, SYS_12@1.1.1, SYS_15@1.1.1, SYS_17@1.1.1,
+  allocated: [SYS_2@1.1.1, SYS_7@1.1.1, SYS_8@1.1.1, SYS_12@1.1.1, SYS_15@1.1.1, SYS_17@1.1.1,
     SYS_22@1.1.1, SYS_23@1.1.1, SYS_24@1.1.1, SYS_25@1.1.1, SYS_27@1.1.1, SYS_28@1.1.1,
     SYS_35@1.1.1, SYS_38@1.1.1, SYS_53@1.1.1, SYS_55@1.1.1, SYS_60@1.1.1, SYS_61@1.1.1,
     SYS_62@1.1.1, SYS_63@1.1.1, SYS_64@1.1.1, SYS_65@1.1.1, SYS_66@1.1.1, SYS_72@1.1.1,
@@ -79,7 +79,7 @@ elements:
   safety: ''
   status: draft
   verification_method: [analysis]
-- object_key: ARC_05
+- object_key: ARC_5
   object_version: '1.1.1'
   kind: subsystem
   repo: extractor-content
@@ -87,7 +87,7 @@ elements:
     test results, annotations -, with a package for each kind of content and no plug-in mechanism. The
     package annotations reads `@implements` and `@verifies` from Go files; it is the repo reporter-annotations
     today
-  allocated: [SYS_02@1.1.1, SYS_07@1.1.1, SYS_08@1.1.1, SYS_12@1.1.1, SYS_15@1.1.1, SYS_17@1.1.1,
+  allocated: [SYS_2@1.1.1, SYS_7@1.1.1, SYS_8@1.1.1, SYS_12@1.1.1, SYS_15@1.1.1, SYS_17@1.1.1,
     SYS_22@1.1.1, SYS_23@1.1.1, SYS_24@1.1.1, SYS_27@1.1.1, SYS_28@1.1.1, SYS_35@1.1.1,
     SYS_38@1.1.1, SYS_53@1.1.1, SYS_55@1.1.1, SYS_63@1.1.1, SYS_64@1.1.1, SYS_65@1.1.1,
     SYS_66@1.1.1, SYS_72@1.1.1, SYS_74@1.1.1]
@@ -95,7 +95,7 @@ elements:
   safety: ''
   status: draft
   verification_method: [analysis]
-- object_key: ARC_06
+- object_key: ARC_6
   object_version: '1.1.1'
   kind: subsystem
   repo: extractor-SYSTEM
@@ -215,7 +215,7 @@ elements:
   object_text: the information model - the common language of converter, storage and reporter; the common
     contract of ARC_12, ARC_13 and ARC_18
   contract: architecture/attributes.md
-  allocated: [SYS_09@1.1.1, SYS_11@1.1.1, SYS_13@1.1.1, SYS_14@1.1.1, SYS_15@1.1.1, SYS_16@1.1.1,
+  allocated: [SYS_9@1.1.1, SYS_11@1.1.1, SYS_13@1.1.1, SYS_14@1.1.1, SYS_15@1.1.1, SYS_16@1.1.1,
     SYS_17@1.1.1, SYS_18@1.1.1, SYS_20@1.1.1, SYS_28@1.1.1, SYS_36@1.1.1, SYS_41@1.1.1,
     SYS_43@1.1.1, SYS_45@1.1.1, SYS_49@1.1.1, SYS_68@1.1.1, SYS_69@1.1.1, SYS_70@1.1.1,
     SYS_72@1.1.1, SYS_73@1.1.1, SYS_74@1.1.1, SYS_75@1.1.1, SYS_76@1.1.1]
@@ -230,27 +230,27 @@ elements:
     that kind names; a draft of the gel schema of ARC_21
   contract: treporting/specs-and-deploy-process/schemas
   rationale: our own data is written by hand in YAML (formats.md); a schema per kind lets a tool check
-    every file (TOOL_05), and is the draft from which the gel schema of ARC_21 grows
+    every file (TOOL_5), and is the draft from which the gel schema of ARC_21 grows
   priority: 'medium'
   safety: ''
   status: approved
   verification_method: [test]
 decisions:
-- object_key: ARCR_01
+- object_key: ARCR_1
   object_version: '1.1.1'
   object_text: Read only
-- object_key: ARCD_01
+- object_key: ARCD_1
   object_version: '2.1.1'
   object_text: Independent count (SYS_23)
-- object_key: ARCD_02
+- object_key: ARCD_2
   object_version: '2.1.1'
   object_text: Import record (SYS_26, SYS_41)
-- object_key: ARCD_03
+- object_key: ARCD_3
   object_version: '2.1.1'
   object_text: Original and derived values (SYS_11)
-- object_key: ARCD_04
+- object_key: ARCD_4
   object_version: '2.1.1'
   object_text: Configuration instead of code for the customer (SYS_22)
-- object_key: ARCD_05
+- object_key: ARCD_5
   object_version: '3.1.1'
   object_text: Identity (SYS_39)

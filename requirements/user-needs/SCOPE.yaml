@@ -5,7 +5,7 @@ type: requirements
 level: r1
 documents: [requirements/user-needs.md]
 requirements:
-- object_key: UN_SCOPE_01
+- object_key: UN_SCOPE_1
   object_version: '1.1.1'
   function: SCOPE
   object_text: Narrows the data to organization and projects (where).
@@ -14,7 +14,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_SCOPE_02
+- object_key: UN_SCOPE_2
   object_version: '1.1.1'
   function: SCOPE
   object_text: Narrows the data to baselines for releases and libraries (when).
@@ -23,7 +23,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_SCOPE_03
+- object_key: UN_SCOPE_3
   object_version: '1.1.1'
   function: SCOPE
   object_text: Narrows the data to functions, features, priorities and safety class (what).
@@ -32,7 +32,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_SCOPE_04
+- object_key: UN_SCOPE_4
   object_version: '1.1.1'
   function: SCOPE
   object_text: Groups the data by feature.
@@ -41,7 +41,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_SCOPE_05
+- object_key: UN_SCOPE_5
   object_version: '1.1.1'
   function: SCOPE
   object_text: Sees at all times what the data are narrowed to.
@@ -50,7 +50,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_SCOPE_06
+- object_key: UN_SCOPE_6
   object_version: '1.1.1'
   function: SCOPE
   object_text: Narrows the data to platforms, launches and streams (which).

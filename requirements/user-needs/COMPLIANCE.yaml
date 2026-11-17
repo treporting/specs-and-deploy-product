@@ -5,7 +5,7 @@ type: requirements
 level: r1
 documents: [requirements/user-needs.md]
 requirements:
-- object_key: UN_COMPLIANCE_01
+- object_key: UN_COMPLIANCE_1
   object_version: '1.1.1'
   function: COMPLIANCE
   object_text: Sees which work products were reviewed (for instance, requirements, documents or
@@ -15,7 +15,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_COMPLIANCE_02
+- object_key: UN_COMPLIANCE_2
   object_version: '1.1.1'
   function: COMPLIANCE
   object_text: Sees which findings of a baseline were evaluated, by whom and where.
@@ -24,7 +24,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_COMPLIANCE_03
+- object_key: UN_COMPLIANCE_3
   object_version: '1.1.1'
   function: COMPLIANCE
   object_text: Follows a finding of a review to its end - the change it caused, and the review that
@@ -34,7 +34,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_COMPLIANCE_04
+- object_key: UN_COMPLIANCE_4
   object_version: '1.1.1'
   function: COMPLIANCE
   object_text: Sees which clauses of the standards in use are met by a requirement, and which are
@@ -44,7 +44,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_COMPLIANCE_05
+- object_key: UN_COMPLIANCE_5
   object_version: '1.1.1'
   function: COMPLIANCE
   object_text: Sees who approved what, and whether a review came first.

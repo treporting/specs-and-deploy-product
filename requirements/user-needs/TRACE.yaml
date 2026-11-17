@@ -5,7 +5,7 @@ type: requirements
 level: r1
 documents: [requirements/user-needs.md]
 requirements:
-- object_key: UN_TRACE_01
+- object_key: UN_TRACE_1
   object_version: '1.1.1'
   function: TRACE
   object_text: Follows the trace down from the user need, across all levels, to the test result.
@@ -14,7 +14,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_TRACE_02
+- object_key: UN_TRACE_2
   object_version: '1.1.1'
   function: TRACE
   object_text: Sees what verifies a requirement (for instance, a test or a review).
@@ -23,7 +23,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_TRACE_03
+- object_key: UN_TRACE_3
   object_version: '1.1.1'
   function: TRACE
   object_text: Knows from which requirements, up to the user need, a test is derived.
@@ -32,7 +32,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_TRACE_04
+- object_key: UN_TRACE_4
   object_version: '1.1.1'
   function: TRACE
   object_text: Sees whether a requirement is already verified on another level.
@@ -41,7 +41,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_TRACE_05
+- object_key: UN_TRACE_5
   object_version: '1.1.1'
   function: TRACE
   object_text: Shows that every hazard and threat is controlled by a measure, down to a test result.
@@ -50,7 +50,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_TRACE_06
+- object_key: UN_TRACE_6
   object_version: '1.1.1'
   function: TRACE
   object_text: Relies on a safety class being carried down the trace without gaps.
@@ -59,7 +59,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_TRACE_07
+- object_key: UN_TRACE_7
   object_version: '1.1.1'
   function: TRACE
   object_text: Sees which code implements a requirement.
@@ -68,7 +68,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_TRACE_08
+- object_key: UN_TRACE_8
   object_version: '1.1.1'
   function: TRACE
   object_text: Relies on function, feature, priority, platform and launch being carried down the trace

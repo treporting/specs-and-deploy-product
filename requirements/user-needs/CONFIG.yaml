@@ -5,7 +5,7 @@ type: requirements
 level: r1
 documents: [requirements/user-needs.md]
 requirements:
-- object_key: UN_CONFIG_01
+- object_key: UN_CONFIG_1
   object_version: '1.1.1'
   function: CONFIG
   object_text: Knows which work products, at which revision, belong to which baseline.
@@ -14,7 +14,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_CONFIG_02
+- object_key: UN_CONFIG_2
   object_version: '1.1.1'
   function: CONFIG
   object_text: Knows where each work product is kept (for instance, DOORS or git).
@@ -23,7 +23,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_CONFIG_03
+- object_key: UN_CONFIG_3
   object_version: '1.1.1'
   function: CONFIG
   object_text: Sees what changed from one baseline to the next.
@@ -32,7 +32,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_CONFIG_04
+- object_key: UN_CONFIG_4
   object_version: '1.1.1'
   function: CONFIG
   object_text: Sees how a project is split into its parts (for instance, subsystems, components or
@@ -42,7 +42,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_CONFIG_05
+- object_key: UN_CONFIG_5
   object_version: '1.1.1'
   function: CONFIG
   object_text: Sees the baselines of a project over time.
@@ -51,7 +51,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_CONFIG_06
+- object_key: UN_CONFIG_6
   object_version: '1.1.1'
   function: CONFIG
   object_text: Sees the history of a requirement across baselines.
