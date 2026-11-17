@@ -1,0 +1,61 @@
+# User needs of the function SCOPE (r1), prefix UN_SCOPE. What explains them is in ../user-needs.md.
+# Format: formats.md of specs-and-deploy-process
+schema: schemas/user-needs.schema.json
+type: requirements
+level: r1
+documents: [requirements/user-needs.md]
+requirements:
+- object_key: UN_SCOPE_01
+  object_version: '1.1.1'
+  function: SCOPE
+  object_text: Narrows the data to organization and projects (where).
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_SCOPE_02
+  object_version: '1.1.1'
+  function: SCOPE
+  object_text: Narrows the data to baselines for releases and libraries (when).
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_SCOPE_03
+  object_version: '1.1.1'
+  function: SCOPE
+  object_text: Narrows the data to functions, features, priorities and safety class (what).
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_SCOPE_04
+  object_version: '1.1.1'
+  function: SCOPE
+  object_text: Groups the data by feature.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_SCOPE_05
+  object_version: '1.1.1'
+  function: SCOPE
+  object_text: Sees at all times what the data are narrowed to.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_SCOPE_06
+  object_version: '1.1.1'
+  function: SCOPE
+  object_text: Narrows the data to platforms, launches and streams (which).
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo

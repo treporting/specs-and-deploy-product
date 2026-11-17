@@ -1,0 +1,62 @@
+# User needs of the function SHARE (r1), prefix UN_SHARE. What explains them is in ../user-needs.md.
+# Format: formats.md of specs-and-deploy-process
+schema: schemas/user-needs.schema.json
+type: requirements
+level: r1
+documents: [requirements/user-needs.md]
+requirements:
+- object_key: UN_SHARE_01
+  object_version: '1.1.1'
+  function: SHARE
+  object_text: Hands a report on to people who do not use the system.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_SHARE_02
+  object_version: '1.1.1'
+  function: SHARE
+  object_text: Shares a view, with the same narrowing, with someone who uses the system.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_SHARE_03
+  object_version: '1.1.1'
+  function: SHARE
+  object_text: Takes the data into another tool (for instance, a spreadsheet).
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_SHARE_04
+  object_version: '1.1.2'
+  function: SHARE
+  object_text: Knows who made a report, when, from which data, with which version of treporting and
+    with which parameters.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 3_selfhosted
+- object_key: UN_SHARE_05
+  object_version: '1.1.1'
+  function: SHARE
+  object_text: Gets complete copies of the records, readable by people and by machines.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_SHARE_06
+  object_version: '1.1.1'
+  function: SHARE
+  object_text: Gets the same report from the same data and the same version of treporting.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo

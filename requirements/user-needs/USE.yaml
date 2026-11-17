@@ -1,0 +1,53 @@
+# User needs of the function USE (r1), prefix UN_USE. What explains them is in ../user-needs.md.
+# Format: formats.md of specs-and-deploy-process
+schema: schemas/user-needs.schema.json
+type: requirements
+level: r1
+documents: [requirements/user-needs.md]
+requirements:
+- object_key: UN_USE_01
+  object_version: '1.1.1'
+  function: USE
+  object_text: Understands what to do on a first look, without being told.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_USE_02
+  object_version: '1.1.1'
+  function: USE
+  object_text: Reads the same data in the vocabulary of the development process in use.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_USE_03
+  object_version: '1.1.1'
+  function: USE
+  object_text: Knows whether the data shown is complete or still loading.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_USE_04
+  object_version: '1.1.1'
+  function: USE
+  object_text: Knows which data set a view answers from.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_USE_05
+  object_version: '1.1.1'
+  function: USE
+  object_text: Grasps the state of thousands of requirements, tests and results at a glance, and
+    finds where to look closer.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo

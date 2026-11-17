@@ -4,8 +4,8 @@ What is needed from treporting, without naming a solution. The needs are the rea
 itself. The document is written for everyone, above all for whoever derives the system
 requirements (r2) from them.
 
-The needs themselves - ids `UN_<class>_nn` - are in [user-needs.yaml](user-needs.yaml), in the
-format of [formats.md](https://github.com/treporting/specs-and-deploy-process/blob/main/formats.md); the field `function` of a need names its class.
+The needs themselves - ids `UN_<function>_nn` - are in [user-needs/](user-needs/), one file per
+function, `user-needs/<function>.yaml`, in the format of [formats.md](https://github.com/treporting/specs-and-deploy-process/blob/main/formats.md); the field `function` of a need names its class.
 
 ## Classes
 
@@ -142,3 +142,4 @@ branch below the requirement reaches it. The rule is fixed; no user can choose a
 | 6.1.1 | 2026-11-12 | Terms: gap, maturity | #619, #611 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 7.1.1 | 2026-11-12 | Links to specs-and-deploy, from the repo of its own | specs-and-deploy#640 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 8.1.1 | 2026-11-13 | specs-and-deploy is named specs-and-deploy-process | specs-and-deploy-process#641 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 9.1.1 | 2026-11-17 | The needs in one file per function | #18 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
