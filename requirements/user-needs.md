@@ -143,3 +143,4 @@ branch below the requirement reaches it. The rule is fixed; no user can choose a
 | 7.1.1 | 2026-11-12 | Links to specs-and-deploy, from the repo of its own | specs-and-deploy#640 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 8.1.1 | 2026-11-13 | specs-and-deploy is named specs-and-deploy-process | specs-and-deploy-process#641 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 9.1.1 | 2026-11-17 | The needs in one file per function | #18 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 10.1.1 | 2026-11-17 | Keys without a leading zero | specs-and-deploy-process#679 | Claude Opus 5.5, author; Mathias Fischer, reviewer |

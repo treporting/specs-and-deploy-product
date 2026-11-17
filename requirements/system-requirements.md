@@ -149,3 +149,4 @@ against criteria; the verification method says how its realization is shown to m
 | 5.1.1 | 2026-11-13 | specs-and-deploy is named specs-and-deploy-process | specs-and-deploy-process#641 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 6.1.1 | 2026-11-13 | Feature Access; Audit keeps the records | specs-and-deploy-process#620 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 7.1.1 | 2026-11-13 | Modes of operation | specs-and-deploy-process#621 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 8.1.1 | 2026-11-17 | Keys without a leading zero | specs-and-deploy-process#679 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
