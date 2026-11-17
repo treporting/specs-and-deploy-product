@@ -5,7 +5,7 @@ type: requirements
 level: r1
 documents: [requirements/user-needs.md]
 requirements:
-- object_key: UN_SECURITY_01
+- object_key: UN_SECURITY_1
   object_version: '1.1.1'
   function: SECURITY
   object_text: Gives access only to authorised people, each known by an identity of their own.
@@ -14,7 +14,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 3_selfhosted
-- object_key: UN_SECURITY_02
+- object_key: UN_SECURITY_2
   object_version: '1.1.1'
   function: SECURITY
   object_text: Sees only the data it is allowed to see (for instance, of its own organization).
@@ -23,7 +23,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 3_selfhosted
-- object_key: UN_SECURITY_03
+- object_key: UN_SECURITY_3
   object_version: '1.1.1'
   function: SECURITY
   object_text: Keeps the records and their history for a set period, readable throughout.
@@ -32,7 +32,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 3_selfhosted
-- object_key: UN_SECURITY_04
+- object_key: UN_SECURITY_4
   object_version: '1.1.1'
   function: SECURITY
   object_text: Gets the security fixes for the version in use, over a period known in advance.
@@ -41,7 +41,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_SECURITY_05
+- object_key: UN_SECURITY_5
   object_version: '1.1.1'
   function: SECURITY
   object_text: Reports a vulnerability, and learns how it is handled.
@@ -50,7 +50,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_SECURITY_06
+- object_key: UN_SECURITY_6
   object_version: '1.1.1'
   function: SECURITY
   object_text: Is recorded only for a stated purpose and period, and only those who need it see the

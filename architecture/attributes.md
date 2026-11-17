@@ -73,9 +73,9 @@ Overview per type, as the prototype sets it; the terms are those of definitions.
 | Meaning | when and by whom an object was created in its source, and when and by whom it was last modified there |
 | Value | a time with its zone; the name of a person as the source gives it |
 | Comes from | the source, as it records it - DOORS, for instance, keeps *Created On*, *Created By*, *Last Modified On*, *Last Modified By*; for a file in GIT the commit gives them |
-| Note | not the time of the import: that is in the import record. The names are personal data, kept only for the purposes set (UN_ALL_04, SYS_44) |
-| Used by | REG_FDADI_01, data attributable to whom it comes from; SYS_16, what changed between two baselines |
-| Prototype | new - REG_FDADI_01: data attributable to whom it comes from |
+| Note | not the time of the import: that is in the import record. The names are personal data, kept only for the purposes set (UN_ALL_4, SYS_44) |
+| Used by | REG_FDADI_1, data attributable to whom it comes from; SYS_16, what changed between two baselines |
+| Prototype | new - REG_FDADI_1: data attributable to whom it comes from |
 
 ## Requirement
 
@@ -88,7 +88,7 @@ Overview per type, as the prototype sets it; the terms are those of definitions.
 | Comes from | author |
 | Variants | `mplatform_launch` - mapped, or where the original is empty the union of the `mplatform_launch` of the parents |
 | Carried down | yes. A requirement with several parents carries the **union** of their platforms and launches - it holds wherever any of them holds (unlike the safety class, where the highest is carried) |
-| Used by | SYS_09 filter over the whole trace; SYS_11 carrying down. The selection of a release offers the launches that release has |
+| Used by | SYS_9 filter over the whole trace; SYS_11 carrying down. The selection of a release offers the launches that release has |
 | Prototype | same - the prototype writes the value taken from the parents into `mplatform_launch` |
 
 ### status
@@ -177,7 +177,7 @@ how tests are carried out, a script being an automated one.
 |---|---|
 | Meaning | the variant the test is run in - a hardware, a mode of operation (see definitions.md) |
 | Comes from | author |
-| Used by | SYS_09, filter |
+| Used by | SYS_9, filter |
 | Prototype | same |
 
 ### mfeature, mfunction, msafety
@@ -400,11 +400,11 @@ category, by the configuration, and needs no attribute of its own.
 
 | What | How | Why |
 |---|---|---|
-| feature, function and safety of a requirement, taken from the parent where the own original is empty | changed: they go into the mapped value (`M`); the prototype writes them into the original - for priority and platform and launch it uses the mapped value already | the original stays original (ARCR_01, REG_FDADI_01), and it can be shown that an object was not classified by itself |
+| feature, function and safety of a requirement, taken from the parent where the own original is empty | changed: they go into the mapped value (`M`); the prototype writes them into the original - for priority and platform and launch it uses the mapped value already | the original stays original (ARCR_1, REG_FDADI_1), and it can be shown that an object was not classified by itself |
 | `verification_method` | renamed from `coverage` | `coverage` had two meanings; ISO/IEC/IEEE 29148 |
 | `coverage` | changed: the code coverage level | as above |
 | `module_prefix` | changed: on every object in a document | an id is unique only within its document, and links name it |
-| `created_at`, `created_by`, `modified_at`, `modified_by` | new, on every type | REG_FDADI_01 |
+| `created_at`, `created_by`, `modified_at`, `modified_by` | new, on every type | REG_FDADI_1 |
 | `prefix` of a document | renamed to `module_prefix` | the same thing as on its objects |
 | ReviewCriteria, ReviewResult, the link `reviewedBy` | new | the review of every requirement before it is approved |
 | `feature`, `function`, `safety` of a test case | renamed to `mfeature`, `mfunction`, `msafety`, with no original | they are always derived from the requirement; the name says so |
@@ -444,3 +444,4 @@ the generator is taken over.
 | 5.1.1 | 2026-11-12 | Links to specs-and-deploy, from the repo of its own | specs-and-deploy#640 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 6.1.1 | 2026-11-13 | specs-and-deploy is named specs-and-deploy-process | specs-and-deploy-process#641 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 7.1.1 | 2026-11-16 | status of a test result: `skip` is mapped to `skipped` | #15 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 8.1.1 | 2026-11-17 | Keys without a leading zero | specs-and-deploy-process#679 | Claude Opus 5.5, author; Mathias Fischer, reviewer |

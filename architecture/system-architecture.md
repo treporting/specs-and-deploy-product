@@ -41,12 +41,12 @@ flowchart LR
 
 | Short form | Subsystem | Id |
 |---|---|---|
-| V | viewer-trace | ARC_01 |
-| R | reporter-trace | ARC_02 |
-| S | storages | ARC_03 |
-| C | converter-trace | ARC_04 |
-| EC | extractor-content | ARC_05 |
-| ES | extractor-SYSTEM | ARC_06 |
+| V | viewer-trace | ARC_1 |
+| R | reporter-trace | ARC_2 |
+| S | storages | ARC_3 |
+| C | converter-trace | ARC_4 |
+| EC | extractor-content | ARC_5 |
+| ES | extractor-SYSTEM | ARC_6 |
 
 There are two kinds of system:
 
@@ -71,8 +71,8 @@ The terms - system, item, content, work product, release, library, baseline - ar
 Process of [harness.md](https://github.com/treporting/specs-and-deploy-process/blob/main/harness.md); this file is r3, the architecture definition of
 ISO/IEC/IEEE 12207, 6.4.4.
 
-The ids are `ARC_nn` for the subsystems and interfaces, `ARCR_nn` for the rationale and
-`ARCD_nn` for the decisions; a requirement that a decision made possible names it as its
+The ids are `ARC_n` for the subsystems and interfaces, `ARCR_n` for the rationale and
+`ARCD_n` for the decisions; a requirement that a decision made possible names it as its
 uplink. The elements, the allocation and the ids of rationale and decisions are in
 [system-architecture.yaml](system-architecture.yaml), in the format of [formats.md](https://github.com/treporting/specs-and-deploy-process/blob/main/formats.md).
 
@@ -80,7 +80,7 @@ uplink. The elements, the allocation and the ids of rationale and decisions are 
 
 The principles every decision below follows.
 
-### ARCR_01 Read only
+### ARCR_1 Read only
 
 treporting only reads the data of its users. It never writes into a source system
 and never holds data that a user enters into treporting itself. What it writes are records of
@@ -102,7 +102,7 @@ the maxim, and bring a way of working, an audit trail of entries and a second tr
 
 ## Decisions
 
-### ARCD_01 Independent count (SYS_23)
+### ARCD_1 Independent count (SYS_23)
 
 **Decision**: the source is counted by a query of its own (ARC_14), in the extractor of the system
 but in code apart from the reader, and the stored count is taken from the storage after the import. A reader never
@@ -127,7 +127,7 @@ an assessor asks for it, rather than run on every import.
 
 **Rejected**: the reader counting for itself - cheap, but it misses exactly the faults above.
 
-### ARCD_02 Import record (SYS_26, SYS_41)
+### ARCD_2 Import record (SYS_26, SYS_41)
 
 **Decision**: the import of the storage brings the four counts together - the count of the
 source from the extractor of the system, read and refused from extractor-content or
@@ -151,10 +151,10 @@ import 2026-10-23T14:02:11Z  by m.fischer
 ```
 
 **Why**: the record carries the trace of a report past the data set to the source and its
-revision (REG_FDADI_01), it is the audit trail of a change of data (REG_CFR21-11_01), and it is the evidence that
-errors of an import are detected (REG_ISO26262-8_01, REG_IEC61508-3_01, REG_DO178C_01, REG_DO330_01).
+revision (REG_FDADI_1), it is the audit trail of a change of data (REG_CFR21-11_1), and it is the evidence that
+errors of an import are detected (REG_ISO26262-8_1, REG_IEC61508-3_1, REG_DO178C_1, REG_DO330_1).
 
-### ARCD_03 Original and derived values (SYS_11)
+### ARCD_3 Original and derived values (SYS_11)
 
 **Decision**: the storage always keeps the original as read from the source. A value derived at
 the import is never the original and is kept beside it under a name of its own, with a
@@ -172,7 +172,7 @@ filter selects platform-1, made for the filter set where it is not stored. A sof
 without a safety class under parents of ASIL B and QM keeps `Safety` empty and gets
 `MSafety = 'ASIL B'`; its test case and test result get `MSafety = 'ASIL B'` as well.
 
-**Why**: what is stored can be compared with the source (SYS_25) and stays original (REG_FDADI_01).
+**Why**: what is stored can be compared with the source (SYS_25) and stays original (REG_FDADI_1).
 Where the evidence is that every requirement was classified by a person, the report shows
 `Safety`, not `MSafety`; where the evidence is that nothing falls out of a filter, it shows
 `MSafety`. A change of a rule needs no new import. Only a derived value that is stored can be
@@ -188,7 +188,7 @@ with `MSafety = 'ASIL D'` in its analysis (SYS_70); the import reads the data as
 - the storage derives them in a view of the database. It binds the rule to the database, and the
   data file (SYS_21) would need the rule a second time.
 
-### ARCD_04 Configuration instead of code for the customer (SYS_22)
+### ARCD_4 Configuration instead of code for the customer (SYS_22)
 
 **Decision**: what differs from customer to customer - the customized attributes of an
 attribute-based system and the values to be mapped - is a configuration file, read by one
@@ -206,7 +206,7 @@ configuration stays with the customer; the mechanism stays public and is tested 
 **Rejected**: a converter in code per system - the proprietary formats would be in code, and the
 same mechanics would be written once per system.
 
-### ARCD_05 Identity (SYS_39)
+### ARCD_5 Identity (SYS_39)
 
 **Decision**: treporting keeps no users and no passwords of its own. It takes the identity from
 what the organization already has: preferably from a proxy in front of it that authenticates the
@@ -246,3 +246,4 @@ The allocation of every system requirement to the subsystems is the field `alloc
 | 3.1.1 | 2026-11-12 | Links to specs-and-deploy, from the repo of its own | specs-and-deploy#640 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 4.1.1 | 2026-11-13 | specs-and-deploy is named specs-and-deploy-process | specs-and-deploy-process#641 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 5.1.1 | 2026-11-13 | The allocation: r4 gone | treporting/specs-and-deploy-process#653 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 6.1.1 | 2026-11-17 | Keys without a leading zero | specs-and-deploy-process#679 | Claude Opus 5.5, author; Mathias Fischer, reviewer |

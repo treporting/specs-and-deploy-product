@@ -10,25 +10,25 @@ not show.
 ```mermaid
 flowchart TB
   subgraph h[hazards - h1, h2]
-    haz[hazard<br>HAZ_nn] --> hazc[control<br>HAZC_nn]
+    haz[hazard<br>HAZ_n] --> hazc[control<br>HAZC_n]
   end
   subgraph t[threats - h1, h2]
-    thr[threat<br>THR_nn] --> thrc[control<br>THRC_nn]
+    thr[threat<br>THR_n] --> thrc[control<br>THRC_n]
   end
   subgraph r[requirements - r1, r2, r3]
-    un[user need<br>UN_..._nn] --> sys[system requirement<br>SYS_nn]
-    sys --> arc[element of the architecture<br>ARC_nn]
+    un[user need<br>UN_..._n] --> sys[system requirement<br>SYS_n]
+    sys --> arc[element of the architecture<br>ARC_n]
   end
   hazc -- controls --> sys
   thrc -- controls --> sys
 ```
 
-The hazards are on level h1, with the ids `HAZ_nn`. Each hazard is controlled by a control on level
-h2, with the ids `HAZC_nn`. Each control asks for a
+The hazards are on level h1, with the ids `HAZ_n`. Each hazard is controlled by a control on level
+h2, with the ids `HAZC_n`. Each control asks for a
 system requirement (r2) that realizes it.
 
-The threats of security share level h1, with the ids `THR_nn`. Each threat is controlled by a
-control on level h2, with the ids `THRC_nn`. Whether treporting gets a threat analysis is not
+The threats of security share level h1, with the ids `THR_n`. Each threat is controlled by a
+control on level h2, with the ids `THRC_n`. Whether treporting gets a threat analysis is not
 decided yet - see Open in [harness.md](https://github.com/treporting/specs-and-deploy-process/blob/main/harness.md).
 
 The hazards and their controls are in [hazards.yaml](hazards.yaml), in the format of
@@ -56,3 +56,4 @@ requirement defines.
 | 1.1.1 | 2026-10-30 | - | #329 | Claude Opus 5.5 and Mathias Fischer, authors; Mathias Fischer, reviewer |
 | 2.1.1 | 2026-11-12 | Links to specs-and-deploy, from the repo of its own | specs-and-deploy#640 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 3.1.1 | 2026-11-13 | specs-and-deploy is named specs-and-deploy-process | specs-and-deploy-process#641 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 4.1.1 | 2026-11-17 | Keys without a leading zero | specs-and-deploy-process#679 | Claude Opus 5.5, author; Mathias Fischer, reviewer |

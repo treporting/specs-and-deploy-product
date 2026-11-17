@@ -5,7 +5,7 @@ type: requirements
 level: r1
 documents: [requirements/user-needs.md]
 requirements:
-- object_key: UN_EVIDENCE_01
+- object_key: UN_EVIDENCE_1
   object_version: '1.1.1'
   function: EVIDENCE
   object_text: Sees which objects a figure counts.
@@ -14,7 +14,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_EVIDENCE_02
+- object_key: UN_EVIDENCE_2
   object_version: '1.1.2'
   function: EVIDENCE
   object_text: Sees every import or change of data - who, when, what - and the state before it.

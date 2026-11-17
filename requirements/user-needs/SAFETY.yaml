@@ -5,7 +5,7 @@ type: requirements
 level: r1
 documents: [requirements/user-needs.md]
 requirements:
-- object_key: UN_SAFETY_01
+- object_key: UN_SAFETY_1
   object_version: '1.1.1'
   function: SAFETY
   object_text: Relies on a gap in the trace never being shown as covered.
@@ -14,7 +14,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_SAFETY_02
+- object_key: UN_SAFETY_2
   object_version: '1.1.1'
   function: SAFETY
   object_text: Relies on what is unknown being shown as unknown - never as zero, empty or passed.
@@ -23,7 +23,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_SAFETY_03
+- object_key: UN_SAFETY_3
   object_version: '1.1.1'
   function: SAFETY
   object_text: Relies on a filter never hiding an object without saying so.
@@ -32,7 +32,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_SAFETY_04
+- object_key: UN_SAFETY_4
   object_version: '1.1.1'
   function: SAFETY
   object_text: Relies on being told of every error that occurred while the data was read in.
@@ -41,7 +41,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_SAFETY_05
+- object_key: UN_SAFETY_5
   object_version: '1.1.1'
   function: SAFETY
   object_text: Relies on every figure measuring what its label says.
@@ -50,7 +50,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_SAFETY_06
+- object_key: UN_SAFETY_6
   object_version: '1.1.1'
   function: SAFETY
   object_text: Relies on data that is out of date never being shown as current.

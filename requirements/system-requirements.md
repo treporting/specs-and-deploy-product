@@ -2,13 +2,13 @@
 
 What treporting has to do, seen as one box - viewer, reporter and storage together. A requirement
 names as uplinks the user needs (r1), the regulatory requirements and the decisions of the
-architecture (`ARCD_nn`) it comes from. Where none stands above it - a requirement derived from the
+architecture (`ARCD_n`) it comes from. Where none stands above it - a requirement derived from the
 view of the system - it gives its rationale instead (ISO/IEC/IEEE 29148, 5.2.8). Every need and
 every regulatory requirement that treporting realizes has at least one requirement. How the
 system does it is left to the architecture (r3). The document is written for whoever derives the
 architecture (r3) and the tests from the requirements.
 
-The requirements themselves - ids `SYS_nn` - are in [system-requirements.yaml](system-requirements.yaml),
+The requirements themselves - ids `SYS_n` - are in [system-requirements.yaml](system-requirements.yaml),
 in the format of [formats.md](https://github.com/treporting/specs-and-deploy-process/blob/main/formats.md); this file holds what explains them.
 
 Each feature is named by a short keyword - the field `feature` of a requirement. A
@@ -149,3 +149,4 @@ against criteria; the verification method says how its realization is shown to m
 | 5.1.1 | 2026-11-13 | specs-and-deploy is named specs-and-deploy-process | specs-and-deploy-process#641 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 6.1.1 | 2026-11-13 | Feature Access; Audit keeps the records | specs-and-deploy-process#620 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 7.1.1 | 2026-11-13 | Modes of operation | specs-and-deploy-process#621 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 8.1.1 | 2026-11-17 | Keys without a leading zero | specs-and-deploy-process#679 | Claude Opus 5.5, author; Mathias Fischer, reviewer |

@@ -5,7 +5,7 @@ type: requirements
 level: r1
 documents: [requirements/user-needs.md]
 requirements:
-- object_key: UN_OPERATE_01
+- object_key: UN_OPERATE_1
   object_version: '1.1.1'
   function: OPERATE
   object_text: Runs it where no database server can be reached.
@@ -14,7 +14,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_OPERATE_02
+- object_key: UN_OPERATE_2
   object_version: '1.1.1'
   function: OPERATE
   object_text: Keeps several data sets side by side and apart - generated data and data read in,
@@ -24,7 +24,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_OPERATE_03
+- object_key: UN_OPERATE_3
   object_version: '1.1.1'
   function: OPERATE
   object_text: Gets it running without help from those who built it.
@@ -33,7 +33,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_OPERATE_04
+- object_key: UN_OPERATE_4
   object_version: '1.1.1'
   function: OPERATE
   object_text: Moves to a new version without losing or changing the data.
@@ -42,7 +42,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_OPERATE_05
+- object_key: UN_OPERATE_5
   object_version: '1.1.1'
   function: OPERATE
   object_text: Knows when it is not available, and why.
@@ -51,7 +51,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_OPERATE_06
+- object_key: UN_OPERATE_6
   object_version: '1.1.1'
   function: OPERATE
   object_text: Finds the cause of a failure from the log of treporting.
@@ -60,7 +60,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_OPERATE_07
+- object_key: UN_OPERATE_7
   object_version: '1.1.1'
   function: OPERATE
   object_text: Knows which features an installation is licensed for, and uses only those.
@@ -69,7 +69,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 4_selfhosted
-- object_key: UN_OPERATE_08
+- object_key: UN_OPERATE_8
   object_version: '1.1.1'
   function: OPERATE
   object_text: Knows the version and the licence of the treporting in use.
@@ -78,7 +78,7 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
-- object_key: UN_OPERATE_09
+- object_key: UN_OPERATE_9
   object_version: '1.1.1'
   function: OPERATE
   object_text: Restores the data after a loss.

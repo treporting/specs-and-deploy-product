@@ -4,7 +4,7 @@ What is needed from treporting, without naming a solution. The needs are the rea
 itself. The document is written for everyone, above all for whoever derives the system
 requirements (r2) from them.
 
-The needs themselves - ids `UN_<function>_nn` - are in [user-needs/](user-needs/), one file per
+The needs themselves - ids `UN_<function>_n` - are in [user-needs/](user-needs/), one file per
 function, `user-needs/<function>.yaml`, in the format of [formats.md](https://github.com/treporting/specs-and-deploy-process/blob/main/formats.md); the field `function` of a need names its class.
 
 ## Classes
@@ -57,21 +57,21 @@ analysis, its threats share level h1 with the hazards (`safety/hazard-and-risk-a
 ## Terms
 
 - **record**: in the user needs, what treporting keeps as evidence - the data read in, their history, and who did
-  what and when. A record can name a person; what it keeps of a person is what UN_SECURITY_06
-  limits. The log that treporting writes while it runs is not a record (UN_OPERATE_06).
+  what and when. A record can name a person; what it keeps of a person is what UN_SECURITY_6
+  limits. The log that treporting writes while it runs is not a record (UN_OPERATE_6).
 - **finding**: something found wrong in a work product, such as a requirement, a test or code. Someone
   evaluates it: they decide whether it is a defect and what is to be done. The evaluation is written
   down somewhere. There are three kinds:
   - **of the customer**: made in the customer's process, by a review, an assessment or a tool such as a
     static analysis. It is kept in the customer's tools. treporting shows it and its evaluation, but
-    makes and evaluates none (UN_COMPLIANCE_02, UN_COMPLIANCE_03).
+    makes and evaluates none (UN_COMPLIANCE_2, UN_COMPLIANCE_3).
   - **of treporting**: treporting finds it in the data of the customer, for instance a rule of
-    plausibility that does not hold (UN_SAFETY_01).
+    plausibility that does not hold (UN_SAFETY_1).
   - **of our own process**: a review of treporting finds it. It is not meant in the user needs.
 - **report**: a document made of views of the data, to be read without the system. There are three
   kinds:
   - **of treporting**: treporting makes it of the views chosen, from the data of the customer
-    (UN_SHARE_01, UN_SHARE_04, UN_SHARE_06).
+    (UN_SHARE_1, UN_SHARE_4, UN_SHARE_6).
   - **of the customer**: made in the customer's own process or tools. It is not meant in the user
     needs.
   - **of our own process**: made by our tools about treporting, such as a test report. It is not
@@ -86,14 +86,14 @@ analysis, its threats share level h1 with the hazards (`safety/hazard-and-risk-a
 
   For example, SR_11 is verified by test but has no test case: the trace has a gap at SR_11. The
   opposite of a gap is covered.
-- **maturity**: how far a requirement has got along the chain of the process in use (UN_STATUS_01).
+- **maturity**: how far a requirement has got along the chain of the process in use (UN_STATUS_1).
   The chain is the row of headers of the trace, such as SYS.2, SWE.1, SWE.3, SWE.4 TC and SWE.4 TR.
   A requirement reaches a step where it has an object under that header; a test result only where
   it passed. How the steps are counted is decided below the two tables.
 
 **Table counting** - which steps of a row count
 
-| | Option | SYS.2 | SYS.3 | SWE.1 | SWE.2 | SWE.3 | SC | SWE.4 TC | SWE.4 TR | SWE.5 TC | SWE.5 TR | SWE.6 TC | SWE.6 TR | ... | SYS_06 |
+| | Option | SYS.2 | SYS.3 | SWE.1 | SWE.2 | SWE.3 | SC | SWE.4 TC | SWE.4 TR | SWE.5 TC | SWE.5 TR | SWE.6 TC | SWE.6 TR | ... | SYS_6 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | A | share: every step reached counts, wherever it stands | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | | | ✔ | | | 9/16 = 56 % |
 | B | up to the first gap: the steps from the left until the first one missing | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | | | ✔ | | | 8/16 = 50 % |
@@ -102,13 +102,13 @@ analysis, its threats share level h1 with the hazards (`safety/hazard-and-risk-a
 
 | Row | SYS.2 | SWE.1 | SWE.3 | SC | SWE.4 TC | SWE.4 TR | Branch |
 |---|---|---|---|---|---|---|---|
-| SYS_06 / SR_12 | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | 6/6 = 100 % |
-| SYS_06 / SR_13 | ✔ | ✔ | ✔ | ✔ | | | 4/6 = 67 % |
+| SYS_6 / SR_12 | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | 6/6 = 100 % |
+| SYS_6 / SR_13 | ✔ | ✔ | ✔ | ✔ | | | 4/6 = 67 % |
 
-| | Option | SYS_06 | What is lost |
+| | Option | SYS_6 | What is lost |
 |---|---|---|---|
 | C1 | the weakest branch: a step counts only where every branch reaches it (SYS_48) | 67 % | nothing is hidden; one late branch holds the requirement back |
-| C2 | the strongest branch | 100 % | the gap at SR_13 is shown as covered (UN_SAFETY_01) |
+| C2 | the strongest branch | 100 % | the gap at SR_13 is shown as covered (UN_SAFETY_1) |
 | C3 | the average of the branches | 83 % | the gap at SR_13 is hidden in the mean |
 
 **Decision**: B and C1. A step counts only up to the first gap of the row, and only where every
@@ -116,11 +116,11 @@ branch below the requirement reaches it. The rule is fixed; no user can choose a
 
 **Why**:
 
-- UN_STATUS_01 asks how far a requirement has got along the chain; only what stands without a gap
+- UN_STATUS_1 asks how far a requirement has got along the chain; only what stands without a gap
   has got that far
 - under A, a passed test result counts where something below it is missing: the figure does not
-  measure what its label says (UN_SAFETY_05)
-- C1 hides no branch; C2 shows a gap as covered (UN_SAFETY_01), C3 hides it in the mean
+  measure what its label says (UN_SAFETY_5)
+- C1 hides no branch; C2 shows a gap as covered (UN_SAFETY_1), C3 hides it in the mean
 - a rule each user could choose would give the same figure a different meaning per project, and
   figures of two projects or two releases could no longer be compared
 
@@ -143,3 +143,4 @@ branch below the requirement reaches it. The rule is fixed; no user can choose a
 | 7.1.1 | 2026-11-12 | Links to specs-and-deploy, from the repo of its own | specs-and-deploy#640 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 8.1.1 | 2026-11-13 | specs-and-deploy is named specs-and-deploy-process | specs-and-deploy-process#641 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 9.1.1 | 2026-11-17 | The needs in one file per function | #18 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 10.1.1 | 2026-11-17 | Keys without a leading zero | specs-and-deploy-process#679 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
