@@ -1,0 +1,81 @@
+# User needs of the function ASR (r1), prefix UN_ASR. What explains them is in ../user-needs.md.
+# Format: formats.md of specs-and-deploy-process
+schema: schemas/user-needs.schema.json
+type: requirements
+level: r1
+documents: [requirements/user-needs.md]
+requirements:
+- object_key: UN_ASR_01
+  object_version: '1.1.1'
+  function: ASR
+  object_text: Sees which clauses of the standards chosen are addressed and verified, per release.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_ASR_02
+  object_version: '1.1.1'
+  function: ASR
+  object_text: 'Can check the evidence: which revision, which data, how many objects.'
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_ASR_03
+  object_version: '1.1.1'
+  function: ASR
+  object_text: Compares the project against a process reference model - ASPICE, DO-178C, EN 50716, IEC
+    62304, IEC 61508, ISO/IEC/IEEE 12207.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_ASR_04
+  object_version: '1.1.1'
+  function: ASR
+  object_text: Sees who produced a report, when, from which data and revision, and with which parameters.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 3_selfhosted
+- object_key: UN_ASR_05
+  object_version: '1.1.1'
+  function: ASR
+  object_text: Sees every import or change of data - who, when, what - and the state before it.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 3_selfhosted
+- object_key: UN_ASR_06
+  object_version: '1.1.1'
+  function: ASR
+  object_text: Gets complete copies of the records, readable by people and by machines.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_ASR_07
+  object_version: '1.1.1'
+  function: ASR
+  object_text: Sees which findings of a release were evaluated, by whom and where.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_ASR_08
+  object_version: '1.1.1'
+  function: ASR
+  object_text: Follows a finding of a review to its end - the change it caused, and the review that
+    found it resolved.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo

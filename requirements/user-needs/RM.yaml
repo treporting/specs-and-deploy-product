@@ -1,0 +1,52 @@
+# User needs of the function RM (r1), prefix UN_RM. What explains them is in ../user-needs.md.
+# Format: formats.md of specs-and-deploy-process
+schema: schemas/user-needs.schema.json
+type: requirements
+level: r1
+documents: [requirements/user-needs.md]
+requirements:
+- object_key: UN_RM_01
+  object_version: '1.1.1'
+  function: RM
+  object_text: Sees which of its requirements are not yet backed by passed tests.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_RM_02
+  object_version: '1.1.1'
+  function: RM
+  object_text: Sees whether maturity grows from release to release and from library to library.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_RM_03
+  object_version: '1.1.1'
+  function: RM
+  object_text: Knows which build and which data a report was made from.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_RM_04
+  object_version: '1.1.1'
+  function: RM
+  object_text: Hands a report on to people who do not use the system.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_RM_05
+  object_version: '1.1.1'
+  function: RM
+  object_text: Approves a release, and may use the reported data as information for it.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo

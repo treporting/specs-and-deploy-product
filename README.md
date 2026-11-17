@@ -6,7 +6,7 @@ the product, and for the auditor who looks for the evidence.
 
 | File | What |
 |---|---|
-| [requirements/user-needs.yaml](requirements/user-needs.yaml) | the user needs (r1), explained in [user-needs.md](requirements/user-needs.md) |
+| [requirements/user-needs/](requirements/user-needs/) | the user needs (r1), one file per function, explained in [user-needs.md](requirements/user-needs.md) |
 | [requirements/system-requirements.yaml](requirements/system-requirements.yaml) | the system requirements (r2), explained in [system-requirements.md](requirements/system-requirements.md) |
 | [architecture/system-architecture.yaml](architecture/system-architecture.yaml) | the system architecture (r3), explained in [system-architecture.md](architecture/system-architecture.md) |
 | [safety/hazards.yaml](safety/hazards.yaml) | the hazards and threats (h1) and their controls (h2), explained in [hazard-and-risk-analysis.md](safety/hazard-and-risk-analysis.md) |

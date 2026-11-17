@@ -1,0 +1,61 @@
+# User needs of the function SAFETY (r1), prefix UN_SAFETY. What explains them is in ../user-needs.md.
+# Format: formats.md of specs-and-deploy-process
+schema: schemas/user-needs.schema.json
+type: requirements
+level: r1
+documents: [requirements/user-needs.md]
+requirements:
+- object_key: UN_SAFETY_01
+  object_version: '1.1.1'
+  function: SAFETY
+  object_text: Relies on a gap in the trace never being shown as covered.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_SAFETY_02
+  object_version: '1.1.1'
+  function: SAFETY
+  object_text: Relies on what is unknown being shown as unknown - never as zero, empty or passed.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_SAFETY_03
+  object_version: '1.1.1'
+  function: SAFETY
+  object_text: Relies on a filter never hiding an object without saying so.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_SAFETY_04
+  object_version: '1.1.1'
+  function: SAFETY
+  object_text: Relies on being told of every error that occurred while the data was read in.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_SAFETY_05
+  object_version: '1.1.1'
+  function: SAFETY
+  object_text: Relies on every figure measuring what its label says.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_SAFETY_06
+  object_version: '1.1.1'
+  function: SAFETY
+  object_text: Relies on data that is out of date never being shown as current.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo

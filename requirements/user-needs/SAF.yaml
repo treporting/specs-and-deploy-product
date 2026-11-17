@@ -1,0 +1,34 @@
+# User needs of the function SAF (r1), prefix UN_SAF. What explains them is in ../user-needs.md.
+# Format: formats.md of specs-and-deploy-process
+schema: schemas/user-needs.schema.json
+type: requirements
+level: r1
+documents: [requirements/user-needs.md]
+requirements:
+- object_key: UN_SAF_01
+  object_version: '1.1.1'
+  function: SAF
+  object_text: Shows that every hazard is controlled by a measure, down to a test result.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_SAF_02
+  object_version: '1.1.1'
+  function: SAF
+  object_text: Narrows to a safety class, the unclassified included.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_SAF_03
+  object_version: '1.1.1'
+  function: SAF
+  object_text: Relies on a safety class being carried down the trace without gaps.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo

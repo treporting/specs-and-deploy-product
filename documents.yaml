@@ -8,14 +8,14 @@ documents:
   type: document
   object_version: '2.1.1'
   object_hash: 'c0bbb06'
-  status: approved
+  status: draft
   verification_method: [review]
 - name: requirements/user-needs.md
   type: explanation
   level: r1
   object_version: '8.1.1'
   object_hash: '074d4f5'
-  status: approved
+  status: draft
   verification_method: [review]
 - name: requirements/system-requirements.md
   type: explanation

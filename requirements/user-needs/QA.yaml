@@ -1,0 +1,72 @@
+# User needs of the function QA (r1), prefix UN_QA. What explains them is in ../user-needs.md.
+# Format: formats.md of specs-and-deploy-process
+schema: schemas/user-needs.schema.json
+type: requirements
+level: r1
+documents: [requirements/user-needs.md]
+requirements:
+- object_key: UN_QA_01
+  object_version: '1.1.1'
+  function: QA
+  object_text: Follows the trace from user need over requirements to test cases and their results, both
+    ways.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_QA_02
+  object_version: '1.1.1'
+  function: QA
+  object_text: Sees the maturity of each level, comparable over releases.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_QA_03
+  object_version: '1.1.1'
+  function: QA
+  object_text: Sees the state of the tests by kind (test case, procedure, result) and by test level (MiL
+    to HiL).
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_QA_04
+  object_version: '1.1.1'
+  function: QA
+  object_text: Reads the same data in the vocabulary of the development process in use.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_QA_05
+  object_version: '1.1.1'
+  function: QA
+  object_text: Sees by what each requirement is verified.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_QA_06
+  object_version: '1.1.1'
+  function: QA
+  object_text: Sees which requirements were reviewed, against which criteria, with which result.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_QA_07
+  object_version: '1.1.1'
+  function: QA
+  object_text: Sees which documents were reviewed, against which criteria, with which result.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo

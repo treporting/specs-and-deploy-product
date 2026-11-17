@@ -1,0 +1,89 @@
+# User needs of the function OPERATE (r1), prefix UN_OPERATE. What explains them is in ../user-needs.md.
+# Format: formats.md of specs-and-deploy-process
+schema: schemas/user-needs.schema.json
+type: requirements
+level: r1
+documents: [requirements/user-needs.md]
+requirements:
+- object_key: UN_OPERATE_01
+  object_version: '1.1.1'
+  function: OPERATE
+  object_text: Runs it where no database server can be reached.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_OPERATE_02
+  object_version: '1.1.1'
+  function: OPERATE
+  object_text: Keeps several data sets side by side and apart - generated data and data read in,
+    each baseline on its own.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_OPERATE_03
+  object_version: '1.1.1'
+  function: OPERATE
+  object_text: Gets it running without help from those who built it.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_OPERATE_04
+  object_version: '1.1.1'
+  function: OPERATE
+  object_text: Moves to a new version without losing or changing the data.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_OPERATE_05
+  object_version: '1.1.1'
+  function: OPERATE
+  object_text: Knows when it is not available, and why.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_OPERATE_06
+  object_version: '1.1.1'
+  function: OPERATE
+  object_text: Finds the cause of a failure from the log of treporting.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_OPERATE_07
+  object_version: '1.1.1'
+  function: OPERATE
+  object_text: Knows which features an installation is licensed for, and uses only those.
+  priority: 'later'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 4_selfhosted
+- object_key: UN_OPERATE_08
+  object_version: '1.1.1'
+  function: OPERATE
+  object_text: Knows the version and the licence of the treporting in use.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_OPERATE_09
+  object_version: '1.1.1'
+  function: OPERATE
+  object_text: Restores the data after a loss.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo

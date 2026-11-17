@@ -1,0 +1,44 @@
+# User needs of the function CM (r1), prefix UN_CM. What explains them is in ../user-needs.md.
+# Format: formats.md of specs-and-deploy-process
+schema: schemas/user-needs.schema.json
+type: requirements
+level: r1
+documents: [requirements/user-needs.md]
+requirements:
+- object_key: UN_CM_01
+  object_version: '1.1.1'
+  function: CM
+  object_text: Knows which documents, at which revision, belong to which baseline.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_CM_02
+  object_version: '1.1.1'
+  function: CM
+  object_text: Knows which tool holds which documents.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_CM_03
+  object_version: '1.1.1'
+  function: CM
+  object_text: Sees what changed from one baseline to the next.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_CM_04
+  object_version: '1.1.1'
+  function: CM
+  object_text: Sees how a vehicle project is split into subsystems, and its releases and libraries over
+    time.
+  priority: 'medium'
+  safety: ''
+  status: obsolete
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo

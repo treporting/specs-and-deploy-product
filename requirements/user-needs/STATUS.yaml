@@ -1,0 +1,93 @@
+# User needs of the function STATUS (r1), prefix UN_STATUS. What explains them is in ../user-needs.md.
+# Format: formats.md of specs-and-deploy-process
+schema: schemas/user-needs.schema.json
+type: requirements
+level: r1
+documents: [requirements/user-needs.md]
+requirements:
+- object_key: UN_STATUS_01
+  object_version: '1.1.1'
+  function: STATUS
+  object_text: Sees how far each requirement has got along the chain of the process in use, in a
+    baseline.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_STATUS_02
+  object_version: '1.1.1'
+  function: STATUS
+  object_text: 'Sees what is still open in a baseline: no lower requirement, no code, no test, no
+    passed result.'
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_STATUS_03
+  object_version: '1.1.1'
+  function: STATUS
+  object_text: Sees where the chain from requirement to test result breaks.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_STATUS_04
+  object_version: '1.1.1'
+  function: STATUS
+  object_text: Compares how far it has got, and what is open, between two baselines.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_STATUS_05
+  object_version: '1.1.1'
+  function: STATUS
+  object_text: Sees how fast the open work gets done (for instance, to judge whether the date of a
+    baseline holds).
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_STATUS_06
+  object_version: '1.1.1'
+  function: STATUS
+  object_text: Sees where the open work of a baseline lies (for instance, to assign resources where
+    they are needed).
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_STATUS_07
+  object_version: '1.1.1'
+  function: STATUS
+  object_text: Sees the state of the requirements and the tests of each level, by their status.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_STATUS_08
+  object_version: '1.1.1'
+  function: STATUS
+  object_text: 'Sees what got worse since the last baseline: a test that failed after it passed, a
+    link that broke.'
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_STATUS_09
+  object_version: '1.1.1'
+  function: STATUS
+  object_text: Sees what follows a changed requirement and was not looked at again.
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
