@@ -13,35 +13,35 @@ documents:
 - name: requirements/user-needs.md
   type: explanation
   level: r1
-  object_version: '9.1.1'
-  object_hash: '939baf3'
-  status: draft
+  object_version: '10.1.1'
+  object_hash: 'af2031d'
+  status: approved
   verification_method: [review]
 - name: requirements/system-requirements.md
   type: explanation
   level: r2
-  object_version: '7.1.1'
-  object_hash: '2ff798f'
-  status: draft
+  object_version: '8.1.1'
+  object_hash: '76d611a'
+  status: approved
   verification_method: [review]
 - name: architecture/system-architecture.md
   type: explanation
   level: r3
-  object_version: '5.1.1'
-  object_hash: 'b965aed'
-  status: draft
+  object_version: '6.1.1'
+  object_hash: 'f5d56a9'
+  status: approved
   verification_method: [review]
 - name: architecture/attributes.md
   type: explanation
   level: r3
-  object_version: '7.1.1'
-  object_hash: 'd004f18'
-  status: draft
+  object_version: '8.1.1'
+  object_hash: 'c98d824'
+  status: approved
   verification_method: [review]
 - name: safety/hazard-and-risk-analysis.md
   type: explanation
   level: h1
-  object_version: '3.1.1'
-  object_hash: 'c32e38d'
-  status: draft
+  object_version: '4.1.1'
+  object_hash: '101af1e'
+  status: approved
   verification_method: [review]
