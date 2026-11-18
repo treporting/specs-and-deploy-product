@@ -2,7 +2,9 @@
 # (TOOL_27). The work is in baseline.yml of tools; see its README.md, section baseline. This repo
 # holds no code: the steps take the version of Go from the tools, and the schemas and levels.yaml
 # from specs-and-deploy-process, the repo above. Both are taken at the tags of their baselines: the
-# tools the same after the @ and in tools-ref; a pull request raises them.
+# tools after the @ at the commit of their tag, in tools-ref at the tag; a pull request raises them.
+# The commit, not the tag: GitHub does not find the build.yml baseline.yml calls where the tag is a
+# signed one.
 name: ticket-baseline
 
 on:
@@ -15,10 +17,10 @@ permissions:
 jobs:
   baseline:
     if: github.event.label.name == 'baseline'
-    uses: treporting/tools/.github/workflows/baseline.yml@T047.0
+    uses: treporting/tools/.github/workflows/baseline.yml@0398e569b70945026ffc604211022110421fbcca # T0471.0
     with:
-      tools-ref: T047.0
+      tools-ref: T0471.0
       go-version-file: .build-steps/go.mod
       above: treporting/specs-and-deploy-process
-      above-ref: T047
+      above-ref: T0471
     secrets: inherit
