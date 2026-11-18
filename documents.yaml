@@ -34,9 +34,9 @@ documents:
 - name: architecture/attributes.md
   type: explanation
   level: r3
-  object_version: '8.1.1'
-  object_hash: 'c98d824'
-  status: draft
+  object_version: '9.1.1'
+  object_hash: 'b3baaaf'
+  status: approved
   verification_method: [review]
 - name: safety/hazard-and-risk-analysis.md
   type: explanation
