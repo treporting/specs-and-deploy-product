@@ -61,8 +61,9 @@ Every system has an extractor of its own that lists and fetches what it holds. C
 storage and reporter speak one language, the information model (ARC_21), whose contract is
 [attributes.md](attributes.md). Our own data in YAML has the schemas of ARC_22 as its contract, in
 [schemas/](https://github.com/treporting/specs-and-deploy-process/tree/main/schemas); each schema names it as `@refines ARC_22`, and is a draft of the gel schema. Both ways end in
-the import of the storage, which works the same for every system. Each subsystem is a repo of
-its own. The allocation is in this file: the system requirements allocated to a subsystem are
+the import of the storage, which works the same for every system. A subsystem is either a folder
+of a code repo, `treporting/<repo>/<subsystem>`, or a repo of its own, `treporting/<subsystem>`.
+The allocation is in this file: the system requirements allocated to a subsystem are
 its requirements, derived directly from r2, with no ids of their own. The document is written
 for whoever derives the software requirements of a subsystem (r5) from it.
 
@@ -247,3 +248,4 @@ The allocation of every system requirement to the subsystems is the field `alloc
 | 4.1.1 | 2026-11-13 | specs-and-deploy is named specs-and-deploy-process | specs-and-deploy-process#641 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 5.1.1 | 2026-11-13 | The allocation: r4 gone | treporting/specs-and-deploy-process#653 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 6.1.1 | 2026-11-17 | Keys without a leading zero | specs-and-deploy-process#679 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 7.1.1 | 2026-11-18 | A subsystem is a folder of a code repo or a repo of its own | #26 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
