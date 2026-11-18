@@ -73,7 +73,7 @@ Overview per type, as the prototype sets it; the terms are those of definitions.
 | Meaning | when and by whom an object was created in its source, and when and by whom it was last modified there |
 | Value | a time with its zone; the name of a person as the source gives it |
 | Comes from | the source, as it records it - DOORS, for instance, keeps *Created On*, *Created By*, *Last Modified On*, *Last Modified By*; for a file in GIT the commit gives them |
-| Note | not the time of the import: that is in the import record. The names are personal data, kept only for the purposes set (UN_ALL_4, SYS_44) |
+| Note | not the time of the import: that is in the import record. The names are personal data, kept only for the purposes set (UN_SECURITY_6, SYS_44) |
 | Used by | REG_FDADI_1, data attributable to whom it comes from; SYS_16, what changed between two baselines |
 | Prototype | new - REG_FDADI_1: data attributable to whom it comes from |
 
@@ -445,3 +445,4 @@ the generator is taken over.
 | 6.1.1 | 2026-11-13 | specs-and-deploy is named specs-and-deploy-process | specs-and-deploy-process#641 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 7.1.1 | 2026-11-16 | status of a test result: `skip` is mapped to `skipped` | #15 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 8.1.1 | 2026-11-17 | Keys without a leading zero | specs-and-deploy-process#679 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 9.1.1 | 2026-11-18 | created_at, created_by, modified_at, modified_by: the reason UN_SECURITY_6, for the deleted UN_ALL_4 | #21 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
