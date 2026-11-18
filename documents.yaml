@@ -45,3 +45,9 @@ documents:
   object_hash: '101af1e'
   status: approved
   verification_method: [review]
+- name: sbom/sbom.md
+  type: document
+  object_version: '1.1.1'
+  object_hash: '0c80ebe'
+  status: completed
+  verification_method: [generated]
