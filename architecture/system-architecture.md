@@ -37,16 +37,16 @@ flowchart LR
   rep -- ARC_18 --> stor
 ```
 
-**Table subsystems** - the short form of each subsystem, and where it lives
+**Table subsystems** - the subsystems and their ids
 
-| Short form | Subsystem | Id | Lives in |
-|---|---|---|---|
-| V | viewer-trace | ARC_1 | `trace/viewer` |
-| R | reporter-trace | ARC_2 | `trace/reporter` |
-| S | storages | ARC_3 | `trace/storage` |
-| C | converter-trace | ARC_4 | `trace/converter` |
-| EC | extractor-content | ARC_5 | `trace/extractor` |
-| ES | extractor-SYSTEM | ARC_6 | `extractor-system` |
+| Subsystem | Id |
+|---|---|
+| viewer-trace | ARC_1 |
+| reporter-trace | ARC_2 |
+| storages | ARC_3 |
+| converter-trace | ARC_4 |
+| extractor-content | ARC_5 |
+| extractor-SYSTEM | ARC_6 |
 
 There are two kinds of system:
 
@@ -62,7 +62,8 @@ storage and reporter speak one language, the information model (ARC_21), whose c
 [attributes.md](attributes.md). Our own data in YAML has the schemas of ARC_22 as its contract, in
 [schemas/](https://github.com/treporting/specs-and-deploy-process/tree/main/schemas); each schema names it as `@refines ARC_22`, and is a draft of the gel schema. Both ways end in
 the import of the storage, which works the same for every system. A subsystem is either a folder
-of a code repo, `treporting/<repo>/<subsystem>`, or a repo of its own, `treporting/<subsystem>`.
+of a code repo, `treporting/<repo>/<subsystem>`, or a repo of its own, `treporting/<subsystem>`;
+the field `repo` of its element says which.
 The allocation is in this file: the system requirements allocated to a subsystem are
 its requirements, derived directly from r2, with no ids of their own. The document is written
 for whoever derives the software requirements of a subsystem (r5) from it.
@@ -249,4 +250,4 @@ The allocation of every system requirement to the subsystems is the field `alloc
 | 5.1.1 | 2026-11-13 | The allocation: r4 gone | treporting/specs-and-deploy-process#653 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 6.1.1 | 2026-11-17 | Keys without a leading zero | specs-and-deploy-process#679 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 7.1.1 | 2026-11-18 | A subsystem is a folder of a code repo or a repo of its own | #26 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
-| 8.1.1 | 2026-11-19 | Table subsystems: where each subsystem lives | #28 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 8.1.1 | 2026-11-19 | Where a subsystem lives is the field repo of its element; Table subsystems: no short forms | #28 | Claude Opus 5.5, author; Mathias Fischer, reviewer |

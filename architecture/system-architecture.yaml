@@ -8,7 +8,7 @@ elements:
 - object_key: ARC_1
   object_version: '1.1.1'
   kind: subsystem
-  repo: viewer-trace
+  repo: trace/viewer
   object_text: 'single page application: shows what the reporter answers - tables, charts, the trace -
     with filters, and hands tables and charts on'
   allocated: [SYS_1@1.1.1, SYS_2@1.1.1, SYS_3@1.1.1, SYS_4@1.1.1, SYS_5@1.1.1, SYS_6@1.1.1,
@@ -26,7 +26,7 @@ elements:
 - object_key: ARC_2
   object_version: '1.1.1'
   kind: subsystem
-  repo: reporter-trace
+  repo: trace/reporter
   object_text: 'REST API: answers trace, states, maturity and compliance from one data set; takes the
     identity from the proxy or the identity provider and checks the role; records every report'
   allocated: [SYS_1@1.1.1, SYS_2@1.1.1, SYS_3@1.1.1, SYS_4@1.1.1, SYS_5@1.1.1, SYS_6@1.1.1,
@@ -47,7 +47,7 @@ elements:
 - object_key: ARC_3
   object_version: '1.1.1'
   kind: subsystem
-  repo: storages
+  repo: trace/storage
   object_text: 'the model, the data sets and the `Source` interface over them - a database branch, generated
     data or a data file; the generator of data of known content; the import, the same for every system:
     counts what was stored, fingerprints it, derives the mapped (`M`) values - by the configuration of
@@ -67,7 +67,7 @@ elements:
 - object_key: ARC_4
   object_version: '1.1.1'
   kind: subsystem
-  repo: converter-trace
+  repo: trace/converter
   object_text: maps the customized attributes of an attribute-based system to the model, by a configuration
     file of the customer; one general mechanism for all of them
   allocated: [SYS_2@1.1.1, SYS_7@1.1.1, SYS_8@1.1.1, SYS_12@1.1.1, SYS_15@1.1.1, SYS_17@1.1.1,
@@ -82,7 +82,7 @@ elements:
 - object_key: ARC_5
   object_version: '1.1.1'
   kind: subsystem
-  repo: extractor-content
+  repo: trace/extractor
   object_text: extracts the information the files of a file-based system hold - requirements, test cases,
     test results, annotations -, with a package for each kind of content and no plug-in mechanism. The
     package annotations reads `@implements` and `@verifies` from Go files; it is the repo reporter-annotations
@@ -98,7 +98,7 @@ elements:
 - object_key: ARC_6
   object_version: '1.1.1'
   kind: subsystem
-  repo: extractor-SYSTEM
+  repo: extractor-system
   object_text: 'one per system, such as extractor-git or extractor-codebeamer: connects to it, lists and
     fetches what it holds with its identity in the system - revision, commit - and counts it by a query
     of its own'
