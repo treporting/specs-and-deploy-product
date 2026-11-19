@@ -37,16 +37,16 @@ flowchart LR
   rep -- ARC_18 --> stor
 ```
 
-**Table subsystems** - the short form of each subsystem
+**Table subsystems** - the short form of each subsystem, and where it lives
 
-| Short form | Subsystem | Id |
-|---|---|---|
-| V | viewer-trace | ARC_1 |
-| R | reporter-trace | ARC_2 |
-| S | storages | ARC_3 |
-| C | converter-trace | ARC_4 |
-| EC | extractor-content | ARC_5 |
-| ES | extractor-SYSTEM | ARC_6 |
+| Short form | Subsystem | Id | Lives in |
+|---|---|---|---|
+| V | viewer-trace | ARC_1 | `trace/viewer` |
+| R | reporter-trace | ARC_2 | `trace/reporter` |
+| S | storages | ARC_3 | `trace/storage` |
+| C | converter-trace | ARC_4 | `trace/converter` |
+| EC | extractor-content | ARC_5 | `trace/extractor` |
+| ES | extractor-SYSTEM | ARC_6 | `extractor-system` |
 
 There are two kinds of system:
 
@@ -249,3 +249,4 @@ The allocation of every system requirement to the subsystems is the field `alloc
 | 5.1.1 | 2026-11-13 | The allocation: r4 gone | treporting/specs-and-deploy-process#653 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 6.1.1 | 2026-11-17 | Keys without a leading zero | specs-and-deploy-process#679 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 7.1.1 | 2026-11-18 | A subsystem is a folder of a code repo or a repo of its own | #26 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 8.1.1 | 2026-11-19 | Table subsystems: where each subsystem lives | #28 | Claude Opus 5.5, author; Mathias Fischer, reviewer |

@@ -29,7 +29,7 @@ documents:
   level: r3
   object_version: '7.1.1'
   object_hash: '2832f81'
-  status: approved
+  status: draft
   verification_method: [review]
 - name: architecture/attributes.md
   type: explanation
