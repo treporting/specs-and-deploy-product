@@ -17,7 +17,7 @@ flowchart LR
     exsys[extractor-SYSTEM<br>one per system]
     excon[extractor-content<br>a package per kind of content]
     conv[converter-trace]
-    stor[storages<br>import]
+    stor[storage-trace<br>import]
     rep[reporter-trace]
     view[viewer-trace]
   end
@@ -43,7 +43,7 @@ flowchart LR
 |---|---|
 | viewer-trace | ARC_1 |
 | reporter-trace | ARC_2 |
-| storages | ARC_3 |
+| storage-trace | ARC_3 |
 | converter-trace | ARC_4 |
 | extractor-content | ARC_5 |
 | extractor-SYSTEM | ARC_6 |
@@ -63,7 +63,24 @@ storage and reporter speak one language, the information model (ARC_21), whose c
 [schemas/](https://github.com/treporting/specs-and-deploy-process/tree/main/schemas); each schema names it as `@refines ARC_22`, and is a draft of the gel schema. Both ways end in
 the import of the storage, which works the same for every system. A subsystem is either a folder
 of a code repo, `treporting/<repo>/<subsystem>`, or a repo of its own, `treporting/<subsystem>`;
-the field `repo` of its element says which.
+the field `repo` of its element says which. The folder of a subsystem in a code repo is its name
+without the name of the repo: storage-trace in `trace/storage`. Each product has its own
+subsystems, a storage too: later storage-tests in `tests/storage`.
+
+**Decision**: what is delivered on its own and talks to others over an interface is a subsystem,
+an element of this architecture. What only divides a task within a subsystem is a component, the
+field `component` of its software requirements (formats.md of specs-and-deploy-process). viewer,
+reporter, storage and converter are subsystems, with interfaces between them, such as ARC_11 from
+the viewer to the reporter; trace is the code repo that holds them, not an element. trace and
+maturity in the viewer, objectcode and baseline in tools are components. The next part is
+classified by this rule.
+
+**Why**: an interface between parts delivered on their own is set here, in r3, so each side
+can be built and tested against it. Within a subsystem nothing is delivered apart, so a
+division there needs no interface of r3.
+
+**Rejected**: trace as the subsystem, with viewer, reporter and converter as its components -
+they are delivered on their own and talk over interfaces, which a component has not.
 The allocation is in this file: the system requirements allocated to a subsystem are
 its requirements, derived directly from r2, with no ids of their own. The document is written
 for whoever derives the software requirements of a subsystem (r5) from it.
@@ -251,3 +268,4 @@ The allocation of every system requirement to the subsystems is the field `alloc
 | 6.1.1 | 2026-11-17 | Keys without a leading zero | specs-and-deploy-process#679 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 7.1.1 | 2026-11-18 | A subsystem is a folder of a code repo or a repo of its own | #26 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 8.1.1 | 2026-11-19 | Where a subsystem lives is the field repo of its element; Table subsystems: no short forms | #28 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 9.1.1 | 2026-11-20 | The rule that tells a subsystem from a component; storage-trace; the folder of a subsystem | #30 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
