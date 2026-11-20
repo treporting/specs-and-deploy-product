@@ -82,7 +82,7 @@ elements:
 - object_key: ARC_5
   object_version: '1.1.1'
   kind: subsystem
-  repo: trace/extractor
+  repo: trace/extractor-content
   object_text: extracts the information the files of a file-based system hold - requirements, test cases,
     test results, annotations -, with a package for each kind of content and no plug-in mechanism. The
     package annotations reads `@implements` and `@verifies` from Go files; it is the repo reporter-annotations
