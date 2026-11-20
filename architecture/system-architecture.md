@@ -67,13 +67,12 @@ the field `repo` of its element says which. The folder of a subsystem in a code 
 without the name of the repo: storage-trace in `trace/storage`. Each product has its own
 subsystems, a storage too: later storage-tests in `tests/storage`.
 
-**Decision**: what is delivered on its own and talks to others over an interface is a subsystem,
-an element of this architecture. What only divides a task within a subsystem is a component, the
-field `component` of its software requirements (formats.md of specs-and-deploy-process). viewer,
+**Decision**: what is delivered on its own and talks to others over an interface is a subsystem, an
+element of this architecture. What only divides a task within a subsystem is a component. viewer,
 reporter, storage and converter are subsystems, with interfaces between them, such as ARC_11 from
 the viewer to the reporter; trace is the code repo that holds them, not an element. trace and
-maturity in the viewer, objectcode and baseline in tools are components. The next part is
-classified by this rule.
+maturity in the viewer, objectcode and baseline in tools are components. The next part is classified
+by this rule.
 
 **Why**: an interface between parts delivered on their own is set here, in r3, so each side
 can be built and tested against it. Within a subsystem nothing is delivered apart, so a
