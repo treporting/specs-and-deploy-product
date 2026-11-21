@@ -122,17 +122,17 @@ the maxim, and bring a way of working, an audit trail of entries and a second tr
 
 ### ARCD_1 Independent count (SYS_23)
 
-**Decision**: the source is counted by a query of its own (ARC_14), in the extractor of the system
+**Decision**: the source system is counted by a query of its own (ARC_14), in the extractor of the system
 but in code apart from the reader, and the stored count is taken from the storage after the import. A reader never
-reports what it read as the count of the source. Besides, a verifier of its own, apart from all
+reports what it read as the count of the source system. Besides, a verifier of its own, apart from all
 subsystems, checks the data of treporting itself (the reference edgedb) and is run on request,
 for instance by an assessor; it is not delivered with the product.
 
 **Example**: a CODEBEAMER tracker holds 1 200 requirements, read in pages of 500. A fault in the
 paging drops the last page, so 1 000 are read. A reader that counts what it reads reports
-1 000 in the source, 1 000 read, 1 000 stored - all equal, and wrong. The query of its own asks
+1 000 in the source system, 1 000 read, 1 000 stored - all equal, and wrong. The query of its own asks
 for the total and gets 1 200; the difference of 200 marks the data set incomplete. On the other
-side, two requirements share an id in the source: 1 200 are read, the second overwrites the first,
+side, two requirements share an id in the source system: 1 200 are read, the second overwrites the first,
 and only a count taken from the storage afterwards shows 1 199. In code, an `@implements` written
 over two lines is missed by the reader and found by a plain `git grep -c '@implements'`.
 
@@ -148,9 +148,9 @@ an assessor asks for it, rather than run on every import.
 ### ARCD_2 Import record (SYS_26, SYS_41)
 
 **Decision**: the import of the storage brings the four counts together - the count of the
-source from the extractor of the system, read and refused from extractor-content or
+source system from the extractor of the system, read and refused from extractor-content or
 the converter, stored from the storage itself -, so it sets the state
-of the data set - complete, incomplete, or unverified when the source has no count of its own - and
+of the data set - complete, incomplete, or unverified when the source system has no count of its own - and
 keeps the import record. The storage keeps the record with the data set,
 the reporter hands the state on with every answer, the viewer shows it on every view.
 
@@ -158,23 +158,23 @@ the reporter hands the state on with every answer, the viewer shows it on every 
 
 ```
 import 2026-10-23T14:02:11Z  by m.fischer
-  source        codebeamer, tracker 4711, revision 3812
+  source system codebeamer, tracker 4711, revision 3812
   converter     converter-trace v1.4.0, configuration acme-codebeamer v7
   data set      release-2.1
-  counted       requirement: source 1200, read 1000, refused 0, stored 1000
-                link parentOf: source 3400, read 2890, refused 0, stored 2890
+  counted       requirement: source system 1200, read 1000, refused 0, stored 1000
+                link parentOf: source system 3400, read 2890, refused 0, stored 2890
   refused       -
   fingerprints  1000 compared, 0 differ
   state         incomplete  (requirement -200, link parentOf -510)
 ```
 
-**Why**: the record carries the trace of a report past the data set to the source and its
+**Why**: the record carries the trace of a report past the data set to the source system and its
 revision (REG_FDADI_1), it is the audit trail of a change of data (REG_CFR21-11_1), and it is the evidence that
 errors of an import are detected (REG_ISO26262-8_1, REG_IEC61508-3_1, REG_DO178C_1, REG_DO330_1).
 
 ### ARCD_3 Original and derived values (SYS_11)
 
-**Decision**: the storage always keeps the original as read from the source. A value derived at
+**Decision**: the storage always keeps the original as read from the source system. A value derived at
 the import is never the original and is kept beside it under a name of its own, with a
 prefix: `M` for a value mapped - unified, translated or adapted to the model; where the original
 is empty, the mapped value of the parent -, `I` for an intermediate form, only for the status, where
@@ -182,7 +182,7 @@ the original has to be transformed before it can be mapped. When a rule changes,
 back in time, so that the data need not be fetched from the source systems again - a requirement
 that follows from this architecture, not from a need (SYS_69).
 
-**Example**: the source says `Status = 'im Review'`; the import keeps it and adds
+**Example**: the source system says `Status = 'im Review'`; the import keeps it and adds
 `MStatus = 'review'`, as the configuration of the customer maps it. A status kept per platform -
 `Status = "status_platform-1 = in Review_Vendor` / `status_platform-2 = open"` - is first transformed
 into `IStatus = "platform-1 = in Review` / `platform-2 = open"`; `MStatus` is then `review` when the
@@ -190,7 +190,7 @@ filter selects platform-1, made for the filter set where it is not stored. A sof
 without a safety class under parents of ASIL B and QM keeps `Safety` empty and gets
 `MSafety = 'ASIL B'`; its test case and test result get `MSafety = 'ASIL B'` as well.
 
-**Why**: what is stored can be compared with the source (SYS_25) and stays original (REG_FDADI_1).
+**Why**: what is stored can be compared with the source system (SYS_25) and stays original (REG_FDADI_1).
 Where the evidence is that every requirement was classified by a person, the report shows
 `Safety`, not `MSafety`; where the evidence is that nothing falls out of a filter, it shows
 `MSafety`. A change of a rule needs no new import. Only a derived value that is stored can be
@@ -268,3 +268,4 @@ The allocation of every system requirement to the subsystems is the field `alloc
 | 7.1.1 | 2026-11-18 | A subsystem is a folder of a code repo or a repo of its own | #26 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 8.1.1 | 2026-11-19 | Where a subsystem lives is the field repo of its element; Table subsystems: no short forms | #28 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 9.1.1 | 2026-11-20 | The rule that tells a subsystem from a component; storage-trace; the folder of a subsystem | #30 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 10.1.1 | 2026-11-21 | Source system, not source; the interface StorageSource | #33 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
