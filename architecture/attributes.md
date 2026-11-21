@@ -17,13 +17,13 @@ it differs; the deviations are listed at the end.
 
 Where it comes from:
 
-- **author** - written in the source, in our YAML by the author
+- **author** - written in the source system, in our YAML by the author
 - **context** - where the object lies, given by the extractor
-- **derived** - made by the import, never written in the source
+- **derived** - made by the import, never written in the source system
 
 The prefixes:
 
-- no prefix - the **original**, as the source writes it; never changed
+- no prefix - the **original**, as the source system writes it; never changed
 - `M` - the **mapped** value: unified, translated or adapted to the model by the configuration of
   the customer. Where the original is empty, it is the mapped value of the parent - priority,
   safety, platform and launch are often set on a parent only
@@ -70,9 +70,9 @@ Overview per type, as the prototype sets it; the terms are those of definitions.
 
 | | |
 |---|---|
-| Meaning | when and by whom an object was created in its source, and when and by whom it was last modified there |
-| Value | a time with its zone; the name of a person as the source gives it |
-| Comes from | the source, as it records it - DOORS, for instance, keeps *Created On*, *Created By*, *Last Modified On*, *Last Modified By*; for a file in GIT the commit gives them |
+| Meaning | when and by whom an object was created in its source system, and when and by whom it was last modified there |
+| Value | a time with its zone; the name of a person as the source system gives it |
+| Comes from | the source system, as it records it - DOORS, for instance, keeps *Created On*, *Created By*, *Last Modified On*, *Last Modified By*; for a file in GIT the commit gives them |
 | Note | not the time of the import: that is in the import record. The names are personal data, kept only for the purposes set (UN_SECURITY_6, SYS_44) |
 | Used by | REG_FDADI_1, data attributable to whom it comes from; SYS_16, what changed between two baselines |
 | Prototype | new - REG_FDADI_1: data attributable to whom it comes from |
@@ -95,7 +95,7 @@ Overview per type, as the prototype sets it; the terms are those of definitions.
 
 | | |
 |---|---|
-| Meaning | the state of an object in its source - in review, released, open |
+| Meaning | the state of an object in its source system - in review, released, open |
 | Example | `status = "status_platform-1 = in Review_Vendor` / `status_platform-2 = open"` |
 | Variants | `istatus` - the intermediate form: `platform-1 = in Review` / `platform-2 = open`; `mstatus` - mapped: `review` when the filter selects platform-1. Where `mstatus` is not stored, it is made for the filter set |
 | Note | the only attribute with an intermediate form |
@@ -144,7 +144,7 @@ Overview per type, as the prototype sets it; the terms are those of definitions.
 
 | | |
 |---|---|
-| Meaning | the original ends of links to signals, parameters and issues, as the source writes them |
+| Meaning | the original ends of links to signals, parameters and issues, as the source system writes them |
 | Note | for treporting itself, `issue_ids` would hold the link to the tickets - where it cannot be derived the other way round |
 | Prototype | same |
 
@@ -167,7 +167,7 @@ how tests are carried out, a script being an automated one.
 
 | | |
 |---|---|
-| Meaning | the id of the test case in its source |
+| Meaning | the id of the test case in its source system |
 | For a test in code | the package and the name of the test function - a test file is the test procedure, a test function with `@verifies` the test case |
 | Prototype | same |
 
@@ -243,7 +243,7 @@ A test result is one run of a test case: its verdict, in a stream.
 | | |
 |---|---|
 | Meaning | the verdict of the run |
-| Comes from | the source as it writes it - for a test in Go, `pass`, `fail` or `skip` of `go test -json` |
+| Comes from | the source system as it writes it - for a test in Go, `pass`, `fail` or `skip` of `go test -json` |
 | Variants | `mstatus` - mapped: `passed`, `failed`, `skipped`; only `passed` counts as reached in the maturity (SYS_47) |
 | Prototype | same in the model; its generator leaves the original empty - see the deviations of the generator |
 
@@ -347,7 +347,7 @@ A clause of a standard or a law (n1). The module is the standard, the object the
 
 | | |
 |---|---|
-| Meaning | the state of the clause in its source - applicable, tailored |
+| Meaning | the state of the clause in its source system - applicable, tailored |
 | Comes from | author - its own, not derived from the requirements that address it |
 | Variants | `mstatus` - mapped from the original; `cstatus` - computed by the reporter where needed: open, addressed or verified, from the requirements that address the clause and their results |
 | Prototype | changed - the prototype takes `mstatus` from the first requirement that addresses the clause |
@@ -424,7 +424,7 @@ the generator is taken over.
 
 | What | The prototype | The model asks |
 |---|---|---|
-| `status` of a test result | writes `mstatus` only, the original stays empty | the original as a source would write it - `pass`, `fail`, `skip` - and `mstatus` mapped from it |
+| `status` of a test result | writes `mstatus` only, the original stays empty | the original as a source system would write it - `pass`, `fail`, `skip` - and `mstatus` mapped from it |
 | `priority`, `status`, `platform_launch` of a hazard or measure | writes the originals from the mapped values (`settleHazard`) | the original as a source writes it, or empty |
 | `status` of a clause | takes `mstatus` from the first requirement that addresses it, and writes the original from it | its own original, `mstatus` mapped from it |
 
@@ -446,3 +446,4 @@ the generator is taken over.
 | 7.1.1 | 2026-11-16 | status of a test result: `skip` is mapped to `skipped` | #15 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 8.1.1 | 2026-11-17 | Keys without a leading zero | specs-and-deploy-process#679 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 9.1.1 | 2026-11-18 | created_at, created_by, modified_at, modified_by: the reason UN_SECURITY_6, for the deleted UN_ALL_4 | #21 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 10.1.1 | 2026-11-21 | Source system, not source | #33 | Claude Opus 5.5, author; Mathias Fischer, reviewer |

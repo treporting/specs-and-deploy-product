@@ -29,14 +29,14 @@ documents:
   level: r3
   object_version: '9.1.1'
   object_hash: '3506f90'
-  status: approved
+  status: draft
   verification_method: [review]
 - name: architecture/attributes.md
   type: explanation
   level: r3
   object_version: '9.1.1'
   object_hash: 'b3baaaf'
-  status: approved
+  status: draft
   verification_method: [review]
 - name: safety/hazard-and-risk-analysis.md
   type: explanation

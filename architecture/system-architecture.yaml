@@ -13,11 +13,11 @@ elements:
     with filters, and hands tables and charts on'
   allocated: [SYS_1@1.1.1, SYS_2@1.1.1, SYS_3@1.1.1, SYS_4@1.1.1, SYS_5@1.1.1, SYS_6@1.1.1,
     SYS_7@1.1.1, SYS_8@1.1.1, SYS_9@1.1.1, SYS_10@1.1.1, SYS_12@1.1.1, SYS_13@1.1.1,
-    SYS_14@1.1.1, SYS_15@1.1.1, SYS_16@1.1.1, SYS_17@1.1.1, SYS_18@1.1.1, SYS_26@1.1.1,
+    SYS_14@1.1.1, SYS_15@1.1.1, SYS_16@1.1.1, SYS_17@1.1.1, SYS_18@1.1.1, SYS_26@2.1.1,
     SYS_27@1.1.1, SYS_28@1.1.1, SYS_29@1.1.1, SYS_30@1.1.1, SYS_31@1.1.1, SYS_33@1.1.1,
     SYS_34@1.1.1, SYS_35@1.1.1, SYS_37@1.1.1, SYS_38@1.1.1, SYS_39@1.1.1, SYS_52@1.1.1,
     SYS_55@1.1.1, SYS_57@1.1.1, SYS_58@1.1.1, SYS_59@1.1.1, SYS_63@1.1.1, SYS_64@1.1.1,
-    SYS_65@1.1.1, SYS_66@1.1.1, SYS_67@1.1.1, SYS_68@1.1.1, SYS_71@1.1.1, SYS_72@1.1.1,
+    SYS_65@1.1.1, SYS_66@1.1.1, SYS_67@1.1.1, SYS_68@2.1.1, SYS_71@1.1.1, SYS_72@1.1.1,
     SYS_73@1.1.1, SYS_74@1.1.1]
   priority: 'medium'
   safety: ''
@@ -32,12 +32,12 @@ elements:
   allocated: [SYS_1@1.1.1, SYS_2@1.1.1, SYS_3@1.1.1, SYS_4@1.1.1, SYS_5@1.1.1, SYS_6@1.1.1,
     SYS_7@1.1.1, SYS_8@1.1.1, SYS_9@1.1.1, SYS_10@1.1.1, SYS_11@1.1.1, SYS_12@1.1.1,
     SYS_13@1.1.1, SYS_14@1.1.1, SYS_15@1.1.1, SYS_16@1.1.1, SYS_17@1.1.1, SYS_18@1.1.1,
-    SYS_19@1.1.1, SYS_20@1.1.1, SYS_26@1.1.1, SYS_27@1.1.1, SYS_28@1.1.1, SYS_29@1.1.1,
+    SYS_19@1.1.1, SYS_20@1.1.1, SYS_26@2.1.1, SYS_27@1.1.1, SYS_28@1.1.1, SYS_29@1.1.1,
     SYS_30@1.1.1, SYS_31@1.1.1, SYS_32@1.1.1, SYS_34@1.1.1, SYS_35@1.1.1, SYS_37@1.1.1,
     SYS_38@1.1.1, SYS_39@1.1.1, SYS_40@1.1.1, SYS_43@1.1.1, SYS_44@1.1.1, SYS_45@1.1.1,
     SYS_46@1.1.1, SYS_47@1.1.1, SYS_48@1.1.1, SYS_49@1.1.1, SYS_50@1.1.1, SYS_51@1.1.1,
     SYS_52@1.1.1, SYS_54@1.1.1, SYS_55@1.1.1, SYS_56@1.1.1, SYS_58@1.1.1, SYS_59@1.1.1,
-    SYS_63@1.1.1, SYS_64@1.1.1, SYS_65@1.1.1, SYS_66@1.1.1, SYS_67@1.1.1, SYS_68@1.1.1,
+    SYS_63@1.1.1, SYS_64@1.1.1, SYS_65@1.1.1, SYS_66@1.1.1, SYS_67@1.1.1, SYS_68@2.1.1,
     SYS_70@1.1.1, SYS_71@1.1.1, SYS_72@1.1.1, SYS_73@1.1.1, SYS_74@1.1.1, SYS_75@1.1.1,
     SYS_76@1.1.1]
   priority: 'medium'
@@ -48,18 +48,18 @@ elements:
   object_version: '1.1.1'
   kind: subsystem
   repo: trace/storage
-  object_text: 'the model, the data sets and the `Source` interface over them - a database branch, generated
+  object_text: 'the model, the data sets and the `StorageSource` interface over them - a database branch, generated
     data or a data file; the generator of data of known content; the import, the same for every system:
     counts what was stored, fingerprints it, derives the mapped (`M`) values - by the configuration of
     the customer, or from the parent where the original is empty - and the intermediate status (`I`),
     sets the state and keeps the import record; the audit trail'
   allocated: [SYS_11@1.1.1, SYS_13@1.1.1, SYS_14@1.1.1, SYS_16@1.1.1, SYS_18@1.1.1, SYS_19@1.1.1,
-    SYS_20@1.1.1, SYS_21@1.1.1, SYS_22@1.1.1, SYS_23@1.1.1, SYS_24@1.1.1, SYS_25@1.1.1,
-    SYS_26@1.1.1, SYS_27@1.1.1, SYS_28@1.1.1, SYS_32@1.1.1, SYS_35@1.1.1, SYS_36@1.1.1,
-    SYS_38@1.1.1, SYS_40@1.1.1, SYS_41@1.1.1, SYS_42@1.1.1, SYS_43@1.1.1, SYS_44@1.1.1,
+    SYS_20@1.1.1, SYS_21@1.1.1, SYS_22@1.1.1, SYS_23@2.1.1, SYS_24@2.1.1, SYS_25@2.1.1,
+    SYS_26@2.1.1, SYS_27@1.1.1, SYS_28@1.1.1, SYS_32@1.1.1, SYS_35@1.1.1, SYS_36@1.1.1,
+    SYS_38@1.1.1, SYS_40@1.1.1, SYS_41@2.1.1, SYS_42@1.1.1, SYS_43@1.1.1, SYS_44@1.1.1,
     SYS_49@1.1.1, SYS_51@1.1.1, SYS_52@1.1.1, SYS_53@1.1.1, SYS_54@1.1.1, SYS_55@1.1.1,
     SYS_60@1.1.1, SYS_62@1.1.1, SYS_63@1.1.1, SYS_64@1.1.1, SYS_65@1.1.1, SYS_66@1.1.1,
-    SYS_68@1.1.1, SYS_69@1.1.1, SYS_74@1.1.1, SYS_75@1.1.1]
+    SYS_68@2.1.1, SYS_69@1.1.1, SYS_74@1.1.1, SYS_75@1.1.1]
   priority: 'medium'
   safety: ''
   status: draft
@@ -71,7 +71,7 @@ elements:
   object_text: maps the customized attributes of an attribute-based system to the model, by a configuration
     file of the customer; one general mechanism for all of them
   allocated: [SYS_2@1.1.1, SYS_7@1.1.1, SYS_8@1.1.1, SYS_12@1.1.1, SYS_15@1.1.1, SYS_17@1.1.1,
-    SYS_22@1.1.1, SYS_23@1.1.1, SYS_24@1.1.1, SYS_25@1.1.1, SYS_27@1.1.1, SYS_28@1.1.1,
+    SYS_22@1.1.1, SYS_23@2.1.1, SYS_24@2.1.1, SYS_25@2.1.1, SYS_27@1.1.1, SYS_28@1.1.1,
     SYS_35@1.1.1, SYS_38@1.1.1, SYS_53@1.1.1, SYS_55@1.1.1, SYS_60@1.1.1, SYS_61@1.1.1,
     SYS_62@1.1.1, SYS_63@1.1.1, SYS_64@1.1.1, SYS_65@1.1.1, SYS_66@1.1.1, SYS_72@1.1.1,
     SYS_73@1.1.1, SYS_74@1.1.1]
@@ -88,7 +88,7 @@ elements:
     package annotations reads `@implements` and `@verifies` from Go files; it is the repo reporter-annotations
     today
   allocated: [SYS_2@1.1.1, SYS_7@1.1.1, SYS_8@1.1.1, SYS_12@1.1.1, SYS_15@1.1.1, SYS_17@1.1.1,
-    SYS_22@1.1.1, SYS_23@1.1.1, SYS_24@1.1.1, SYS_27@1.1.1, SYS_28@1.1.1, SYS_35@1.1.1,
+    SYS_22@1.1.1, SYS_23@2.1.1, SYS_24@2.1.1, SYS_27@1.1.1, SYS_28@1.1.1, SYS_35@1.1.1,
     SYS_38@1.1.1, SYS_53@1.1.1, SYS_55@1.1.1, SYS_63@1.1.1, SYS_64@1.1.1, SYS_65@1.1.1,
     SYS_66@1.1.1, SYS_72@1.1.1, SYS_74@1.1.1]
   priority: 'medium'
@@ -102,7 +102,7 @@ elements:
   object_text: 'one per system, such as extractor-git or extractor-codebeamer: connects to it, lists and
     fetches what it holds with its identity in the system - revision, commit - and counts it by a query
     of its own'
-  allocated: [SYS_15@1.1.1, SYS_17@1.1.1, SYS_22@1.1.1, SYS_23@1.1.1, SYS_24@1.1.1, SYS_27@1.1.1,
+  allocated: [SYS_15@1.1.1, SYS_17@1.1.1, SYS_22@1.1.1, SYS_23@2.1.1, SYS_24@2.1.1, SYS_27@1.1.1,
     SYS_35@1.1.1, SYS_38@1.1.1, SYS_53@1.1.1, SYS_55@1.1.1, SYS_61@1.1.1, SYS_63@1.1.1,
     SYS_64@1.1.1, SYS_65@1.1.1, SYS_66@1.1.1]
   priority: 'medium'
@@ -122,7 +122,7 @@ elements:
 - object_key: ARC_12
   object_version: '1.1.1'
   kind: interface
-  object_text: '`Source`'
+  object_text: '`StorageSource`'
   between: reporter → storage
   contract: Go interface of the storage
   priority: 'medium'
@@ -216,8 +216,8 @@ elements:
     contract of ARC_12, ARC_13 and ARC_18
   contract: architecture/attributes.md
   allocated: [SYS_9@1.1.1, SYS_11@1.1.1, SYS_13@1.1.1, SYS_14@1.1.1, SYS_15@1.1.1, SYS_16@1.1.1,
-    SYS_17@1.1.1, SYS_18@1.1.1, SYS_20@1.1.1, SYS_28@1.1.1, SYS_36@1.1.1, SYS_41@1.1.1,
-    SYS_43@1.1.1, SYS_45@1.1.1, SYS_49@1.1.1, SYS_68@1.1.1, SYS_69@1.1.1, SYS_70@1.1.1,
+    SYS_17@1.1.1, SYS_18@1.1.1, SYS_20@1.1.1, SYS_28@1.1.1, SYS_36@1.1.1, SYS_41@2.1.1,
+    SYS_43@1.1.1, SYS_45@1.1.1, SYS_49@1.1.1, SYS_68@2.1.1, SYS_69@1.1.1, SYS_70@1.1.1,
     SYS_72@1.1.1, SYS_73@1.1.1, SYS_74@1.1.1, SYS_75@1.1.1, SYS_76@1.1.1]
   priority: 'medium'
   safety: ''
