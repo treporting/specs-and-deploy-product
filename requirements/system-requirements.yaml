@@ -253,7 +253,7 @@ requirements:
   source_ids: [UN_SAFETY_1@1.1.1, UN_SAFETY_4@1.1.1, REG_ISO26262-8_1@1.1.1, REG_IEC61508-3_1@1.1.1, REG_DO178C_1@1.1.1, REG_DO330_1@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: review
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_24
@@ -263,7 +263,7 @@ requirements:
   source_ids: [UN_SHARE_6@1.1.1, REG_ISO26262-8_1@1.1.1, REG_IEC61508-3_1@1.1.1, REG_DO178C_1@1.1.1, REG_DO330_1@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: review
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_25
@@ -274,7 +274,7 @@ requirements:
   source_ids: [UN_SAFETY_1@1.1.1, UN_SAFETY_2@1.1.1, REG_ISO26262-8_1@1.1.1, REG_IEC61508-3_1@1.1.1, REG_DO178C_1@1.1.1, REG_DO330_1@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: review
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_26
@@ -286,7 +286,7 @@ requirements:
   source_ids: [UN_SAFETY_2@1.1.1, UN_SAFETY_4@1.1.1, REG_ISO26262-8_1@1.1.1, REG_IEC61508-3_1@1.1.1, REG_DO178C_1@1.1.1, REG_DO330_1@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: review
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_27
@@ -444,7 +444,7 @@ requirements:
   source_ids: [UN_EVIDENCE_2@1.1.2, REG_CFR21-11_1@1.1.1, REG_FDADI_1@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: review
   verification_method: [test]
   platform_launch: treporting = 3_selfhosted
 - object_key: SYS_42
@@ -751,7 +751,7 @@ requirements:
   source_ids: [UN_SAFETY_5@1.1.1, UN_TRACE_6@1.1.1, REG_FDADI_1@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: review
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_69
