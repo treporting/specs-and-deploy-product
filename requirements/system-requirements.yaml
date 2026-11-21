@@ -1075,3 +1075,23 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: SYS_99
+  object_version: '1.1.1'
+  feature: Assistant
+  object_text: answer an assistant the figures a view shows, the same as the view shows them
+  source_ids: [UN_USE_6@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: SYS_100
+  object_version: '1.1.1'
+  feature: Assistant
+  object_text: name with every answer to an assistant the view and the filters that show the same
+  source_ids: [UN_USE_6@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
