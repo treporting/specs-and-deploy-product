@@ -101,6 +101,43 @@ uplink. The elements, the requirements, the allocation and the ids of rationale 
 Each interface between two subsystems, with what passes over it. Its requirements are in
 [system-architecture.yaml](system-architecture.yaml).
 
+### ARC_11 REST API (viewer-trace → reporter-trace)
+
+The viewer asks the reporter over a REST API. The technical form is the swagger of the reporter;
+this section says what goes across it. Every request names its scope (ARC_29) and may name the
+process reference model (ARC_30); the routes on the trace and the states narrow the rows (ARC_31),
+by level (ARC_32) and, on the code, by component and unit (ARC_33). Every answer comes as JSON or
+CSV (ARC_36); a request that cannot be answered is refused with the reason (ARC_37).
+
+**Table routes** - the routes of the reporter, what each answers, and what a request carries
+beyond the scope
+
+| Route | Answers | Parameters beyond the scope | Asked by the viewer |
+|---|---|---|---|
+| GET /version | the revision and the build of the reporter, the state of its data set and the number of its objects | - | yes |
+| GET /health | that the reporter runs: 200, "ok" | - | no - for the operation |
+| PUT /configuration | the lists the filters offer for a scope, from the filter sent; release `*` names the newest release | filter (body) | yes |
+| GET /configuration/projects | the projects of an organization and how they are split | - (organization only) | yes |
+| GET /configuration/baselines | the releases and libraries of a project | - (organization, project only) | yes |
+| GET /configuration/artefacts | every work product of a subsystem, with its revision, kind, tool and baseline | process; no baseline | yes |
+| GET /configuration/systems | the stores and what each holds | process (organization only) | yes |
+| GET /configuration/functions | the functions of a scope | level, process | yes |
+| GET /configuration/features | the features of a scope | level, process | yes |
+| GET /configuration/safety | the safety classes of a scope | - | yes |
+| GET /configuration/components | the components of the code and their units; release `*` names every release | - (no library) | yes |
+| GET /maturity/requirements | the trace from a level, one row per object | level, narrowing, component, unit, process, above, keys | yes |
+| GET /requirements/features | the trace from a feature | narrowing | yes |
+| GET /maturity/features | the maturity per feature | level, narrowing, process | yes |
+| GET /maturity/states | the counted states of a level over the libraries | level, narrowing, component, unit, process; no baseline | yes |
+| GET /maturity/components | the components and the state of their requirements or tests | level, process | yes |
+| GET /maturity/compliance | per clause of a standard what addresses it and its state | process | yes |
+| GET /maturity/compliance/states | per release how many clauses are open, addressed and verified | process; no release | yes |
+
+The levels above each row come only on request (ARC_34), so that a view of a large data set stays
+within its time (SYS_52). A cell comes as the keys of its objects or as the count per state
+(ARC_35): one table serves the single object of the trace (SYS_1) and the count of the states
+(SYS_5).
+
 ### ARC_12 StorageSource (reporter-trace → storage-trace)
 
 The reporter reads the data sets of the storage through `StorageSource`, a Go interface of the
@@ -272,8 +309,10 @@ architecture to the subsystems and interfaces, is the field `allocated` of each 
 - `treporting = 1_demo` - **Repos**: the repos of extractor-content and of the extractors per system
   are not created yet. reporter-annotations becomes the package annotations of extractor-content.
 
-- `treporting = 1_demo` - **Interfaces**: the sections of ARC_11 and of ARC_13 to ARC_20 are not
-  written yet.
+- `treporting = 1_demo` - **Interfaces**: the sections of ARC_13 to ARC_20 are not written yet.
+  ARC_11 describes the routes there are; no route answers yet the findings of the plausibility
+  check (SYS_71), the states of the code (SYS_77), a report of the views chosen (SYS_85), or the
+  record of what users did (SYS_90).
 
 ## Change history
 
@@ -290,3 +329,4 @@ architecture to the subsystems and interfaces, is the field `allocated` of each 
 | 9.1.1 | 2026-11-20 | The rule that tells a subsystem from a component; storage-trace; the folder of a subsystem | #30 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 10.1.1 | 2026-11-21 | Source system, not source; the interface StorageSource | #33 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 11.1.1 | 2026-11-21 | Requirements of the architecture; the modes of operation; Interfaces, with ARC_12 | #34 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 12.1.1 | 2026-11-21 | The interface ARC_11 REST API: its routes and its requirements | #37 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
