@@ -51,3 +51,13 @@ requirements:
   status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: UN_USE_6
+  object_version: '1.1.1'
+  function: USE
+  object_text: Asks an assistant about the data in plain words, and gets the figures a view shows,
+    with the view and the filters that show the same.
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
