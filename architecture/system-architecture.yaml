@@ -65,16 +65,17 @@ elements:
   object_text: 'single page application: shows what the reporter answers - tables, charts, the trace -
     with filters, and hands tables and charts on'
   allocated: [SYS_1@1.1.1, SYS_2@1.1.1, SYS_3@1.1.1, SYS_4@1.1.1, SYS_5@1.1.1, SYS_6@1.1.1,
-    SYS_7@1.1.1, SYS_8@1.1.1, SYS_9@1.1.1, SYS_10@1.1.1, SYS_12@1.1.1, SYS_13@1.1.1,
-    SYS_14@1.1.1, SYS_15@1.1.1, SYS_16@1.1.1, SYS_17@1.1.1, SYS_18@1.1.1, SYS_26@2.1.1,
-    SYS_27@1.1.1, SYS_28@1.1.1, SYS_29@1.1.1, SYS_30@1.1.1, SYS_31@1.1.1, SYS_33@1.1.1,
-    SYS_34@1.1.1, SYS_35@1.1.1, SYS_37@1.1.1, SYS_38@1.1.1, SYS_39@1.1.1, SYS_52@1.1.1,
-    SYS_55@1.1.1, SYS_57@1.1.1, SYS_58@1.1.1, SYS_59@1.1.1, SYS_63@1.1.1, SYS_64@1.1.1,
-    SYS_65@1.1.1, SYS_66@1.1.1, SYS_67@1.1.1, SYS_68@2.1.1, SYS_71@1.1.1, SYS_72@1.1.1,
-    SYS_73@1.1.1, SYS_74@1.1.1]
+    SYS_7@1.1.1, SYS_8@1.1.1, SYS_9@2.1.1, SYS_10@1.1.1, SYS_12@1.1.1, SYS_13@1.1.1, SYS_14@1.1.1,
+    SYS_15@1.1.1, SYS_16@1.1.1, SYS_17@1.1.1, SYS_18@2.1.1, SYS_26@2.1.1, SYS_27@1.1.1, SYS_28@1.1.1,
+    SYS_29@1.1.1, SYS_30@1.1.1, SYS_31@1.1.1, SYS_33@1.1.1, SYS_34@1.1.1, SYS_35@1.1.1, SYS_37@1.1.1,
+    SYS_38@1.1.1, SYS_39@1.1.1, SYS_52@1.1.1, SYS_55@1.1.1, SYS_57@1.1.1, SYS_58@1.1.1, SYS_59@1.1.1,
+    SYS_63@1.1.1, SYS_64@1.1.1, SYS_65@1.1.1, SYS_66@1.1.1, SYS_67@1.1.1, SYS_68@2.1.1, SYS_71@1.1.1,
+    SYS_72@1.1.1, SYS_73@1.1.1, SYS_74@1.1.1, SYS_77@1.1.1, SYS_78@1.1.1, SYS_80@1.1.1, SYS_81@1.1.1,
+    SYS_82@1.1.1, SYS_83@1.1.1, SYS_84@1.1.1, SYS_85@1.1.1, SYS_86@1.1.1, SYS_87@1.1.1, SYS_90@1.1.1,
+    SYS_91@1.1.1, SYS_93@1.1.1, SYS_94@1.1.1, SYS_95@1.1.1, SYS_96@1.1.1, SYS_97@1.1.1, SYS_98@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_2
   object_version: '1.1.1'
@@ -83,20 +84,21 @@ elements:
   object_text: 'REST API: answers trace, states, maturity and compliance from one data set; takes the
     identity from the proxy or the identity provider and checks the role; records every report'
   allocated: [SYS_1@1.1.1, SYS_2@1.1.1, SYS_3@1.1.1, SYS_4@1.1.1, SYS_5@1.1.1, SYS_6@1.1.1,
-    SYS_7@1.1.1, SYS_8@1.1.1, SYS_9@1.1.1, SYS_10@1.1.1, SYS_11@1.1.1, SYS_12@1.1.1,
-    SYS_13@1.1.1, SYS_14@1.1.1, SYS_15@1.1.1, SYS_16@1.1.1, SYS_17@1.1.1, SYS_18@1.1.1,
-    SYS_19@1.1.1, SYS_20@1.1.1, SYS_26@2.1.1, SYS_27@1.1.1, SYS_28@1.1.1, SYS_29@1.1.1,
-    SYS_30@1.1.1, SYS_31@1.1.1, SYS_32@1.1.1, SYS_34@1.1.1, SYS_35@1.1.1, SYS_37@1.1.1,
-    SYS_38@1.1.1, SYS_39@1.1.1, SYS_40@1.1.1, SYS_43@1.1.1, SYS_44@1.1.1, SYS_45@1.1.1,
-    SYS_46@1.1.1, SYS_47@1.1.1, SYS_48@1.1.1, SYS_49@1.1.1, SYS_50@1.1.1, SYS_51@1.1.1,
-    SYS_52@1.1.1, SYS_54@1.1.1, SYS_55@1.1.1, SYS_56@1.1.1, SYS_58@1.1.1, SYS_59@1.1.1,
-    SYS_63@1.1.1, SYS_64@1.1.1, SYS_65@1.1.1, SYS_66@1.1.1, SYS_67@1.1.1, SYS_68@2.1.1,
-    SYS_70@1.1.1, SYS_71@1.1.1, SYS_72@1.1.1, SYS_73@1.1.1, SYS_74@1.1.1, SYS_75@1.1.1,
-    SYS_76@1.1.1,
+    SYS_7@1.1.1, SYS_8@1.1.1, SYS_9@2.1.1, SYS_10@1.1.1, SYS_11@1.1.1, SYS_12@1.1.1, SYS_13@1.1.1,
+    SYS_14@1.1.1, SYS_15@1.1.1, SYS_16@1.1.1, SYS_17@1.1.1, SYS_18@2.1.1, SYS_19@1.1.1, SYS_20@1.1.1,
+    SYS_26@2.1.1, SYS_27@1.1.1, SYS_28@1.1.1, SYS_29@1.1.1, SYS_30@1.1.1, SYS_31@1.1.1, SYS_32@1.1.1,
+    SYS_34@1.1.1, SYS_35@1.1.1, SYS_37@1.1.1, SYS_38@1.1.1, SYS_39@1.1.1, SYS_40@1.1.1, SYS_43@1.1.1,
+    SYS_44@1.1.1, SYS_45@2.1.1, SYS_46@1.1.1, SYS_47@1.1.1, SYS_48@1.1.1, SYS_49@1.2.1, SYS_50@1.1.1,
+    SYS_51@1.1.1, SYS_52@1.1.1, SYS_54@1.1.1, SYS_55@1.1.1, SYS_56@1.1.1, SYS_58@1.1.1, SYS_59@1.1.1,
+    SYS_63@1.1.1, SYS_64@1.1.1, SYS_65@1.1.1, SYS_66@1.1.1, SYS_67@1.1.1, SYS_68@2.1.1, SYS_70@1.1.1,
+    SYS_71@1.1.1, SYS_72@1.1.1, SYS_73@1.1.1, SYS_74@1.1.1, SYS_75@1.1.1, SYS_76@1.1.1, SYS_77@1.1.1,
+    SYS_78@1.1.1, SYS_79@1.1.1, SYS_80@1.1.1, SYS_81@1.1.1, SYS_82@1.1.1, SYS_83@1.1.1, SYS_84@1.1.1,
+    SYS_85@1.1.1, SYS_88@1.1.1, SYS_90@1.1.1, SYS_91@1.1.1, SYS_93@1.1.1, SYS_94@1.1.1, SYS_95@1.1.1,
+    SYS_96@1.1.1, SYS_97@1.1.1,
     ARC_23@1.1.1, ARC_24@1.1.1, ARC_25@1.1.1, ARC_26@1.1.1, ARC_27@1.1.1, ARC_28@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_3
   object_version: '1.1.1'
@@ -107,17 +109,22 @@ elements:
     counts what was stored, fingerprints it, derives the mapped (`M`) values - by the configuration of
     the customer, or from the parent where the original is empty - and the intermediate status (`I`),
     sets the state and keeps the import record; the audit trail'
-  allocated: [SYS_11@1.1.1, SYS_13@1.1.1, SYS_14@1.1.1, SYS_16@1.1.1, SYS_18@1.1.1, SYS_19@1.1.1,
-    SYS_20@1.1.1, SYS_21@1.1.1, SYS_22@1.1.1, SYS_23@2.1.1, SYS_24@2.1.1, SYS_25@2.1.1,
-    SYS_26@2.1.1, SYS_27@1.1.1, SYS_28@1.1.1, SYS_32@1.1.1, SYS_35@1.1.1, SYS_36@1.1.1,
-    SYS_38@1.1.1, SYS_40@1.1.1, SYS_41@2.1.1, SYS_42@1.1.1, SYS_43@1.1.1, SYS_44@1.1.1,
-    SYS_49@1.1.1, SYS_51@1.1.1, SYS_52@1.1.1, SYS_53@1.1.1, SYS_54@1.1.1, SYS_55@1.1.1,
-    SYS_60@1.1.1, SYS_62@1.1.1, SYS_63@1.1.1, SYS_64@1.1.1, SYS_65@1.1.1, SYS_66@1.1.1,
-    SYS_68@2.1.1, SYS_69@1.1.1, SYS_74@1.1.1, SYS_75@1.1.1,
+  allocated: [SYS_1@1.1.1, SYS_2@1.1.1, SYS_3@1.1.1, SYS_4@1.1.1, SYS_5@1.1.1, SYS_6@1.1.1,
+    SYS_7@1.1.1, SYS_8@1.1.1, SYS_9@2.1.1, SYS_10@1.1.1, SYS_11@1.1.1, SYS_12@1.1.1, SYS_13@1.1.1,
+    SYS_14@1.1.1, SYS_15@1.1.1, SYS_16@1.1.1, SYS_17@1.1.1, SYS_18@2.1.1, SYS_19@1.1.1, SYS_20@1.1.1,
+    SYS_21@1.1.1, SYS_22@1.1.1, SYS_23@2.1.1, SYS_24@2.1.1, SYS_25@2.1.1, SYS_26@2.1.1, SYS_27@1.1.1,
+    SYS_28@1.1.1, SYS_30@1.1.1, SYS_32@1.1.1, SYS_35@1.1.1, SYS_36@1.1.1, SYS_38@1.1.1, SYS_40@1.1.1,
+    SYS_41@2.1.1, SYS_42@1.1.1, SYS_43@1.1.1, SYS_44@1.1.1, SYS_45@2.1.1, SYS_46@1.1.1, SYS_47@1.1.1,
+    SYS_48@1.1.1, SYS_49@1.2.1, SYS_50@1.1.1, SYS_51@1.1.1, SYS_52@1.1.1, SYS_53@1.1.1, SYS_54@1.1.1,
+    SYS_55@1.1.1, SYS_60@1.1.1, SYS_62@1.1.1, SYS_63@1.1.1, SYS_64@1.1.1, SYS_65@1.1.1, SYS_66@1.1.1,
+    SYS_68@2.1.1, SYS_69@1.1.1, SYS_70@1.1.1, SYS_71@1.1.1, SYS_72@1.1.1, SYS_73@1.1.1, SYS_74@1.1.1,
+    SYS_75@1.1.1, SYS_76@1.1.1, SYS_77@1.1.1, SYS_78@1.1.1, SYS_79@1.1.1, SYS_80@1.1.1, SYS_81@1.1.1,
+    SYS_82@1.1.1, SYS_83@1.1.1, SYS_84@1.1.1, SYS_85@1.1.1, SYS_88@1.1.1, SYS_89@1.1.1, SYS_90@1.1.1,
+    SYS_92@1.1.1, SYS_93@1.1.1, SYS_94@1.1.1, SYS_95@1.1.1, SYS_96@1.1.1, SYS_97@1.1.1,
     ARC_23@1.1.1, ARC_24@1.1.1, ARC_25@1.1.1, ARC_26@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_4
   object_version: '1.1.1'
@@ -126,13 +133,12 @@ elements:
   object_text: maps the customized attributes of an attribute-based system to the model, by a configuration
     file of the customer; one general mechanism for all of them
   allocated: [SYS_2@1.1.1, SYS_7@1.1.1, SYS_8@1.1.1, SYS_12@1.1.1, SYS_15@1.1.1, SYS_17@1.1.1,
-    SYS_22@1.1.1, SYS_23@2.1.1, SYS_24@2.1.1, SYS_25@2.1.1, SYS_27@1.1.1, SYS_28@1.1.1,
-    SYS_35@1.1.1, SYS_38@1.1.1, SYS_53@1.1.1, SYS_55@1.1.1, SYS_60@1.1.1, SYS_61@1.1.1,
-    SYS_62@1.1.1, SYS_63@1.1.1, SYS_64@1.1.1, SYS_65@1.1.1, SYS_66@1.1.1, SYS_72@1.1.1,
-    SYS_73@1.1.1, SYS_74@1.1.1]
+    SYS_22@1.1.1, SYS_23@2.1.1, SYS_24@2.1.1, SYS_25@2.1.1, SYS_27@1.1.1, SYS_28@1.1.1, SYS_35@1.1.1,
+    SYS_38@1.1.1, SYS_53@1.1.1, SYS_55@1.1.1, SYS_60@1.1.1, SYS_61@1.1.1, SYS_62@1.1.1, SYS_63@1.1.1,
+    SYS_64@1.1.1, SYS_65@1.1.1, SYS_66@1.1.1, SYS_72@1.1.1, SYS_73@1.1.1, SYS_74@1.1.1, SYS_93@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_5
   object_version: '1.1.1'
@@ -143,12 +149,12 @@ elements:
     package annotations reads `@implements` and `@verifies` from Go files; it is the repo reporter-annotations
     today
   allocated: [SYS_2@1.1.1, SYS_7@1.1.1, SYS_8@1.1.1, SYS_12@1.1.1, SYS_15@1.1.1, SYS_17@1.1.1,
-    SYS_22@1.1.1, SYS_23@2.1.1, SYS_24@2.1.1, SYS_27@1.1.1, SYS_28@1.1.1, SYS_35@1.1.1,
-    SYS_38@1.1.1, SYS_53@1.1.1, SYS_55@1.1.1, SYS_63@1.1.1, SYS_64@1.1.1, SYS_65@1.1.1,
-    SYS_66@1.1.1, SYS_72@1.1.1, SYS_74@1.1.1]
+    SYS_22@1.1.1, SYS_23@2.1.1, SYS_24@2.1.1, SYS_27@1.1.1, SYS_28@1.1.1, SYS_35@1.1.1, SYS_38@1.1.1,
+    SYS_53@1.1.1, SYS_55@1.1.1, SYS_63@1.1.1, SYS_64@1.1.1, SYS_65@1.1.1, SYS_66@1.1.1, SYS_72@1.1.1,
+    SYS_74@1.1.1, SYS_93@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_6
   object_version: '1.1.1'
@@ -158,11 +164,11 @@ elements:
     fetches what it holds with its identity in the system - revision, commit - and counts it by a query
     of its own'
   allocated: [SYS_15@1.1.1, SYS_17@1.1.1, SYS_22@1.1.1, SYS_23@2.1.1, SYS_24@2.1.1, SYS_27@1.1.1,
-    SYS_35@1.1.1, SYS_38@1.1.1, SYS_53@1.1.1, SYS_55@1.1.1, SYS_61@1.1.1, SYS_63@1.1.1,
-    SYS_64@1.1.1, SYS_65@1.1.1, SYS_66@1.1.1]
+    SYS_35@1.1.1, SYS_38@1.1.1, SYS_53@1.1.1, SYS_55@1.1.1, SYS_61@1.1.1, SYS_63@1.1.1, SYS_64@1.1.1,
+    SYS_65@1.1.1, SYS_66@1.1.1, SYS_93@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_11
   object_version: '1.1.1'
@@ -170,7 +176,8 @@ elements:
   object_text: REST API
   between: viewer → reporter
   contract: swagger of the reporter
-  allocated: [ARC_27@1.1.1]
+  allocated: [
+    ARC_27@1.1.1]
   priority: 'medium'
   safety: ''
   status: draft
@@ -181,7 +188,8 @@ elements:
   object_text: '`StorageSource`'
   between: reporter → storage
   contract: Go interface of the storage
-  allocated: [ARC_23@1.1.1, ARC_24@1.1.1, ARC_25@1.1.1, ARC_26@1.1.1, ARC_27@1.1.1]
+  allocated: [
+    ARC_23@1.1.1, ARC_24@1.1.1, ARC_25@1.1.1, ARC_26@1.1.1, ARC_27@1.1.1]
   priority: 'medium'
   safety: ''
   status: draft
@@ -272,13 +280,13 @@ elements:
   object_text: the information model - the common language of converter, storage and reporter; the common
     contract of ARC_12, ARC_13 and ARC_18
   contract: architecture/attributes.md
-  allocated: [SYS_9@1.1.1, SYS_11@1.1.1, SYS_13@1.1.1, SYS_14@1.1.1, SYS_15@1.1.1, SYS_16@1.1.1,
-    SYS_17@1.1.1, SYS_18@1.1.1, SYS_20@1.1.1, SYS_28@1.1.1, SYS_36@1.1.1, SYS_41@2.1.1,
-    SYS_43@1.1.1, SYS_45@1.1.1, SYS_49@1.1.1, SYS_68@2.1.1, SYS_69@1.1.1, SYS_70@1.1.1,
-    SYS_72@1.1.1, SYS_73@1.1.1, SYS_74@1.1.1, SYS_75@1.1.1, SYS_76@1.1.1]
+  allocated: [SYS_9@2.1.1, SYS_11@1.1.1, SYS_13@1.1.1, SYS_14@1.1.1, SYS_15@1.1.1, SYS_16@1.1.1,
+    SYS_17@1.1.1, SYS_18@2.1.1, SYS_20@1.1.1, SYS_28@1.1.1, SYS_36@1.1.1, SYS_41@2.1.1, SYS_43@1.1.1,
+    SYS_45@2.1.1, SYS_49@1.2.1, SYS_68@2.1.1, SYS_69@1.1.1, SYS_70@1.1.1, SYS_72@1.1.1, SYS_73@1.1.1,
+    SYS_74@1.1.1, SYS_75@1.1.1, SYS_76@1.1.1, SYS_77@1.1.1, SYS_82@1.1.1, SYS_83@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_22
   object_version: '2.1.3'
