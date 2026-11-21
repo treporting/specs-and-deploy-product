@@ -58,6 +58,6 @@ requirements:
     with the view and the filters that show the same.
   priority: 'medium'
   safety: ''
-  status: draft
+  status: review
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
