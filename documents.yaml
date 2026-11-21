@@ -29,7 +29,7 @@ documents:
   level: r3
   object_version: '13.1.1'
   object_hash: 'fa1013b'
-  status: approved
+  status: draft
   verification_method: [review]
 - name: architecture/attributes.md
   type: explanation

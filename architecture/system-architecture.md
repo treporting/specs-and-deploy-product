@@ -255,7 +255,7 @@ prefix: `M` for a value mapped - unified, translated or adapted to the model; wh
 is empty, the mapped value of the parent -, `I` for an intermediate form, only for the status, where
 the original has to be transformed before it can be mapped. When a rule changes, the derived values can be made again on the stored data set,
 back in time, so that the data need not be fetched from the source systems again - a requirement
-that follows from this architecture, not from a need (SYS_69).
+that follows from this architecture, not from a need (ARC_50).
 
 **Example**: the source system says `Status = 'im Review'`; the import keeps it and adds
 `MStatus = 'review'`, as the configuration of the customer maps it. A status kept per platform -
@@ -360,4 +360,5 @@ architecture to the subsystems and interfaces, is the field `allocated` of each 
 | 10.1.1 | 2026-11-21 | Source system, not source; the interface StorageSource | #33 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 11.1.1 | 2026-11-21 | Requirements of the architecture; the modes of operation; Interfaces, with ARC_12 | #34 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 12.1.1 | 2026-11-21 | The interface ARC_11 REST API: its routes and its requirements | #37 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
-| 13.1.1 | 2026-11-21 | The interface ARC_12 StorageSource: its methods and its requirements | #37 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 13.1.1 | 2026-11-21 | The interface ARC_12 StorageSource: what goes across and its requirements | #37 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 14.1.1 | 2026-11-21 | ARCD_3: the requirement it made possible is ARC_50 | #39 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
