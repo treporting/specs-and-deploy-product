@@ -146,6 +146,29 @@ server of its own (ARC_23), in a database run together with the reporter (ARC_24
 (ARC_25), or as generated data in the memory of the reporter (ARC_26). The reporter answers the
 same from each (ARC_27), and from one mode only while it runs (ARC_28).
 
+The storage hands the reporter the data of a scope; what a route makes of them - the states, the
+counting, the trace - is the reporter's, the same for every mode.
+
+**Table source** - what goes from the storage to the reporter, and what it is needed for
+
+| What goes across | Needed for | SYS |
+|---|---|---|
+| the names of every scope: organizations, requirements projects and their subsystems, releases, libraries (ARC_38) | the lists to choose from; refusing a scope that does not exist | SYS_9, SYS_20 |
+| each baseline with its project, start and end; for a library the release it went into (ARC_39) | the baselines over time, the libraries in their order | SYS_17 |
+| every object with its scope, its key, its level by key and its state, as read and mapped (ARC_40) | the answer from one scope; the states and their counts | SYS_1, SYS_5, SYS_8, SYS_20 |
+| the links downward, each object once however many link to it (ARC_41) | the trace down, the missing places | SYS_1, SYS_2, SYS_6, SYS_12, SYS_13 |
+| test cases, test procedures and test results as kinds apart (ARC_42) | their states apart | SYS_8 |
+| on every level function, feature, priority, safety class, platform, launch and stream; the mapped value of priority and of platform and launch (ARC_43) | narrowing | SYS_9, SYS_11 |
+| per requirement its verification method, and per level whether it is verified (ARC_44) | a missing test case | SYS_2, SYS_73 |
+| per object its component and unit, and the components with their units (ARC_45) | narrowing the code | SYS_1 |
+| per requirements project its head: the levels in order, with key, name and views (ARC_46) | the levels of the trace | SYS_14, SYS_49 |
+| the work products with baseline, revision, level, kind and store, and the stores with their work products (ARC_47) | the work products of a baseline | SYS_15 |
+| the name of the data set | the data set on every view | SYS_18 |
+| per baseline the version of code and test procedures, and what changed | the changes of a baseline | SYS_16 |
+| the code coverage level sc1, as a level | the chain of maturity | SYS_49 |
+| a failed read apart from a read with no data, with the error (ARC_48) | the refusal with the reason | SYS_29, SYS_37, SYS_38 |
+| that the data set is still being filled (ARC_49) | refusing while the data are not there | SYS_34, SYS_54 |
+
 ## Rationale
 
 The principles every decision below follows.
@@ -313,6 +336,13 @@ architecture to the subsystems and interfaces, is the field `allocated` of each 
   ARC_11 describes the routes there are; no route answers yet the findings of the plausibility
   check (SYS_71), the states of the code (SYS_77), a report of the views chosen (SYS_85), or the
   record of what users did (SYS_90).
+  ARC_12 describes what goes across there; not yet: the objects above each object (SYS_1) - the
+  storage keeps every link from both ends, or hands the downward links whole and the reporter turns
+  them round; the mapped value of function, feature and safety class (SYS_11); an unknown value apart
+  from an empty one (SYS_28); the process reference model a data set names (SYS_14); the revision
+  and the state of the data set (SYS_18, SYS_26); the reviews and approvals of a work product
+  (SYS_74, SYS_75); the import records and the audit trail (SYS_32, SYS_41); that no read changes
+  the data set (SYS_19); the time of a read of a data set of size large (SYS_52).
 
 ## Change history
 
@@ -330,3 +360,4 @@ architecture to the subsystems and interfaces, is the field `allocated` of each 
 | 10.1.1 | 2026-11-21 | Source system, not source; the interface StorageSource | #33 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 11.1.1 | 2026-11-21 | Requirements of the architecture; the modes of operation; Interfaces, with ARC_12 | #34 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 12.1.1 | 2026-11-21 | The interface ARC_11 REST API: its routes and its requirements | #37 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 13.1.1 | 2026-11-21 | The interface ARC_12 StorageSource: its methods and its requirements | #37 | Claude Opus 5.5, author; Mathias Fischer, reviewer |

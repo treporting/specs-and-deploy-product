@@ -138,6 +138,112 @@ requirements:
   safety: ''
   status: approved
   verification_method: [test]
+- object_key: ARC_38
+  object_version: '1.1.1'
+  object_text: 'scope names: hand the names of every scope - organizations, requirements projects and
+    their subsystems, releases, libraries'
+  source_ids: [SYS_9@2.1.1, SYS_20@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_39
+  object_version: '1.1.1'
+  object_text: 'baselines: hand each baseline with its project, start and end, and for a library the
+    release it was delivered into'
+  source_ids: [SYS_17@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_40
+  object_version: '1.1.1'
+  object_text: 'objects: hand every object with its scope, its key, its level by key and its state,
+    as read and mapped'
+  source_ids: [SYS_1@1.1.1, SYS_5@1.1.1, SYS_8@1.1.1, SYS_20@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_41
+  object_version: '1.1.1'
+  object_text: 'links: hand the links downward between every two types the trace joins, each object
+    once however many link to it'
+  source_ids: [SYS_1@1.1.1, SYS_2@1.1.1, SYS_6@1.1.1, SYS_12@1.1.1, SYS_13@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_42
+  object_version: '1.1.1'
+  object_text: 'kinds of test: hand test cases, test procedures and test results as kinds apart'
+  source_ids: [SYS_8@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_43
+  object_version: '1.1.1'
+  object_text: 'narrowing: hand on every level function, feature, priority, safety class, platform,
+    launch and stream'
+  source_ids: [SYS_9@2.1.1, SYS_11@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_44
+  object_version: '1.1.1'
+  object_text: 'verification: hand per requirement its verification method, and per level of the
+    head whether it is verified'
+  source_ids: [SYS_2@1.1.1, SYS_73@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_45
+  object_version: '1.1.1'
+  object_text: 'components: hand per object its component and unit, and the components with their
+    units'
+  source_ids: [SYS_1@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_46
+  object_version: '1.1.1'
+  object_text: 'head: hand per requirements project its head - the levels in order, with key, name and
+    views'
+  source_ids: [SYS_14@1.1.1, SYS_49@1.2.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_47
+  object_version: '1.1.1'
+  object_text: 'work products: hand the work products with baseline, revision, level, kind and
+    store, and the stores with their work products'
+  source_ids: [SYS_15@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_48
+  object_version: '1.1.1'
+  object_text: 'read error: say a read that fails, with the error, apart from a read that found no
+    data'
+  source_ids: [SYS_29@1.1.1, SYS_37@1.1.1, SYS_38@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_49
+  object_version: '1.1.1'
+  object_text: 'pending: say while the data set is still being filled'
+  source_ids: [SYS_34@1.1.1, SYS_54@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
 elements:
 - object_key: ARC_1
   object_version: '1.1.1'
@@ -269,10 +375,12 @@ elements:
   object_text: '`StorageSource`'
   between: reporter → storage
   contract: Go interface of the storage
-  allocated: [ARC_23@1.1.1, ARC_24@1.1.1, ARC_25@1.1.1, ARC_26@1.1.1, ARC_27@1.1.1]
+  allocated: [ARC_23@1.1.1, ARC_24@1.1.1, ARC_25@1.1.1, ARC_26@1.1.1, ARC_27@1.1.1, ARC_38@1.1.1,
+    ARC_39@1.1.1, ARC_40@1.1.1, ARC_41@1.1.1, ARC_42@1.1.1, ARC_43@1.1.1, ARC_44@1.1.1, ARC_45@1.1.1,
+    ARC_46@1.1.1, ARC_47@1.1.1, ARC_48@1.1.1, ARC_49@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_13
   object_version: '1.1.1'
