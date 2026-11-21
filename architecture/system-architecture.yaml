@@ -506,24 +506,24 @@ decisions:
 - object_key: ARCR_1
   object_version: '1.1.1'
   object_text: Read only
-  status: draft
+  status: approved
 - object_key: ARCD_1
   object_version: '2.1.1'
   object_text: Independent count (SYS_23)
-  status: draft
+  status: approved
 - object_key: ARCD_2
   object_version: '2.1.1'
   object_text: Import record (SYS_26, SYS_41)
-  status: draft
+  status: approved
 - object_key: ARCD_3
   object_version: '2.1.1'
   object_text: Original and derived values (SYS_11)
-  status: draft
+  status: approved
 - object_key: ARCD_4
   object_version: '2.1.1'
   object_text: Configuration instead of code for the customer (SYS_22)
-  status: draft
+  status: approved
 - object_key: ARCD_5
   object_version: '3.1.1'
   object_text: Identity (SYS_39)
-  status: draft
+  status: approved
