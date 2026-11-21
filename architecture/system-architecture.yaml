@@ -138,6 +138,41 @@ requirements:
   safety: ''
   status: approved
   verification_method: [test]
+- object_key: ARC_38
+  object_version: '1.1.1'
+  object_text: 'scope: read the trace, the hazards, the clauses and the objects of the maturity of one
+    release, and below the subsystem only what its library carries'
+  source_ids: [SYS_1@1.1.1, SYS_9@2.1.1, SYS_20@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_39
+  object_version: '1.1.1'
+  object_text: 'data set: say which data set it answers from - generated, a data file or a database
+    branch - and how many objects of each type it holds'
+  source_ids: [SYS_18@2.1.1, SYS_96@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_40
+  object_version: '1.1.1'
+  object_text: 'head: give the head of a project - its levels as the columns of the trace - and how
+    many objects of its data carry each level'
+  source_ids: [SYS_1@1.1.1, SYS_94@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_41
+  object_version: '1.1.1'
+  object_text: 'read error: say a read that fails as such, and never answer it empty'
+  source_ids: [SYS_29@1.1.1, SYS_37@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
 elements:
 - object_key: ARC_1
   object_version: '1.1.1'
@@ -269,7 +304,8 @@ elements:
   object_text: '`StorageSource`'
   between: reporter → storage
   contract: Go interface of the storage
-  allocated: [ARC_23@1.1.1, ARC_24@1.1.1, ARC_25@1.1.1, ARC_26@1.1.1, ARC_27@1.1.1]
+  allocated: [ARC_23@1.1.1, ARC_24@1.1.1, ARC_25@1.1.1, ARC_26@1.1.1, ARC_27@1.1.1, ARC_38@1.1.1,
+    ARC_39@1.1.1, ARC_40@1.1.1, ARC_41@1.1.1]
   priority: 'medium'
   safety: ''
   status: draft
