@@ -468,13 +468,17 @@ elements:
   object_text: the information model - the common language of converter, storage and reporter; the common
     contract of ARC_12, ARC_13 and ARC_18
   contract: architecture/attributes.md
-  allocated: [SYS_9@2.1.1, SYS_11@1.1.1, SYS_13@1.1.1, SYS_14@1.1.1, SYS_15@1.1.1, SYS_16@1.1.1,
-    SYS_17@1.1.1, SYS_18@2.1.1, SYS_20@1.1.1, SYS_28@1.1.1, SYS_36@1.1.1, SYS_41@2.1.1, SYS_43@1.1.1,
-    SYS_45@2.1.1, SYS_49@1.2.1, SYS_68@2.1.1, SYS_69@1.1.1, SYS_70@1.1.1, SYS_72@1.1.1, SYS_73@1.1.1,
-    SYS_74@1.1.1, SYS_75@1.1.1, SYS_76@1.1.1, SYS_77@1.1.1, SYS_82@1.1.1, SYS_83@1.1.1]
+  allocated: [SYS_1@1.1.1, SYS_2@1.1.1, SYS_3@1.1.1, SYS_4@1.1.1, SYS_5@1.1.1, SYS_6@1.1.1,
+    SYS_7@1.1.1, SYS_8@1.1.1, SYS_9@2.1.1, SYS_11@1.1.1, SYS_12@1.1.1, SYS_13@1.1.1, SYS_14@1.1.1,
+    SYS_15@1.1.1, SYS_16@1.1.1, SYS_17@1.1.1, SYS_18@2.1.1, SYS_20@1.1.1, SYS_22@1.1.1,
+    SYS_23@2.1.1, SYS_25@2.1.1, SYS_26@2.1.1, SYS_28@1.1.1, SYS_32@1.1.1, SYS_36@1.1.1,
+    SYS_40@1.1.1, SYS_41@2.1.1, SYS_43@1.1.1, SYS_45@2.1.1, SYS_47@1.1.1, SYS_49@1.2.1,
+    SYS_68@2.1.1, SYS_69@1.1.1, SYS_70@1.1.1, SYS_72@1.1.1, SYS_73@1.1.1, SYS_74@1.1.1,
+    SYS_75@1.1.1, SYS_76@1.1.1, SYS_77@1.1.1, SYS_82@1.1.1, SYS_83@1.1.1, SYS_84@1.1.1,
+    SYS_88@1.1.1, SYS_94@1.1.1, SYS_95@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [analysis]
 - object_key: ARC_22
   object_version: '2.1.3'
