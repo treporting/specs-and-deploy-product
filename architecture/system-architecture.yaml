@@ -57,6 +57,87 @@ requirements:
   safety: ''
   status: draft
   verification_method: [test]
+- object_key: ARC_29
+  object_version: '1.1.1'
+  object_text: 'scope: name in every request the organization, the project, one subsystem and the
+    baseline, and answer it from that scope alone; refuse a request that names every subsystem (`*`),
+    with the reason'
+  source_ids: [SYS_9@2.1.1, SYS_20@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_30
+  object_version: '1.1.1'
+  object_text: 'process: take in a request the process reference model the data are read as, and name
+    the levels of the answer in its vocabulary'
+  source_ids: [SYS_14@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_31
+  object_version: '1.1.1'
+  object_text: 'narrowing: narrow the rows by function, feature, priority, safety class, platform,
+    launch and stream; `*` or nothing stands for every one'
+  source_ids: [SYS_9@2.1.1, SYS_83@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_32
+  object_version: '1.1.1'
+  object_text: 'level: take in a request the level the trace starts at, or the level counted, by its
+    key'
+  source_ids: [SYS_1@1.1.1, SYS_5@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_33
+  object_version: '1.1.1'
+  object_text: 'component: narrow a request on the code by component and by unit of the design'
+  source_ids: [SYS_1@1.1.1, SYS_82@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_34
+  object_version: '1.1.1'
+  object_text: 'above: send the levels above each row, up to the roots, only where the request asks
+    for them'
+  source_ids: [SYS_1@1.1.1, SYS_52@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_35
+  object_version: '1.1.1'
+  object_text: 'keys: send each cell as the keys of its objects with their states, or as the count per
+    state, as the request asks'
+  source_ids: [SYS_1@1.1.1, SYS_5@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_36
+  object_version: '1.1.1'
+  object_text: 'format: answer as JSON or as CSV, as the request asks'
+  source_ids: [SYS_31@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_37
+  object_version: '1.1.1'
+  object_text: 'refusal: refuse a request with a parameter it does not know, or a value it cannot
+    answer, with the reason (422); say that the data are not there yet, or that the data source cannot
+    be read, as such (503)'
+  source_ids: [SYS_29@1.1.1, SYS_34@1.1.1, SYS_37@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
 elements:
 - object_key: ARC_1
   object_version: '1.1.1'
@@ -176,11 +257,11 @@ elements:
   object_text: REST API
   between: viewer → reporter
   contract: swagger of the reporter
-  allocated: [
-    ARC_27@1.1.1]
+  allocated: [ARC_27@1.1.1, ARC_29@1.1.1, ARC_30@1.1.1, ARC_31@1.1.1, ARC_32@1.1.1, ARC_33@1.1.1,
+    ARC_34@1.1.1, ARC_35@1.1.1, ARC_36@1.1.1, ARC_37@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_12
   object_version: '1.1.1'
@@ -188,8 +269,7 @@ elements:
   object_text: '`StorageSource`'
   between: reporter → storage
   contract: Go interface of the storage
-  allocated: [
-    ARC_23@1.1.1, ARC_24@1.1.1, ARC_25@1.1.1, ARC_26@1.1.1, ARC_27@1.1.1]
+  allocated: [ARC_23@1.1.1, ARC_24@1.1.1, ARC_25@1.1.1, ARC_26@1.1.1, ARC_27@1.1.1]
   priority: 'medium'
   safety: ''
   status: draft
