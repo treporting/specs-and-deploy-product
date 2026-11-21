@@ -4,6 +4,59 @@ schema: schemas/system-architecture.schema.json
 type: architecture
 level: r3
 documents: [architecture/system-architecture.md, architecture/attributes.md]
+requirements:
+- object_key: ARC_23
+  object_version: '1.1.1'
+  object_text: 'mode database: keep the data sets in a database server of their own, which the
+    reporter reaches through `StorageSource`'
+  source_ids: [SYS_20@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_24
+  object_version: '1.1.1'
+  object_text: 'mode database with the reporter: keep the data sets in a database run together with
+    the reporter, where a database server of their own is not possible'
+  source_ids: [SYS_20@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_25
+  object_version: '1.1.1'
+  object_text: 'mode file: answer from a data file the reporter reads, where no database server can
+    be reached'
+  source_ids: [SYS_21@1.1.1, SYS_55@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_26
+  object_version: '1.1.1'
+  object_text: 'mode memory: answer from generated data in the memory of the reporter, for the demo
+    and the tests'
+  source_ids: [SYS_20@1.1.1, SYS_55@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_27
+  object_version: '1.1.1'
+  object_text: 'read every mode through `StorageSource`, and serve the viewer the same API from each'
+  source_ids: [SYS_19@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_28
+  object_version: '1.1.1'
+  object_text: 'answer, in a running reporter, from one mode only, chosen at its start'
+  source_ids: [SYS_20@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
 elements:
 - object_key: ARC_1
   object_version: '1.1.1'
@@ -39,7 +92,8 @@ elements:
     SYS_52@1.1.1, SYS_54@1.1.1, SYS_55@1.1.1, SYS_56@1.1.1, SYS_58@1.1.1, SYS_59@1.1.1,
     SYS_63@1.1.1, SYS_64@1.1.1, SYS_65@1.1.1, SYS_66@1.1.1, SYS_67@1.1.1, SYS_68@2.1.1,
     SYS_70@1.1.1, SYS_71@1.1.1, SYS_72@1.1.1, SYS_73@1.1.1, SYS_74@1.1.1, SYS_75@1.1.1,
-    SYS_76@1.1.1]
+    SYS_76@1.1.1,
+    ARC_23@1.1.1, ARC_24@1.1.1, ARC_25@1.1.1, ARC_26@1.1.1, ARC_27@1.1.1, ARC_28@1.1.1]
   priority: 'medium'
   safety: ''
   status: draft
@@ -59,7 +113,8 @@ elements:
     SYS_38@1.1.1, SYS_40@1.1.1, SYS_41@2.1.1, SYS_42@1.1.1, SYS_43@1.1.1, SYS_44@1.1.1,
     SYS_49@1.1.1, SYS_51@1.1.1, SYS_52@1.1.1, SYS_53@1.1.1, SYS_54@1.1.1, SYS_55@1.1.1,
     SYS_60@1.1.1, SYS_62@1.1.1, SYS_63@1.1.1, SYS_64@1.1.1, SYS_65@1.1.1, SYS_66@1.1.1,
-    SYS_68@2.1.1, SYS_69@1.1.1, SYS_74@1.1.1, SYS_75@1.1.1]
+    SYS_68@2.1.1, SYS_69@1.1.1, SYS_74@1.1.1, SYS_75@1.1.1,
+    ARC_23@1.1.1, ARC_24@1.1.1, ARC_25@1.1.1, ARC_26@1.1.1]
   priority: 'medium'
   safety: ''
   status: draft
@@ -115,6 +170,7 @@ elements:
   object_text: REST API
   between: viewer → reporter
   contract: swagger of the reporter
+  allocated: [ARC_27@1.1.1]
   priority: 'medium'
   safety: ''
   status: draft
@@ -125,6 +181,7 @@ elements:
   object_text: '`StorageSource`'
   between: reporter → storage
   contract: Go interface of the storage
+  allocated: [ARC_23@1.1.1, ARC_24@1.1.1, ARC_25@1.1.1, ARC_26@1.1.1, ARC_27@1.1.1]
   priority: 'medium'
   safety: ''
   status: draft
