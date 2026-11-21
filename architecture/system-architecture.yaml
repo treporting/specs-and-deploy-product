@@ -65,7 +65,7 @@ requirements:
   source_ids: [SYS_9@2.1.1, SYS_20@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_30
   object_version: '1.1.1'
@@ -74,7 +74,7 @@ requirements:
   source_ids: [SYS_14@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_31
   object_version: '1.1.1'
@@ -83,7 +83,7 @@ requirements:
   source_ids: [SYS_9@2.1.1, SYS_83@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_32
   object_version: '1.1.1'
@@ -92,7 +92,7 @@ requirements:
   source_ids: [SYS_1@1.1.1, SYS_5@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_33
   object_version: '1.1.1'
@@ -100,7 +100,7 @@ requirements:
   source_ids: [SYS_1@1.1.1, SYS_82@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_34
   object_version: '1.1.1'
@@ -109,7 +109,7 @@ requirements:
   source_ids: [SYS_1@1.1.1, SYS_52@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_35
   object_version: '1.1.1'
@@ -118,7 +118,7 @@ requirements:
   source_ids: [SYS_1@1.1.1, SYS_5@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_36
   object_version: '1.1.1'
@@ -126,7 +126,7 @@ requirements:
   source_ids: [SYS_31@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_37
   object_version: '1.1.1'
@@ -136,7 +136,7 @@ requirements:
   source_ids: [SYS_29@1.1.1, SYS_34@1.1.1, SYS_37@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 elements:
 - object_key: ARC_1
@@ -261,7 +261,7 @@ elements:
     ARC_34@1.1.1, ARC_35@1.1.1, ARC_36@1.1.1, ARC_37@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_12
   object_version: '1.1.1'
