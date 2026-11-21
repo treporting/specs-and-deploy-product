@@ -366,11 +366,22 @@ elements:
   safety: ''
   status: approved
   verification_method: [analysis]
-- object_key: ARC_11
+- object_key: ARC_51
   object_version: '1.1.1'
+  kind: subsystem
+  repo: trace/mcp
+  object_text: 'answers an assistant what the viewer shows, from the reporter over the REST API; names
+    with every answer the view and the filters that show the same'
+  allocated: [SYS_99@1.1.1, SYS_100@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [analysis]
+- object_key: ARC_11
+  object_version: '1.1.2'
   kind: interface
   object_text: REST API
-  between: viewer → reporter
+  between: viewer, mcp → reporter
   contract: swagger of the reporter
   allocated: [ARC_27@1.1.1, ARC_29@1.1.1, ARC_30@1.1.1, ARC_31@1.1.1, ARC_32@1.1.1, ARC_33@1.1.1,
     ARC_34@1.1.1, ARC_35@1.1.1, ARC_36@1.1.1, ARC_37@1.1.1]
@@ -470,6 +481,16 @@ elements:
   priority: 'medium'
   safety: ''
   status: draft
+  verification_method: [analysis]
+- object_key: ARC_52
+  object_version: '1.1.1'
+  kind: interface
+  object_text: Model Context Protocol
+  between: assistant → mcp
+  contract: the tools of the MCP server, one per view
+  priority: 'medium'
+  safety: ''
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_21
   object_version: '1.4.1'
