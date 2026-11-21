@@ -153,7 +153,7 @@ counting, the trace - is the reporter's, the same for every mode.
 
 | What goes across | Needed for | SYS |
 |---|---|---|
-| the names of every scope: organizations, vehicle projects and their subsystems, releases, libraries (ARC_38) | the lists to choose from; refusing a scope that does not exist | SYS_9, SYS_20 |
+| the names of every scope: organizations, requirements projects and their subsystems, releases, libraries (ARC_38) | the lists to choose from; refusing a scope that does not exist | SYS_9, SYS_20 |
 | each baseline with its project, start and end; for a library the release it went into (ARC_39) | the baselines over time, the libraries in their order | SYS_17 |
 | every object with its scope, its key, its level by key and its state, as read and mapped (ARC_40) | the answer from one scope; the states and their counts | SYS_1, SYS_5, SYS_8, SYS_20 |
 | the links downward, each object once however many link to it (ARC_41) | the trace down, the missing places | SYS_1, SYS_2, SYS_6, SYS_12, SYS_13 |
@@ -161,7 +161,7 @@ counting, the trace - is the reporter's, the same for every mode.
 | on every level function, feature, priority, safety class, platform, launch and stream; the mapped value of priority and of platform and launch (ARC_43) | narrowing | SYS_9, SYS_11 |
 | per requirement its verification method, and per level whether it is verified (ARC_44) | a missing test case | SYS_2, SYS_73 |
 | per object its component and unit, and the components with their units (ARC_45) | narrowing the code | SYS_1 |
-| per vehicle project its head: the levels in order, with key, name and views (ARC_46) | the levels of the trace | SYS_14, SYS_49 |
+| per requirements project its head: the levels in order, with key, name and views (ARC_46) | the levels of the trace | SYS_14, SYS_49 |
 | the work products with baseline, revision, level, kind and store, and the stores with their work products (ARC_47) | the work products of a baseline | SYS_15 |
 | the name of the data set | the data set on every view | SYS_18 |
 | per baseline the version of code and test procedures, and what changed | the changes of a baseline | SYS_16 |

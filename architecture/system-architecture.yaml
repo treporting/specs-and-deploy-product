@@ -140,7 +140,7 @@ requirements:
   verification_method: [test]
 - object_key: ARC_38
   object_version: '1.1.1'
-  object_text: 'scope names: hand the names of every scope - organizations, vehicle projects and
+  object_text: 'scope names: hand the names of every scope - organizations, requirements projects and
     their subsystems, releases, libraries'
   source_ids: [SYS_9@2.1.1, SYS_20@1.1.1]
   priority: 'medium'
@@ -211,7 +211,7 @@ requirements:
   verification_method: [test]
 - object_key: ARC_46
   object_version: '1.1.1'
-  object_text: 'head: hand per vehicle project its head - the levels in order, with key, name and
+  object_text: 'head: hand per requirements project its head - the levels in order, with key, name and
     views'
   source_ids: [SYS_14@1.1.1, SYS_49@1.2.1]
   priority: 'medium'
