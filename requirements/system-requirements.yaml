@@ -921,9 +921,9 @@ requirements:
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_84
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   feature: Maturity
-  object_text: show the objects of the view maturity per feature
+  object_text: show the data grouped by feature, one group per feature
   source_ids: [UN_SCOPE_4@1.1.1]
   priority: 'medium'
   safety: ''
