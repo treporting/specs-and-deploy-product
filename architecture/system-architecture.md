@@ -12,6 +12,7 @@ flowchart LR
   conf[/configuration<br>of the customer/]
   idp[proxy or identity provider]
   user((user))
+  assistant((assistant))
 
   subgraph treporting
     exsys[extractor-SYSTEM<br>one per system]
@@ -20,6 +21,7 @@ flowchart LR
     stor[storage-trace<br>import]
     rep[reporter-trace]
     view[viewer-trace]
+    mcp[mcp-trace]
   end
 
   files -- ARC_14 --> exsys
@@ -33,6 +35,8 @@ flowchart LR
   stor -- ARC_12 --> rep
   rep -- ARC_11 --> view
   view --> user
+  rep -- ARC_11 --> mcp
+  mcp -- ARC_52 --> assistant
   idp -- ARC_17 --> rep
   rep -- ARC_18 --> stor
 ```
@@ -47,6 +51,7 @@ flowchart LR
 | converter-trace | ARC_4 |
 | extractor-content | ARC_5 |
 | extractor-SYSTEM | ARC_6 |
+| mcp-trace | ARC_51 |
 
 There are two kinds of system:
 
@@ -101,9 +106,9 @@ uplink. The elements, the requirements, the allocation and the ids of rationale 
 Each interface between two subsystems, with what passes over it. Its requirements are in
 [system-architecture.yaml](system-architecture.yaml).
 
-### ARC_11 REST API (viewer-trace → reporter-trace)
+### ARC_11 REST API (viewer-trace, mcp-trace → reporter-trace)
 
-The viewer asks the reporter over a REST API. The technical form is the swagger of the reporter;
+The viewer and the MCP server ask the reporter over a REST API. The technical form is the swagger of the reporter;
 this section says what goes across it. Every request names its scope (ARC_29) and may name the
 process reference model (ARC_30); the routes on the trace and the states narrow the rows (ARC_31),
 by level (ARC_32) and, on the code, by component and unit (ARC_33). Every answer comes as JSON or
@@ -168,6 +173,12 @@ counting, the trace - is the reporter's, the same for every mode.
 | the code coverage level sc1, as a level | the chain of maturity | SYS_49 |
 | a failed read apart from a read with no data, with the error (ARC_48) | the refusal with the reason | SYS_29, SYS_37, SYS_38 |
 | that the data set is still being filled (ARC_49) | refusing while the data are not there | SYS_34, SYS_54 |
+
+### ARC_52 Model Context Protocol (assistant → mcp-trace)
+
+An assistant asks the MCP server over the Model Context Protocol. The server offers one tool per
+view of the viewer; each tool asks the reporter over the REST API (ARC_11) and answers its figures
+as the view shows them (SYS_99), with the view and the filters that show the same (SYS_100).
 
 ## Rationale
 
@@ -362,3 +373,4 @@ architecture to the subsystems and interfaces, is the field `allocated` of each 
 | 12.1.1 | 2026-11-21 | The interface ARC_11 REST API: its routes and its requirements | #37 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 13.1.1 | 2026-11-21 | The interface ARC_12 StorageSource: what goes across and its requirements | #37 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 14.1.1 | 2026-11-21 | ARCD_3: the requirement it made possible is ARC_50 | #39 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 15.1.1 | 2026-11-21 | The MCP server: the subsystem ARC_51 and its interface ARC_52; ARC_11 serves it too | #45 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
