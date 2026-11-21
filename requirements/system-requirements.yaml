@@ -1082,7 +1082,7 @@ requirements:
   source_ids: [UN_USE_6@1.1.1]
   priority: 'medium'
   safety: ''
-  status: review
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_100
@@ -1092,6 +1092,6 @@ requirements:
   source_ids: [UN_USE_6@1.1.1]
   priority: 'medium'
   safety: ''
-  status: review
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
