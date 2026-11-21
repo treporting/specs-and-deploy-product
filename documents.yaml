@@ -22,7 +22,7 @@ documents:
   level: r2
   object_version: '8.1.1'
   object_hash: '76d611a'
-  status: approved
+  status: draft
   verification_method: [review]
 - name: architecture/system-architecture.md
   type: explanation

@@ -97,7 +97,7 @@ controls:
   object_version: '1.1.1'
   object_text: every import is counted on a way of its own, and every error is reported
   source_ids: [HAZ_4@1.1.1]
-  controls: [SYS_22@1.1.1, SYS_23@1.1.1, SYS_26@1.1.1]
+  controls: [SYS_22@1.1.1, SYS_23@2.1.1, SYS_26@2.1.1]
   priority: 'medium'
   status: draft
   verification_method: [analysis]
