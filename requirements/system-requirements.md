@@ -95,15 +95,10 @@ so that 100 % can always be reached.
 
 ## Modes of operation
 
-treporting runs in one of four modes. Each serves the same API to the viewer; they differ in where
-the data lies.
-
-| Mode | Data | Used |
-|---|---|---|
-| a) database | a database server of its own, which the reporter reaches | the normal case |
-| b) database with the reporter | a database run together with the reporter | where a) is not possible |
-| c) file | a data file the reporter reads | where b) is not possible - no database server can be reached |
-| d) memory | synthetic data in the memory of the reporter | the demo and tests |
+treporting runs in one of four modes of operation - database, database with the reporter, file,
+memory. They differ in where the data lies, and are set by the architecture: ARC_23 to ARC_28 in
+[system-architecture.yaml](../architecture/system-architecture.yaml), described with the interface
+ARC_12 in [system-architecture.md](../architecture/system-architecture.md).
 
 ## Performance
 
@@ -151,3 +146,4 @@ against criteria; the verification method says how its realization is shown to m
 | 7.1.1 | 2026-11-13 | Modes of operation | specs-and-deploy-process#621 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 8.1.1 | 2026-11-17 | Keys without a leading zero | specs-and-deploy-process#679 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 9.1.1 | 2026-11-21 | Integrity: source system, not source | #33 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 10.1.1 | 2026-11-21 | Modes of operation: set by the architecture | #34 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
