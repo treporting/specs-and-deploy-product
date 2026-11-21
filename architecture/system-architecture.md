@@ -81,7 +81,8 @@ division there needs no interface of r3.
 **Rejected**: trace as the subsystem, with viewer, reporter and converter as its components -
 they are delivered on their own and talk over interfaces, which a component has not.
 The allocation is in this file: the system requirements allocated to a subsystem are
-its requirements, derived directly from r2, with no ids of their own. The document is written
+its requirements, derived directly from r2, with no ids of their own. The requirements of the
+architecture on a subsystem or an interface stand beside them, with ids of their own. The document is written
 for whoever derives the software requirements of a subsystem (r5) from it.
 
 The terms - system, item, content, work product, release, library, baseline - are those of
@@ -89,10 +90,24 @@ The terms - system, item, content, work product, release, library, baseline - ar
 Process of [harness.md](https://github.com/treporting/specs-and-deploy-process/blob/main/harness.md); this file is r3, the architecture definition of
 ISO/IEC/IEEE 12207, 6.4.4.
 
-The ids are `ARC_n` for the subsystems and interfaces, `ARCR_n` for the rationale and
+The ids are `ARC_n` for the subsystems, the interfaces and the requirements of the architecture on
+them, `ARCR_n` for the rationale and
 `ARCD_n` for the decisions; a requirement that a decision made possible names it as its
-uplink. The elements, the allocation and the ids of rationale and decisions are in
+uplink. The elements, the requirements, the allocation and the ids of rationale and decisions are in
 [system-architecture.yaml](system-architecture.yaml), in the format of [formats.md](https://github.com/treporting/specs-and-deploy-process/blob/main/formats.md).
+
+## Interfaces
+
+Each interface between two subsystems, with what passes over it. Its requirements are in
+[system-architecture.yaml](system-architecture.yaml).
+
+### ARC_12 StorageSource (reporter-trace → storage-trace)
+
+The reporter reads the data sets of the storage through `StorageSource`, a Go interface of the
+storage. Behind it, the storage holds the data in one of four modes of operation: in a database
+server of its own (ARC_23), in a database run together with the reporter (ARC_24), in a data file
+(ARC_25), or as generated data in the memory of the reporter (ARC_26). The reporter answers the
+same from each (ARC_27), and from one mode only while it runs (ARC_28).
 
 ## Rationale
 
@@ -244,7 +259,9 @@ and the duty of keeping passwords.
 
 ## Allocation
 
-The allocation of every system requirement to the subsystems is the field `allocated` of each subsystem in [system-architecture.yaml](system-architecture.yaml).
+The allocation of every system requirement to the subsystems, and of every requirement of the
+architecture to the subsystems and interfaces, is the field `allocated` of each of them in
+[system-architecture.yaml](system-architecture.yaml).
 
 ## Open
 
@@ -254,6 +271,9 @@ The allocation of every system requirement to the subsystems is the field `alloc
   per repo.
 - `treporting = 1_demo` - **Repos**: the repos of extractor-content and of the extractors per system
   are not created yet. reporter-annotations becomes the package annotations of extractor-content.
+
+- `treporting = 1_demo` - **Interfaces**: the sections of ARC_11 and of ARC_13 to ARC_20 are not
+  written yet.
 
 ## Change history
 
@@ -269,3 +289,4 @@ The allocation of every system requirement to the subsystems is the field `alloc
 | 8.1.1 | 2026-11-19 | Where a subsystem lives is the field repo of its element; Table subsystems: no short forms | #28 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 9.1.1 | 2026-11-20 | The rule that tells a subsystem from a component; storage-trace; the folder of a subsystem | #30 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 10.1.1 | 2026-11-21 | Source system, not source; the interface StorageSource | #33 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 11.1.1 | 2026-11-21 | Requirements of the architecture; the modes of operation; Interfaces, with ARC_12 | #34 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
