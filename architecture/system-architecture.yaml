@@ -244,6 +244,15 @@ requirements:
   safety: ''
   status: approved
   verification_method: [test]
+- object_key: ARC_50
+  object_version: '1.1.1'
+  object_text: 'derived values again: make the derived values of a stored data set again on request
+    when a rule changes, back in time, without fetching the data from the source systems again'
+  source_ids: [ARCD_3@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
 elements:
 - object_key: ARC_1
   object_version: '1.1.1'
@@ -288,7 +297,7 @@ elements:
   status: approved
   verification_method: [analysis]
 - object_key: ARC_3
-  object_version: '1.1.1'
+  object_version: '1.2.1'
   kind: subsystem
   repo: trace/storage
   object_text: 'the model, the data sets and the `StorageSource` interface over them - a database branch, generated
@@ -304,11 +313,11 @@ elements:
     SYS_41@2.1.1, SYS_42@1.1.1, SYS_43@1.1.1, SYS_44@1.1.1, SYS_45@2.1.1, SYS_46@1.1.1, SYS_47@1.1.1,
     SYS_48@1.1.1, SYS_49@1.2.1, SYS_50@1.1.1, SYS_51@1.1.1, SYS_52@1.1.1, SYS_53@1.1.1, SYS_54@1.1.1,
     SYS_55@1.1.1, SYS_60@1.1.1, SYS_62@1.1.1, SYS_63@1.1.1, SYS_64@1.1.1, SYS_65@1.1.1, SYS_66@1.1.1,
-    SYS_68@2.1.1, SYS_69@1.1.1, SYS_70@1.1.1, SYS_71@1.1.1, SYS_72@1.1.1, SYS_73@1.1.1, SYS_74@1.1.1,
+    SYS_68@2.1.1, SYS_70@1.1.1, SYS_71@1.1.1, SYS_72@1.1.1, SYS_73@1.1.1, SYS_74@1.1.1,
     SYS_75@1.1.1, SYS_76@1.1.1, SYS_77@1.1.1, SYS_78@1.1.1, SYS_79@1.1.1, SYS_80@1.1.1, SYS_81@1.1.1,
     SYS_82@1.1.1, SYS_83@1.1.1, SYS_84@1.1.1, SYS_85@1.1.1, SYS_88@1.1.1, SYS_89@1.1.1, SYS_90@1.1.1,
     SYS_92@1.1.1, SYS_93@1.1.1, SYS_94@1.1.1, SYS_95@1.1.1, SYS_96@1.1.1, SYS_97@1.1.1,
-    ARC_23@1.1.1, ARC_24@1.1.1, ARC_25@1.1.1, ARC_26@1.1.1]
+    ARC_23@1.1.1, ARC_24@1.1.1, ARC_25@1.1.1, ARC_26@1.1.1, ARC_50@1.1.1]
   priority: 'medium'
   safety: ''
   status: approved
@@ -463,7 +472,7 @@ elements:
   status: draft
   verification_method: [analysis]
 - object_key: ARC_21
-  object_version: '1.2.1'
+  object_version: '1.3.1'
   kind: model
   object_text: the information model - the common language of converter, storage and reporter; the common
     contract of ARC_12, ARC_13 and ARC_18
@@ -473,9 +482,10 @@ elements:
     SYS_15@1.1.1, SYS_16@1.1.1, SYS_17@1.1.1, SYS_18@2.1.1, SYS_20@1.1.1, SYS_22@1.1.1,
     SYS_23@2.1.1, SYS_25@2.1.1, SYS_26@2.1.1, SYS_28@1.1.1, SYS_32@1.1.1, SYS_36@1.1.1,
     SYS_40@1.1.1, SYS_41@2.1.1, SYS_43@1.1.1, SYS_45@2.1.1, SYS_47@1.1.1, SYS_49@1.2.1,
-    SYS_68@2.1.1, SYS_69@1.1.1, SYS_70@1.1.1, SYS_72@1.1.1, SYS_73@1.1.1, SYS_74@1.1.1,
+    SYS_68@2.1.1, SYS_70@1.1.1, SYS_72@1.1.1, SYS_73@1.1.1, SYS_74@1.1.1,
     SYS_75@1.1.1, SYS_76@1.1.1, SYS_77@1.1.1, SYS_82@1.1.1, SYS_83@1.1.1, SYS_84@1.1.1,
-    SYS_88@1.1.1, SYS_94@1.1.1, SYS_95@1.1.1]
+    SYS_88@1.1.1, SYS_94@1.1.1, SYS_95@1.1.1,
+    ARC_50@1.1.1]
   priority: 'medium'
   safety: ''
   status: approved
@@ -496,18 +506,24 @@ decisions:
 - object_key: ARCR_1
   object_version: '1.1.1'
   object_text: Read only
+  status: approved
 - object_key: ARCD_1
   object_version: '2.1.1'
   object_text: Independent count (SYS_23)
+  status: approved
 - object_key: ARCD_2
   object_version: '2.1.1'
   object_text: Import record (SYS_26, SYS_41)
+  status: approved
 - object_key: ARCD_3
   object_version: '2.1.1'
   object_text: Original and derived values (SYS_11)
+  status: approved
 - object_key: ARCD_4
   object_version: '2.1.1'
   object_text: Configuration instead of code for the customer (SYS_22)
+  status: approved
 - object_key: ARCD_5
   object_version: '3.1.1'
   object_text: Identity (SYS_39)
+  status: approved
