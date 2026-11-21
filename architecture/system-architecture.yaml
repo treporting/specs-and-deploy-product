@@ -12,7 +12,7 @@ requirements:
   source_ids: [SYS_20@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_24
   object_version: '1.1.1'
@@ -21,7 +21,7 @@ requirements:
   source_ids: [SYS_20@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_25
   object_version: '1.1.1'
@@ -30,7 +30,7 @@ requirements:
   source_ids: [SYS_21@1.1.1, SYS_55@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_26
   object_version: '1.1.1'
@@ -39,7 +39,7 @@ requirements:
   source_ids: [SYS_20@1.1.1, SYS_55@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_27
   object_version: '1.1.1'
@@ -47,7 +47,7 @@ requirements:
   source_ids: [SYS_19@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_28
   object_version: '1.1.1'
@@ -55,7 +55,7 @@ requirements:
   source_ids: [SYS_20@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_29
   object_version: '1.1.1'
