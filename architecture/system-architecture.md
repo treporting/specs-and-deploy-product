@@ -146,6 +146,34 @@ server of its own (ARC_23), in a database run together with the reporter (ARC_24
 (ARC_25), or as generated data in the memory of the reporter (ARC_26). The reporter answers the
 same from each (ARC_27), and from one mode only while it runs (ARC_28).
 
+The storage hands the reporter rows; what a route makes of them - the states, the counting, the
+trace - is the reporter's, the same for every mode. Every method may fail, and a read that fails is
+said as such and never answered empty (ARC_41).
+
+**Table methods** - the methods of `StorageSource`, what each answers, and what it is narrowed by
+
+| Method | Answers | Narrowed by |
+|---|---|---|
+| Hierarchy | the organizations, their projects, releases and subsystems - the lists the filters offer | - (every scope) |
+| Projects | the projects | - |
+| Baselines | the releases and libraries | - |
+| Components | the components of the design and their units | - |
+| Systems | the systems and what each holds | organization |
+| Artifacts | the work products | organization |
+| Tree | the requirement tree of one release, below the subsystem only what its library carries | the scope (ARC_38) |
+| Roots | the roots of one release, with the test cases on them | the scope (ARC_38) |
+| Hazards | the hazards of one release, each with its measures | the scope (ARC_38) |
+| Normatives | the clauses of a standard in one release, with the requirements that address each | the scope (ARC_38) |
+| ScopedReduced | the objects of a scope, with the fields the maturity reads, of the types asked for | the scope (ARC_38), the types |
+| Describe | which data set it answers from - generated, a data file or a database branch (ARC_39) | - |
+| Header | the head of a project: its levels as the columns of the trace (ARC_40) | organization, project |
+| LevelCounts | the levels the data of a project carries, with how many objects each (ARC_40) | organization, project |
+| Counts | how many objects of each type it holds (ARC_39) | - |
+
+A method narrows by what every route that reads it narrows by, and no further: a route that builds
+a map out of the links - the parent of a requirement, the deliveries of a baseline - reads every
+row, as a link may cross an organization.
+
 ## Rationale
 
 The principles every decision below follows.
@@ -330,3 +358,4 @@ architecture to the subsystems and interfaces, is the field `allocated` of each 
 | 10.1.1 | 2026-11-21 | Source system, not source; the interface StorageSource | #33 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 11.1.1 | 2026-11-21 | Requirements of the architecture; the modes of operation; Interfaces, with ARC_12 | #34 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 12.1.1 | 2026-11-21 | The interface ARC_11 REST API: its routes and its requirements | #37 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 13.1.1 | 2026-11-21 | The interface ARC_12 StorageSource: its methods and its requirements | #37 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
