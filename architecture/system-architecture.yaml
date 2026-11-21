@@ -463,7 +463,7 @@ elements:
   status: draft
   verification_method: [analysis]
 - object_key: ARC_21
-  object_version: '1.1.1'
+  object_version: '1.2.1'
   kind: model
   object_text: the information model - the common language of converter, storage and reporter; the common
     contract of ARC_12, ARC_13 and ARC_18
@@ -478,7 +478,7 @@ elements:
     SYS_88@1.1.1, SYS_94@1.1.1, SYS_95@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_22
   object_version: '2.1.3'
