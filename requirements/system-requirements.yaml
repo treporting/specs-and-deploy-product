@@ -245,10 +245,10 @@ requirements:
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_23
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   feature: Integrity
   object_text: count at every import, per kind of object, per type of link and per state, at four points
-    - in the source by a query of its own, read, refused, and stored, counted from the storage afterwards
+    - in the source system by a query of its own, read, refused, and stored, counted from the storage afterwards
     - and name every difference
   source_ids: [UN_SAFETY_1@1.1.1, UN_SAFETY_4@1.1.1, REG_ISO26262-8_1@1.1.1, REG_IEC61508-3_1@1.1.1, REG_DO178C_1@1.1.1, REG_DO330_1@1.1.1]
   priority: 'medium'
@@ -257,9 +257,9 @@ requirements:
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_24
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   feature: Integrity
-  object_text: build the same data set from the same source on every import
+  object_text: build the same data set from the same source system on every import
   source_ids: [UN_SHARE_6@1.1.1, REG_ISO26262-8_1@1.1.1, REG_IEC61508-3_1@1.1.1, REG_DO178C_1@1.1.1, REG_DO330_1@1.1.1]
   priority: 'medium'
   safety: ''
@@ -267,9 +267,9 @@ requirements:
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_25
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   feature: Integrity
-  object_text: compare at every import a fingerprint of the fields that matter of each object in the source
+  object_text: compare at every import a fingerprint of the fields that matter of each object in the source system
     with the same object as stored, and name every object that differs
   source_ids: [UN_SAFETY_1@1.1.1, UN_SAFETY_2@1.1.1, REG_ISO26262-8_1@1.1.1, REG_IEC61508-3_1@1.1.1, REG_DO178C_1@1.1.1, REG_DO330_1@1.1.1]
   priority: 'medium'
@@ -278,10 +278,10 @@ requirements:
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_26
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   feature: Integrity
   object_text: mark every data set as complete, incomplete when its import showed a difference, or unverified
-    when its source could not be counted on a way of its own - on every view and in every report that
+    when its source system could not be counted on a way of its own - on every view and in every report that
     answers from it
   source_ids: [UN_SAFETY_2@1.1.1, UN_SAFETY_4@1.1.1, REG_ISO26262-8_1@1.1.1, REG_IEC61508-3_1@1.1.1, REG_DO178C_1@1.1.1, REG_DO330_1@1.1.1]
   priority: 'medium'
@@ -435,10 +435,10 @@ requirements:
   verification_method: [test]
   platform_launch: treporting = 3_selfhosted
 - object_key: SYS_41
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   feature: Audit
   object_text: record and show every import and change of data - who, when, what - and keep the state before it;
-    the record of an import holds the source and its revision, the time, who started it, the version of
+    the record of an import holds the source system and its revision, the time, who started it, the version of
     the converter, the counts at the four points of SYS_23, the objects refused with their reason, the
     result of the fingerprints of SYS_25 and the state of SYS_26
   source_ids: [UN_EVIDENCE_2@1.1.2, REG_CFR21-11_1@1.1.1, REG_FDADI_1@1.1.1]
@@ -743,9 +743,9 @@ requirements:
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_68
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   feature: Derived values
-  object_text: keep every value as read from its source, and keep a value it derives beside it under a
+  object_text: keep every value as read from its source system, and keep a value it derives beside it under a
     name of its own - `M` for mapped, also from the parent where the original is empty; `I` for an intermediate
     form of the status -, and say on every view which of the two it shows
   source_ids: [UN_SAFETY_5@1.1.1, UN_TRACE_6@1.1.1, REG_FDADI_1@1.1.1]
