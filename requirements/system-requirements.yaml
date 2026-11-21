@@ -927,7 +927,7 @@ requirements:
   source_ids: [UN_SCOPE_4@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: review
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_85
