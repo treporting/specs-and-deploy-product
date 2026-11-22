@@ -270,7 +270,7 @@ requirements:
     assistant can read
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 elements:
 - object_key: ARC_1
@@ -503,7 +503,7 @@ elements:
   status: draft
   verification_method: [analysis]
 - object_key: ARC_52
-  object_version: '1.2.1'
+  object_version: '1.3.1'
   kind: interface
   object_text: Model Context Protocol
   between: assistant → mcp
@@ -511,7 +511,7 @@ elements:
   allocated: [ARC_53@1.1.1, ARC_54@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_21
   object_version: '1.4.1'
