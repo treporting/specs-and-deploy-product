@@ -291,6 +291,191 @@ requirements:
   safety: ''
   status: approved
   verification_method: [test]
+- object_key: ARC_57
+  object_version: '1.1.1'
+  object_text: 'baselines: list the baselines the system holds - for a file-based system its tags
+    and branches - each with its identity in the system and its date'
+  source_ids: [SYS_17@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_58
+  object_version: '1.1.1'
+  object_text: 'listing and fetching: list and fetch what a baseline holds, as it is in that
+    baseline, with its identity in the system - revision, commit'
+  source_ids: [SYS_15@1.1.1, SYS_22@1.1.1, SYS_24@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_59
+  object_version: '1.1.1'
+  object_text: 'count of its own: count what a baseline holds per kind by a query of its own, in
+    code apart from the listing and fetching'
+  source_ids: [SYS_23@2.1.1, ARCD_1@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_60
+  object_version: '1.1.1'
+  object_text: 'read only: never write into the system'
+  source_ids: [ARCR_1@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_61
+  object_version: '1.1.1'
+  object_text: 'access error: say a system that cannot be reached, or a fetch that fails, with the
+    cause'
+  source_ids: [SYS_22@1.1.1, SYS_38@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_62
+  object_version: '1.1.1'
+  object_text: 'baseline first: name the baseline - its name and its date - before its files'
+  source_ids: [SYS_8@1.1.1, SYS_17@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_63
+  object_version: '1.1.1'
+  object_text: 'file: hand each file with its path, its content, its kind and its identity in the
+    system - the system, the revision of the file'
+  source_ids: [SYS_15@1.1.1, SYS_24@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_64
+  object_version: '1.1.1'
+  object_text: 'end: say when the files of a baseline are all handed over, so that what spans
+    several files - a link - is made after the last'
+  source_ids: [SYS_2@1.1.1, SYS_12@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_65
+  object_version: '1.1.1'
+  object_text: 'objects: hand every object read - requirement, test case, test procedure, test
+    result, piece of code - with its scope, key, level, state and the person responsible, as read;
+    test cases, procedures and results as kinds apart'
+  source_ids: [SYS_7@1.1.1, SYS_8@1.1.1, SYS_22@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_66
+  object_version: '1.1.1'
+  object_text: 'links: hand every link read, with its type and its two ends, also where an end is
+    missing'
+  source_ids: [SYS_2@1.1.1, SYS_12@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_67
+  object_version: '1.1.1'
+  object_text: 'work products: hand each file read as a work product with its baseline, revision,
+    level, kind and store'
+  source_ids: [SYS_15@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_68
+  object_version: '1.1.1'
+  object_text: 'reviews and findings: hand per work product its status, its approval and its reviews
+    - criteria, result per criterion, reviewer, time, revision reviewed -, and every finding of the
+    customer with its evaluation'
+  source_ids: [SYS_72@1.1.1, SYS_74@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_69
+  object_version: '1.1.1'
+  object_text: 'as read: hand every value as the file holds it, an unknown value apart from an empty
+    one; derive none'
+  source_ids: [SYS_28@1.1.1, ARCD_3@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_70
+  object_version: '1.1.1'
+  object_text: 'refused: name every object it could not read, with the reason'
+  source_ids: [SYS_22@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_71
+  object_version: '1.1.1'
+  object_text: 'counted: hand per kind of object, per type of link and per state how many were read
+    and how many refused'
+  source_ids: [SYS_23@2.1.1, ARCD_2@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_72
+  object_version: '1.1.1'
+  object_text: 'errors: hand its errors and warnings with time and cause'
+  source_ids: [SYS_38@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_73
+  object_version: '1.1.1'
+  object_text: 'one import: take the information of every system the same way, into the model of
+    ARC_21'
+  source_ids: [SYS_22@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_74
+  object_version: '1.1.1'
+  object_text: 'same data set: build from the same information the same data set on every import'
+  source_ids: [SYS_24@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_75
+  object_version: '1.1.1'
+  object_text: 'stored count: count what was stored from the storage after the import, apart from
+    the counts handed in'
+  source_ids: [SYS_23@2.1.1, ARCD_1@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_76
+  object_version: '1.1.1'
+  object_text: 'being filled: mark the data set as being filled until the import is done'
+  source_ids: [SYS_34@1.1.1, SYS_54@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_77
+  object_version: '1.1.1'
+  object_text: 'time: import a data set of size large, with the checks of Integrity, within the time
+    given'
+  source_ids: [SYS_53@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
 elements:
 - object_key: ARC_1
   object_version: '1.3.1'
@@ -447,9 +632,10 @@ elements:
   object_text: import
   between: converter, extractor-content → storage
   contract: Go interface of the storage
+  allocated: [ARC_73@1.1.1, ARC_74@1.1.1, ARC_75@1.1.1, ARC_76@1.1.1, ARC_77@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_14
   object_version: '1.1.1'
@@ -457,9 +643,10 @@ elements:
   object_text: system access
   between: extractor-SYSTEM → system
   contract: 'per system: listing and fetching, and a query of its own for counting'
+  allocated: [ARC_57@1.1.1, ARC_58@1.1.1, ARC_59@1.1.1, ARC_60@1.1.1, ARC_61@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_15
   object_version: '1.1.1'
@@ -467,9 +654,10 @@ elements:
   object_text: files
   between: extractor-SYSTEM → extractor-content
   contract: a file with its kind and its identity in the system
+  allocated: [ARC_62@1.1.1, ARC_63@1.1.1, ARC_64@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_16
   object_version: '1.1.1'
@@ -477,9 +665,11 @@ elements:
   object_text: information
   between: extractor-content → storage
   contract: the information extracted, per kind, over ARC_13; for annotations the format of formats.md
+  allocated: [ARC_65@1.1.1, ARC_66@1.1.1, ARC_67@1.1.1, ARC_68@1.1.1, ARC_69@1.1.1, ARC_70@1.1.1,
+    ARC_71@1.1.1, ARC_72@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_17
   object_version: '1.1.1'

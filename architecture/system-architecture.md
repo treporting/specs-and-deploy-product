@@ -175,6 +175,42 @@ counting, the trace - is the reporter's, the same for every mode.
 | a failed read apart from a read with no data, with the error (ARC_48) | the refusal with the reason | SYS_29, SYS_37, SYS_38 |
 | that the data set is still being filled (ARC_49) | refusing while the data are not there | SYS_34, SYS_54 |
 
+### ARC_14 system access (extractor-SYSTEM → system)
+
+The extractor of a system reaches the system per system: it lists the baselines the system holds -
+for a file-based system its tags and branches (ARC_57) - and lists and fetches what a baseline
+holds, with its identity in the system (ARC_58). It counts what a baseline holds by a query of its
+own, apart from the listing and fetching (ARC_59); a system with no count of its own, as GitHub
+over its REST API, does not meet it, and its data set is then unverified (ARCD_2). It never writes
+into the system (ARC_60, ARCR_1), and says a system it cannot reach, or a fetch that fails, with
+the cause (ARC_61).
+
+### ARC_15 files (extractor-SYSTEM → extractor-content)
+
+The extractor of a file-based system hands extractor-content the files of a baseline: first the
+baseline, its name and its date (ARC_62), then each file with its path, its content, its kind and
+its identity in the system (ARC_63), and at the end that the files are all handed over, so that
+what spans several files - a link - is made after the last (ARC_64). The release a library is
+delivered into is not handed over here; it is in the configuration (ARC_20).
+
+### ARC_16 information (extractor-content → storage)
+
+extractor-content hands the storage, over ARC_13, what it read from the files: the objects (ARC_65),
+the links, also where an end is missing (ARC_66), the files as work products (ARC_67), and per work
+product its reviews and the findings of the customer (ARC_68). Every value goes across as the file
+holds it, derived from nothing (ARC_69). What it could not read is named with the reason (ARC_70);
+what it read and refused is counted per kind, per type of link and per state (ARC_71); its errors
+and warnings go across with time and cause (ARC_72).
+
+### ARC_13 import (converter, extractor-content → storage)
+
+The storage takes the information of every system the same way, into the model of ARC_21 (ARC_73),
+and builds from the same information the same data set on every import (ARC_74). After the import
+it counts what it stored, apart from the counts handed in (ARC_75); until the import is done the
+data set is marked as being filled (ARC_76). A data set of size large is imported, with the checks
+of Integrity, within the time given (ARC_77). This section holds the part of extractor-content; the
+part of the converter is not written yet.
+
 ### ARC_52 Model Context Protocol (assistant → mcp-trace)
 
 An assistant asks the MCP server over the Model Context Protocol. The server offers one tool per
@@ -348,7 +384,8 @@ architecture to the subsystems and interfaces, is the field `allocated` of each 
 - `treporting = 1_demo` - **Repos**: the repos of extractor-content and of the extractors per system
   are not created yet. reporter-annotations becomes the package annotations of extractor-content.
 
-- `treporting = 1_demo` - **Interfaces**: the sections of ARC_13 to ARC_20 are not written yet.
+- `treporting = 1_demo` - **Interfaces**: the sections of ARC_17 to ARC_20 are not written yet;
+  of ARC_13 only the part of extractor-content.
   ARC_11 describes the routes there are; no route answers yet the findings of the plausibility
   check (SYS_71), the states of the code (SYS_77), a report of the views chosen (SYS_85), or the
   record of what users did (SYS_90).
@@ -383,3 +420,4 @@ architecture to the subsystems and interfaces, is the field `allocated` of each 
 | 17.1.1 | 2026-11-22 | ARC_52: its requirement ARC_54, the limit on the rows of an answer | #62 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 18.1.1 | 2026-11-22 | ARC_52: its requirement ARC_55, the organization; ARC_11: its requirement ARC_56, the newest baseline | #64 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 19.1.1 | 2026-11-22 | ARC_5: extractor-content is a plug-in that an extractor-system starts | #66 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 20.1.1 | 2026-11-22 | The file-based way into the storage: the sections of ARC_14, ARC_15, ARC_16 and ARC_13, and their requirements ARC_57 to ARC_77 | #69 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
