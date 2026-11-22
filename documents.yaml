@@ -27,8 +27,8 @@ documents:
 - name: architecture/system-architecture.md
   type: explanation
   level: r3
-  object_version: '15.1.1'
-  object_hash: '9900859'
+  object_version: '16.1.1'
+  object_hash: '389895c'
   status: approved
   verification_method: [review]
 - name: architecture/attributes.md
