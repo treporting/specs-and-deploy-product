@@ -57,7 +57,7 @@ There are two kinds of system:
 
 - **file-based** systems - SHAREPOINT, SVN, GIT, JFROG - only manage files: the content lies in
   the folders and files themselves. extractor-content reads it, with a package for each kind of
-  content and no plug-in mechanism.
+  content, as a plug-in: a program of its own that an extractor-system starts and hands the files to.
 - **attribute-based** systems - DOORS, JIRA, a DMS, CODEBEAMER - hold items whose attributes are
   customized by each customer. The converter maps those attributes to the model, by a
   configuration file of the customer.
@@ -382,3 +382,4 @@ architecture to the subsystems and interfaces, is the field `allocated` of each 
 | 16.1.1 | 2026-11-21 | ARC_52: its requirement ARC_53, one tool per view | #60 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 17.1.1 | 2026-11-22 | ARC_52: its requirement ARC_54, the limit on the rows of an answer | #62 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 18.1.1 | 2026-11-22 | ARC_52: its requirement ARC_55, the organization; ARC_11: its requirement ARC_56, the newest baseline | #64 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 19.1.1 | 2026-11-22 | ARC_5: extractor-content is a plug-in that an extractor-system starts | #66 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
