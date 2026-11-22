@@ -724,7 +724,7 @@ elements:
   kind: interface
   object_text: configuration
   between: customer → extractor-SYSTEM, extractor-content, converter, storage
-  contract: the mapping of attributes and of values, one file per system of a customer
+  contract: the mapping of attributes and of values; where a file, one per customer
   allocated: [ARC_78@1.1.1, ARC_79@1.1.1]
   priority: 'medium'
   safety: ''
