@@ -245,13 +245,13 @@ requirements:
   status: approved
   verification_method: [test]
 - object_key: ARC_50
-  object_version: '1.1.1'
+  object_version: '1.2.1'
   object_text: 'derived values again: make the derived values of a stored data set again on request
     when a rule changes, back in time, without fetching the data from the source systems again'
-  source_ids: [ARCD_3@2.1.1]
+  source_ids: [ARCD_3@3.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_53
   object_version: '1.1.1'
@@ -400,13 +400,13 @@ requirements:
   status: approved
   verification_method: [test]
 - object_key: ARC_69
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   object_text: 'as read: hand every value as the file holds it, an unknown value apart from an empty
     one, and beside it its mapped (`M`) and intermediate (`I`) value, which may be empty'
-  source_ids: [SYS_28@1.1.1, ARCD_3@2.1.1]
+  source_ids: [SYS_28@1.1.1, ARCD_3@3.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_70
   object_version: '1.1.1'
@@ -548,7 +548,7 @@ elements:
   status: approved
   verification_method: [analysis]
 - object_key: ARC_3
-  object_version: '1.4.1'
+  object_version: '2.1.1'
   kind: subsystem
   repo: trace/storage
   object_text: 'the model, the data sets and the `StorageSource` interface over them - a database branch, generated
@@ -571,7 +571,7 @@ elements:
     ARC_23@1.1.1, ARC_24@1.1.1, ARC_25@1.1.1, ARC_26@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_4
   object_version: '1.2.1'
@@ -794,13 +794,13 @@ decisions:
   object_text: Import record (SYS_26, SYS_41)
   status: approved
 - object_key: ARCD_3
-  object_version: '2.1.1'
+  object_version: '3.1.1'
   object_text: Original and derived values (SYS_11)
-  status: draft
+  status: approved
 - object_key: ARCD_4
-  object_version: '2.1.1'
+  object_version: '3.1.1'
   object_text: Configuration instead of code for the customer (SYS_22)
-  status: draft
+  status: approved
 - object_key: ARCD_5
   object_version: '3.1.1'
   object_text: Identity (SYS_39)
