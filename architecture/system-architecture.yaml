@@ -279,7 +279,7 @@ requirements:
   source_ids: [SYS_88@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_56
   object_version: '1.1.1'
@@ -289,7 +289,7 @@ requirements:
   rationale: whoever opens a view looks at the newest first
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 elements:
 - object_key: ARC_1
@@ -417,7 +417,7 @@ elements:
   status: approved
   verification_method: [analysis]
 - object_key: ARC_11
-  object_version: '1.1.2'
+  object_version: '1.2.1'
   kind: interface
   object_text: REST API
   between: viewer, mcp → reporter
@@ -426,7 +426,7 @@ elements:
     ARC_34@1.1.1, ARC_35@1.1.1, ARC_36@1.1.1, ARC_37@1.1.1, ARC_56@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_12
   object_version: '1.1.1'
@@ -522,7 +522,7 @@ elements:
   status: draft
   verification_method: [analysis]
 - object_key: ARC_52
-  object_version: '1.3.1'
+  object_version: '1.4.1'
   kind: interface
   object_text: Model Context Protocol
   between: assistant → mcp
@@ -530,7 +530,7 @@ elements:
   allocated: [ARC_53@1.1.1, ARC_54@1.1.1, ARC_55@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_21
   object_version: '1.4.1'
