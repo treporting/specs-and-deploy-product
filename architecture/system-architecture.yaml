@@ -585,15 +585,16 @@ elements:
   kind: subsystem
   repo: trace/extractor-content
   object_text: 'extracts the information the files of a file-based system hold - requirements, test
-    cases, test results, annotations -, with a package for each kind of content, as a plug-in: a program
-    of its own that an extractor-system starts and hands the files to. The package annotations reads
-    `@implements` and `@verifies` from Go files; it is the repo reporter-annotations today'
+    cases, test results, annotations -: it takes the files from the extractor of the system and hands
+    them to a package for each kind of content, each a plug-in, a program of its own that
+    extractor-content starts. The package annotations reads `@implements` and `@verifies` from Go
+    files; it is the repo reporter-annotations today'
   allocated: [SYS_2@1.1.1, SYS_7@1.1.1, SYS_8@1.1.1, SYS_12@1.1.1, SYS_15@1.1.1, SYS_17@1.1.1,
     SYS_22@1.1.1, SYS_23@2.1.1, SYS_24@2.1.1, SYS_27@1.1.1, SYS_28@1.1.1, SYS_38@1.1.1,
     SYS_53@1.1.1, SYS_64@1.1.1, SYS_72@1.1.1, SYS_74@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [analysis]
 - object_key: ARC_6
   object_version: '1.2.1'
