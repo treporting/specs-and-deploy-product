@@ -500,7 +500,7 @@ requirements:
   source_ids: [SYS_22@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 elements:
 - object_key: ARC_1
@@ -589,7 +589,7 @@ elements:
   status: approved
   verification_method: [analysis]
 - object_key: ARC_5
-  object_version: '3.1.1'
+  object_version: '3.2.1'
   kind: subsystem
   repo: trace/extractor-content
   object_text: 'extracts the information the files of a file-based system hold - requirements, test
@@ -602,7 +602,7 @@ elements:
     SYS_53@1.1.1, SYS_64@1.1.1, SYS_72@1.1.1, SYS_74@1.1.1, ARC_80@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_6
   object_version: '1.2.1'
