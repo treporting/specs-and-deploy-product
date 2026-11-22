@@ -179,6 +179,8 @@ counting, the trace - is the reporter's, the same for every mode.
 An assistant asks the MCP server over the Model Context Protocol. The server offers one tool per
 view of the viewer (ARC_53); each tool asks the reporter over the REST API (ARC_11) and answers its figures
 as the view shows them (SYS_99), with the view and the filters that show the same (SYS_100).
+An answer carries at most as many rows as the assistant names, 100 where it names none, and says
+how many rows it left out (ARC_54).
 
 ## Rationale
 
@@ -375,3 +377,4 @@ architecture to the subsystems and interfaces, is the field `allocated` of each 
 | 14.1.1 | 2026-11-21 | ARCD_3: the requirement it made possible is ARC_50 | #39 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 15.1.1 | 2026-11-21 | The MCP server: the subsystem ARC_51 and its interface ARC_52; ARC_11 serves it too | #45 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 16.1.1 | 2026-11-21 | ARC_52: its requirement ARC_53, one tool per view | #60 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 17.1.1 | 2026-11-22 | ARC_52: its requirement ARC_54, the limit on the rows of an answer | #62 | Claude Opus 5.5, author; Mathias Fischer, reviewer |

@@ -261,6 +261,17 @@ requirements:
   safety: ''
   status: approved
   verification_method: [test]
+- object_key: ARC_54
+  object_version: '1.1.1'
+  object_text: 'limit: answer at most as many rows as the assistant names, 100 where it names none,
+    and say how many rows were left out'
+  source_ids: [SYS_99@1.1.1]
+  rationale: the artifacts of one project are thousands of rows and megabytes, which is no answer an
+    assistant can read
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
 elements:
 - object_key: ARC_1
   object_version: '1.3.1'
@@ -497,10 +508,10 @@ elements:
   object_text: Model Context Protocol
   between: assistant → mcp
   contract: the tools of the MCP server, one per view
-  allocated: [ARC_53@1.1.1]
+  allocated: [ARC_53@1.1.1, ARC_54@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [analysis]
 - object_key: ARC_21
   object_version: '1.4.1'
