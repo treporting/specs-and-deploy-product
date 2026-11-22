@@ -581,7 +581,7 @@ elements:
   status: approved
   verification_method: [analysis]
 - object_key: ARC_5
-  object_version: '2.1.1'
+  object_version: '3.1.1'
   kind: subsystem
   repo: trace/extractor-content
   object_text: 'extracts the information the files of a file-based system hold - requirements, test
@@ -594,7 +594,7 @@ elements:
     SYS_53@1.1.1, SYS_64@1.1.1, SYS_72@1.1.1, SYS_74@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_6
   object_version: '1.2.1'

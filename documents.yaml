@@ -27,9 +27,9 @@ documents:
 - name: architecture/system-architecture.md
   type: explanation
   level: r3
-  object_version: '21.1.1'
-  object_hash: '885f641'
-  status: draft
+  object_version: '22.1.1'
+  object_hash: '9191b25'
+  status: approved
   verification_method: [review]
 - name: architecture/attributes.md
   type: explanation
