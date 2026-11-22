@@ -58,8 +58,9 @@ flowchart LR
 There are two kinds of system:
 
 - **file-based** systems - SHAREPOINT, SVN, GIT, JFROG - only manage files: the content lies in
-  the folders and files themselves. extractor-content reads it, with a package for each kind of
-  content, as a plug-in: a program of its own that an extractor-system starts and hands the files to.
+  the folders and files themselves. extractor-content reads it: it takes the files from the
+  extractor of the system and hands them to a package for each kind of content, each a plug-in, a
+  program of its own that extractor-content starts.
 - **attribute-based** systems - DOORS, JIRA, a DMS, CODEBEAMER - hold items whose attributes are
   customized by each customer. The converter maps those attributes to the model, by a
   configuration file of the customer.
@@ -467,3 +468,4 @@ architecture to the subsystems and interfaces, is the field `allocated` of each 
 | 19.1.1 | 2026-11-22 | ARC_5: extractor-content is a plug-in that an extractor-system starts | #66 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 20.1.1 | 2026-11-22 | The file-based way into the storage: the sections of ARC_14, ARC_15, ARC_16 and ARC_13, and their requirements ARC_57 to ARC_77 | #69 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 21.1.1 | 2026-11-22 | ARC_20: the configuration on both ways into the storage, its requirements ARC_78 and ARC_79, and the decision ARCD_6 | #68 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 22.1.1 | 2026-11-22 | ARC_5: extractor-content starts its packages as plug-ins | #72 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
