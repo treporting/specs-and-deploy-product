@@ -13,7 +13,7 @@ criteria_revision: '0cf3315'
 results:
 - object_key: RR_1
   target_ids: [ARC_20]
-  revision: '5c9e4e6'
+  revision: '476d285'
   criteria:
     RC_1: passed
     RC_2: passed
