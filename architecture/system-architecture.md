@@ -28,6 +28,8 @@ flowchart LR
   attrs -- ARC_14 --> exsys
   exsys -- ARC_15 files --> excon
   exsys -- ARC_19 items --> conv
+  conf -. ARC_20 .-> exsys
+  conf -. ARC_20 .-> excon
   conf -. ARC_20 .-> conv
   conf -. ARC_20 .-> stor
   excon -- ARC_16 --> stor
@@ -211,6 +213,32 @@ data set is marked as being filled (ARC_76). A data set of size large is importe
 of Integrity, within the time given (ARC_77). This section holds the part of extractor-content; the
 part of the converter is not written yet.
 
+### ARC_20 configuration (customer → extractor-SYSTEM, extractor-content, converter, storage)
+
+The configuration of the customer is used on both ways into the storage. Each of the four uses it
+for what it does itself: the extractor-SYSTEM in reading the system, extractor-content and the
+converter in mapping, the storage in deriving the values. The way of the file-based systems maps
+too: that our own YAML matches the model is chance. The configuration is taken from a file, from
+the command line and from the environment (ARC_78, ARCD_6), and it names per release the libraries
+it delivers (ARC_79).
+
+**Figure ways** - the two ways the data come into the storage
+
+```
+way 1 - file-based (SHAREPOINT, SVN, GIT, JFROG)
+
+  system ──ARC_14──▶ extractor-SYSTEM ──ARC_15──▶ extractor-content ──ARC_16──▶ storage (import)
+                          ▲                             ▲                          ▲
+  customer ──▶ config ────┴────────────ARC_20───────────┴──────────────────────────┘
+
+
+way 2 - attribute-based (DOORS, JIRA, DMS, CODEBEAMER)
+
+  system ──ARC_14──▶ extractor-SYSTEM ──ARC_19──▶ converter ──ARC_13──▶ storage (import)
+                          ▲                          ▲                     ▲
+  customer ──▶ config ────┴────────────ARC_20────────┴─────────────────────┘
+```
+
 ### ARC_52 Model Context Protocol (assistant → mcp-trace)
 
 An assistant asks the MCP server over the Model Context Protocol. The server offers one tool per
@@ -369,6 +397,23 @@ instead of bringing a second management. A proxy keeps that entirely outside tre
 **Rejected**: a user management of its own in treporting - a second place to lock an account,
 and the duty of keeping passwords.
 
+### ARCD_6 Sources of the configuration
+
+**Decision**: the configuration is taken from a file, from the command line and from the
+environment, each part from any of them; the operator manual says which way is preferred for
+which part.
+
+**Example**: the organization, the projects with their repositories and the libraries of each
+release stand in one file, the same for every run; the repository and the tag of one run are
+given on the command line; the token of the system is given in the environment.
+
+**Why**: in practice no single way serves every part: what holds for many runs belongs in a
+file, what changes with each run on the command line, and a secret is best kept out of both,
+where a file is kept in a repository and a command line is shown by `ps`.
+
+**Rejected**: one way only - a file alone has to be written again for every run, a command line
+alone repeats the same settings in every run and shows a secret.
+
 ## Allocation
 
 The allocation of every system requirement to the subsystems, and of every requirement of the
@@ -384,7 +429,7 @@ architecture to the subsystems and interfaces, is the field `allocated` of each 
 - `treporting = 1_demo` - **Repos**: the repos of extractor-content and of the extractors per system
   are not created yet. reporter-annotations becomes the package annotations of extractor-content.
 
-- `treporting = 1_demo` - **Interfaces**: the sections of ARC_17 to ARC_20 are not written yet;
+- `treporting = 1_demo` - **Interfaces**: the sections of ARC_17 to ARC_19 are not written yet;
   of ARC_13 only the part of extractor-content.
   ARC_11 describes the routes there are; no route answers yet the findings of the plausibility
   check (SYS_71), the states of the code (SYS_77), a report of the views chosen (SYS_85), or the
@@ -421,3 +466,4 @@ architecture to the subsystems and interfaces, is the field `allocated` of each 
 | 18.1.1 | 2026-11-22 | ARC_52: its requirement ARC_55, the organization; ARC_11: its requirement ARC_56, the newest baseline | #64 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 19.1.1 | 2026-11-22 | ARC_5: extractor-content is a plug-in that an extractor-system starts | #66 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 20.1.1 | 2026-11-22 | The file-based way into the storage: the sections of ARC_14, ARC_15, ARC_16 and ARC_13, and their requirements ARC_57 to ARC_77 | #69 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 21.1.1 | 2026-11-22 | ARC_20: the configuration on both ways into the storage, its requirements ARC_78 and ARC_79, and the decision ARCD_6 | #68 | Claude Opus 5.5, author; Mathias Fischer, reviewer |

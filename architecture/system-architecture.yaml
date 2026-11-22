@@ -476,6 +476,24 @@ requirements:
   safety: ''
   status: approved
   verification_method: [test]
+- object_key: ARC_78
+  object_version: '1.1.1'
+  object_text: 'sources: take the configuration from a file, from the command line and from the
+    environment, each part from any of them'
+  source_ids: [ARCD_6@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
+- object_key: ARC_79
+  object_version: '1.1.1'
+  object_text: 'releases: name per release the libraries it delivers, of one subsystem or of several,
+    in their order in time'
+  source_ids: [SYS_17@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: approved
+  verification_method: [test]
 elements:
 - object_key: ARC_1
   object_version: '1.3.1'
@@ -705,11 +723,12 @@ elements:
   object_version: '1.1.1'
   kind: interface
   object_text: configuration
-  between: customer → converter, storage
-  contract: the mapping of attributes and of values, one file per system of a customer
+  between: customer → extractor-SYSTEM, extractor-content, converter, storage
+  contract: the mapping of attributes and of values; where a file, one per customer
+  allocated: [ARC_78@1.1.1, ARC_79@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_52
   object_version: '1.4.1'
@@ -777,4 +796,8 @@ decisions:
 - object_key: ARCD_5
   object_version: '3.1.1'
   object_text: Identity (SYS_39)
+  status: approved
+- object_key: ARCD_6
+  object_version: '1.1.1'
+  object_text: Sources of the configuration
   status: approved
