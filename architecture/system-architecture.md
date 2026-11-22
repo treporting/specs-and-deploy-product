@@ -201,18 +201,19 @@ delivered into is not handed over here; it is in the configuration (ARC_20).
 extractor-content hands the storage, over ARC_13, what it read from the files: the objects (ARC_65),
 the links, also where an end is missing (ARC_66), the files as work products (ARC_67), and per work
 product its reviews and the findings of the customer (ARC_68). Every value goes across as the file
-holds it, derived from nothing (ARC_69). What it could not read is named with the reason (ARC_70);
-what it read and refused is counted per kind, per type of link and per state (ARC_71); its errors
-and warnings go across with time and cause (ARC_72).
+holds it, and beside it its mapped and intermediate value, which may be empty (ARC_69). What it
+could not read is named with the reason (ARC_70); what it read and refused is counted per kind, per
+type of link and per state (ARC_71); its errors and warnings go across with time and cause (ARC_72).
 
 ### ARC_13 import (converter, extractor-content → storage)
 
 The storage takes the information of every system the same way, into the model of ARC_21 (ARC_73),
-and builds from the same information the same data set on every import (ARC_74). After the import
-it counts what it stored, apart from the counts handed in (ARC_75); until the import is done the
-data set is marked as being filled (ARC_76). A data set of size large is imported, with the checks
-of Integrity, within the time given (ARC_77). This section holds the part of extractor-content; the
-part of the converter is not written yet.
+and stores every value as it is handed, derives none (ARC_3). It builds from the same information
+the same data set on every import (ARC_74). After the import it counts what it stored, apart from
+the counts handed in (ARC_75); until the import is done the data set is marked as being filled
+(ARC_76). A data set of size large is imported, with the checks of Integrity, within the time given
+(ARC_77). This section holds the part of extractor-content; the part of the converter is not written
+yet.
 
 ### ARC_20 configuration (customer → extractor-SYSTEM, extractor-content, converter, storage)
 
@@ -330,16 +331,20 @@ errors of an import are detected (REG_ISO26262-8_1, REG_IEC61508-3_1, REG_DO178C
 
 ### ARCD_3 Original and derived values (SYS_11)
 
-**Decision**: the storage always keeps the original as read from the source system. A value derived at
-the import is never the original and is kept beside it under a name of its own, with a
+**Decision**: the storage always keeps the original as read from the source system. A derived value
+is never the original and is kept beside it under a name of its own, with a
 prefix: `M` for a value mapped - unified, translated or adapted to the model; where the original
 is empty, the mapped value of the parent -, `I` for an intermediate form, only for the status, where
-the original has to be transformed before it can be mapped. When a rule changes, the derived values can be made again on the stored data set,
-back in time, so that the data need not be fetched from the source systems again - a requirement
-that follows from this architecture, not from a need (ARC_50).
+the original has to be transformed before it can be mapped. The converter or extractor-content
+hands the derived values to the storage beside the original, and either may be empty; the storage
+stores them as they are handed. When a rule changes, the derived values can be made again on the
+stored data set, back in time, so that the data need not be fetched from the source systems
+again - a requirement that follows from this architecture, not from a need (ARC_50). No subsystem
+realizes it yet: one that reads the stored data set, makes the derived values again and stores
+them.
 
-**Example**: the source system says `Status = 'im Review'`; the import keeps it and adds
-`MStatus = 'review'`, as the configuration of the customer maps it. A status kept per platform -
+**Example**: the source system says `Status = 'im Review'`; extractor-content hands it
+and beside it `MStatus = 'review'`; the storage keeps both. A status kept per platform -
 `Status = "status_platform-1 = in Review_Vendor` / `status_platform-2 = open"` - is first transformed
 into `IStatus = "platform-1 = in Review` / `platform-2 = open"`; `MStatus` is then `review` when the
 filter selects platform-1, made for the filter set where it is not stored. A software requirement
@@ -366,8 +371,8 @@ with `MSafety = 'ASIL D'` in its analysis (SYS_70); the import reads the data as
 
 **Decision**: what differs from customer to customer - the customized attributes of an
 attribute-based system and the values to be mapped - is a configuration file, read by one
-general mechanism: the converter for the attributes, the import of the storage for the
-values. Only what a configuration cannot say goes into code of its own, in a private repo per
+general mechanism: the converter for the attributes, the converter and extractor-content for
+the values. Only what a configuration cannot say goes into code of its own, in a private repo per
 system and customer, such as converter-doors-acme.
 
 **Example**: one customer keeps the safety class of a requirement in the DOORS attribute
@@ -470,3 +475,4 @@ architecture to the subsystems and interfaces, is the field `allocated` of each 
 | 21.1.1 | 2026-11-22 | ARC_20: the configuration on both ways into the storage, its requirements ARC_78 and ARC_79, and the decision ARCD_6 | #68 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 22.1.1 | 2026-11-22 | ARC_5: extractor-content starts its packages as plug-ins | #72 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 23.1.1 | 2026-11-22 | ARC_5: its requirement ARC_80, the plug-ins | #74 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 24.1.1 | 2026-11-22 | the derived values are made by the converter or extractor-content and stored as handed: ARC_3, ARC_69, ARCD_3, ARCD_4; ARC_50 realized by no subsystem yet | #76 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
