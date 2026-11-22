@@ -110,7 +110,8 @@ Each interface between two subsystems, with what passes over it. Its requirement
 
 The viewer and the MCP server ask the reporter over a REST API. The technical form is the swagger of the reporter;
 this section says what goes across it. Every request names its scope (ARC_29) and may name the
-process reference model (ARC_30); the routes on the trace and the states narrow the rows (ARC_31),
+process reference model (ARC_30); a request that names no release is answered from the newest
+release and the newest library it delivered (ARC_56). The routes on the trace and the states narrow the rows (ARC_31),
 by level (ARC_32) and, on the code, by component and unit (ARC_33). Every answer comes as JSON or
 CSV (ARC_36); a request that cannot be answered is refused with the reason (ARC_37).
 
@@ -121,7 +122,7 @@ beyond the scope
 |---|---|---|---|
 | GET /version | the revision and the build of the reporter, the state of its data set and the number of its objects | - | yes |
 | GET /health | that the reporter runs: 200, "ok" | - | no - for the operation |
-| PUT /configuration | the lists the filters offer for a scope, from the filter sent; release `*` names the newest release | filter (body) | yes |
+| PUT /configuration | the lists the filters offer for a scope, from the filter sent; release `*` names the newest release (ARC_56) | filter (body) | yes |
 | GET /configuration/projects | the projects of an organization and how they are split | - (organization only) | yes |
 | GET /configuration/baselines | the releases and libraries of a project | - (organization, project only) | yes |
 | GET /configuration/artefacts | every work product of a subsystem, with its revision, kind, tool and baseline | process; no baseline | yes |
@@ -181,6 +182,8 @@ view of the viewer (ARC_53); each tool asks the reporter over the REST API (ARC_
 as the view shows them (SYS_99), with the view and the filters that show the same (SYS_100).
 An answer carries at most as many rows as the assistant names, 100 where it names none, and says
 how many rows it left out (ARC_54).
+The server answers from the one organization it is started with and never asks the assistant
+for it (ARC_55).
 
 ## Rationale
 
@@ -378,3 +381,4 @@ architecture to the subsystems and interfaces, is the field `allocated` of each 
 | 15.1.1 | 2026-11-21 | The MCP server: the subsystem ARC_51 and its interface ARC_52; ARC_11 serves it too | #45 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 16.1.1 | 2026-11-21 | ARC_52: its requirement ARC_53, one tool per view | #60 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 17.1.1 | 2026-11-22 | ARC_52: its requirement ARC_54, the limit on the rows of an answer | #62 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 18.1.1 | 2026-11-22 | ARC_52: its requirement ARC_55, the organization; ARC_11: its requirement ARC_56, the newest baseline | #64 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
