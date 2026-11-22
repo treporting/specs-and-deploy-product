@@ -483,7 +483,7 @@ requirements:
   source_ids: [ARCD_6@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_79
   object_version: '1.1.1'
@@ -492,7 +492,7 @@ requirements:
   source_ids: [SYS_17@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 elements:
 - object_key: ARC_1
@@ -728,7 +728,7 @@ elements:
   allocated: [ARC_78@1.1.1, ARC_79@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_52
   object_version: '1.4.1'
@@ -800,4 +800,4 @@ decisions:
 - object_key: ARCD_6
   object_version: '1.1.1'
   object_text: Sources of the configuration
-  status: draft
+  status: approved
