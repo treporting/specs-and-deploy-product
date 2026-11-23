@@ -725,10 +725,10 @@ elements:
   status: draft
   verification_method: [analysis]
 - object_key: ARC_20
-  object_version: '1.1.1'
+  object_version: '1.1.2'
   kind: interface
   object_text: configuration
-  between: customer → extractor-SYSTEM, extractor-content, converter, storage
+  between: customer → extractor-SYSTEM, extractor-content, converter
   contract: the mapping of attributes and of values; where a file, one per customer
   allocated: [ARC_78@1.1.1, ARC_79@1.1.1]
   priority: 'medium'
