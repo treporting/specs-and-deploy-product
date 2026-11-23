@@ -759,7 +759,6 @@ requirements:
   feature: Derived values
   object_text: make the derived values of a stored data set again on request when a rule changes, back
     in time, without fetching the data from the source systems again
-  source_ids: [ARCD_3@2.1.1]
   priority: 'medium'
   safety: ''
   rationale: moved to r3 as ARC_50, a requirement of the architecture that ARCD_3 made possible,
