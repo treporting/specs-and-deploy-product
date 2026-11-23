@@ -691,11 +691,11 @@ elements:
   object_text: information
   between: extractor-content → storage
   contract: the information extracted, per kind, over ARC_13; for annotations the format of formats.md
-  allocated: [ARC_65@1.1.1, ARC_66@1.1.1, ARC_67@1.1.1, ARC_68@1.1.1, ARC_69@1.1.1, ARC_70@1.1.1,
+  allocated: [ARC_65@1.1.1, ARC_66@1.1.1, ARC_67@1.1.1, ARC_68@1.1.1, ARC_69@2.1.1, ARC_70@1.1.1,
     ARC_71@1.1.1, ARC_72@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [analysis]
 - object_key: ARC_17
   object_version: '1.1.1'
