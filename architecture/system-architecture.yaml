@@ -686,7 +686,7 @@ elements:
   status: approved
   verification_method: [analysis]
 - object_key: ARC_16
-  object_version: '1.1.1'
+  object_version: '1.2.1'
   kind: interface
   object_text: information
   between: extractor-content → storage
@@ -695,7 +695,7 @@ elements:
     ARC_71@1.1.1, ARC_72@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_17
   object_version: '1.1.1'
