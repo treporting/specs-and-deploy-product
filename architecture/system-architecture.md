@@ -87,10 +87,10 @@ division there needs no interface of r3.
 
 **Rejected**: trace as the subsystem, with viewer, reporter and converter as its components -
 they are delivered on their own and talk over interfaces, which a component has not.
-The allocation is in this file: the system requirements allocated to a subsystem are
-its requirements, derived directly from r2, with no ids of their own. The requirements of the
-architecture on a subsystem or an interface stand beside them, with ids of their own. The document is written
-for whoever derives the software requirements of a subsystem (r5) from it.
+A system requirement is broken down into requirements of the architecture, one per subsystem that
+contributes. Each names it as uplink, the subsystem in `component` and the interface it is met
+over in `interface`, where there is one. The document is written for whoever derives the software
+requirements of a subsystem (r5) from it.
 
 The terms - system, item, content, work product, release, library, baseline - are those of
 [definitions.md](https://github.com/treporting/specs-and-deploy-process/blob/main/definitions.md). The levels follow ISO/IEC/IEEE 12207 as set out in the section
@@ -100,7 +100,7 @@ ISO/IEC/IEEE 12207, 6.4.4.
 The ids are `ARC_n` for the subsystems, the interfaces and the requirements of the architecture on
 them, `ARCR_n` for the rationale and
 `ARCD_n` for the decisions; a requirement that a decision made possible names it as its
-uplink. The elements, the requirements, the allocation and the ids of rationale and decisions are in
+uplink. The elements, the requirements and the ids of rationale and decisions are in
 [system-architecture.yaml](system-architecture.yaml), in the format of [formats.md](https://github.com/treporting/specs-and-deploy-process/blob/main/formats.md).
 
 ## Interfaces
@@ -148,8 +148,7 @@ within its time (SYS_52). A cell comes as the keys of its objects or as the coun
 
 ### ARC_12 StorageSource (reporter-trace → storage-trace)
 
-The reporter reads the data sets of the storage through `StorageSource`, a Go interface of the
-storage. Behind it, the storage holds the data in one of four modes of operation: in a database
+The reporter reads the data sets of the storage through `StorageSource`. Behind it, the storage holds the data in one of four modes of operation: in a database
 server of its own (ARC_23), in a database run together with the reporter (ARC_24), in a data file
 (ARC_25), or as generated data in the memory of the reporter (ARC_26). The reporter answers the
 same from each (ARC_27), and from one mode only while it runs (ARC_28).
@@ -211,8 +210,8 @@ and stores every value as it is handed, derives none (ARC_3). It builds from the
 the same data set on every import (ARC_74). After the import it counts what it stored, apart from
 the counts handed in (ARC_75); until the import is done the data set is marked as being filled
 (ARC_76). A data set of size large is imported, with the checks of Integrity, within the time given
-(ARC_77). This section holds the part of extractor-content; the part of the converter is not written
-yet.
+(ARC_77). What extractor-content and the converter hand over it stands in their requirements with
+`interface: information` and `interface: import`.
 
 ### ARC_20 configuration (customer → extractor-SYSTEM, extractor-content, converter)
 
@@ -421,9 +420,8 @@ alone repeats the same settings in every run and shows a secret.
 
 ## Allocation
 
-The allocation of every system requirement to the subsystems, and of every requirement of the
-architecture to the subsystems and interfaces, is the field `allocated` of each of them in
-[system-architecture.yaml](system-architecture.yaml).
+Which subsystems a system requirement stands on follows from its requirements of the architecture
+and their `component` in [system-architecture.yaml](system-architecture.yaml).
 
 ## Open
 
@@ -477,3 +475,4 @@ architecture to the subsystems and interfaces, is the field `allocated` of each 
 | 24.1.1 | 2026-11-22 | the derived values are made by the converter or extractor-content and stored as handed: ARC_3, ARC_69, ARCD_3, ARCD_4; ARC_50 realized by no subsystem yet | #76 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 25.1.1 | 2026-11-23 | ARC_20: the storage takes nothing from the configuration any more | #89 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 26.1.1 | 2026-11-23 | ARC_12: the trace, the states, their counting and the maturity are the storage's | #92 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 27.1.1 | 2026-11-23 | The breakdown of a system requirement per subsystem with component and interface; ARC_12, ARC_13: logical; Allocation | #95 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
