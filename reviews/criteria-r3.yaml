@@ -1,4 +1,4 @@
-# Review criteria of the elements of the architecture (r3), after ISO29148 read for the elements.
+# Review criteria of the elements and the requirements of the architecture (r3), after ISO29148 read for them.
 # An element is approved only when it passed every criterion (PROC_13). See reviews/README.md.
 schema: schemas/review-criteria.schema.json
 type: criteria
@@ -6,8 +6,9 @@ level: r3
 criteria:
 - object_key: RC_1
   source: REG_ISO29148_1 - necessary
-  object_text: necessary - a system requirement is allocated to it, or it gives its rationale
-  question: Is a system requirement allocated to it, or does it give its rationale?
+  object_text: necessary - a requirement names a system requirement, a rationale or a decision as
+    uplink, or gives its rationale; an element is a part of the system a requirement can stand on
+  question: Does a requirement name its uplink or give its rationale, and is an element a part a requirement can stand on?
 - object_key: RC_2
   source: REG_ISO29148_1 - appropriate; what part of the system, not its design inside, is the rule of r3 of treporting
   object_text: appropriate - it states which part of the system it is - a subsystem, an interface, a
@@ -40,12 +41,14 @@ criteria:
   question: Can it be realized with a reasonable effort?
 - object_key: RC_9
   source: REG_ISO29148_1 - correct
-  object_text: correct - it states rightly what the system requirements allocated to it ask for
-  question: Does it state rightly what its allocated system requirements ask for?
+  object_text: correct - a requirement states rightly the share of its subsystem in what its uplinks
+    ask for
+  question: Does a requirement state rightly the share of its subsystem in what its uplinks ask for?
 - object_key: RC_10
-  source: treporting - traceable and allocated, the allocation
-  object_text: traceable - every system requirement allocated to it exists, and belongs to it
-  question: Does every allocated system requirement exist, and belong to this element?
+  source: treporting - traceable and allocated, the breakdown per subsystem
+  object_text: traceable - every uplink exists; its `component` names the subsystem that does what it
+    states, and its `interface` the interface it is met over
+  question: Does every uplink exist, does component name the subsystem that does what it states, and interface the interface it is met over?
 - object_key: RC_11
   source: REG_ISO29148_1 - conforming; what to conform to is set by treporting, formats.md
   object_text: conforming - it follows formats.md - id, kind, status and verification method, and a

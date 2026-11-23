@@ -7,251 +7,305 @@ documents: [architecture/system-architecture.md, architecture/attributes.md]
 requirements:
 - object_key: ARC_23
   object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
   object_text: 'mode database: keep the data sets in a database server of their own, which the
     reporter reaches through `StorageSource`'
   source_ids: [SYS_20@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_24
   object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
   object_text: 'mode database with the reporter: keep the data sets in a database run together with
     the reporter, where a database server of their own is not possible'
   source_ids: [SYS_20@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_25
   object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
   object_text: 'mode file: answer from a data file the reporter reads, where no database server can
     be reached'
   source_ids: [SYS_21@1.1.1, SYS_55@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_26
   object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
   object_text: 'mode memory: answer from generated data in the memory of the reporter, for the demo
     and the tests'
   source_ids: [SYS_20@1.1.1, SYS_55@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_27
   object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
   object_text: 'read every mode through `StorageSource`, and serve the viewer the same API from each'
   source_ids: [SYS_19@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_28
   object_version: '1.1.1'
+  component: trace/reporter
   object_text: 'answer, in a running reporter, from one mode only, chosen at its start'
   source_ids: [SYS_20@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_29
   object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
   object_text: 'scope: name in every request the organization, the project, one subsystem and the
     baseline, and answer it from that scope alone; refuse a request that names every subsystem (`*`),
     with the reason'
   source_ids: [SYS_9@2.1.1, SYS_20@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_30
   object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
   object_text: 'process: take in a request the process reference model the data are read as, and name
     the levels of the answer in its vocabulary'
   source_ids: [SYS_14@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_31
   object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
   object_text: 'narrowing: narrow the rows by function, feature, priority, safety class, platform,
     launch and stream; `*` or nothing stands for every one'
   source_ids: [SYS_9@2.1.1, SYS_83@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_32
   object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
   object_text: 'level: take in a request the level the trace starts at, or the level counted, by its
     key'
   source_ids: [SYS_1@1.1.1, SYS_5@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_33
   object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
   object_text: 'component: narrow a request on the code by component and by unit of the design'
   source_ids: [SYS_1@1.1.1, SYS_82@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_34
   object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
   object_text: 'above: send the levels above each row, up to the roots, only where the request asks
     for them'
   source_ids: [SYS_1@1.1.1, SYS_52@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_35
   object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
   object_text: 'keys: send each cell as the keys of its objects with their states, or as the count per
     state, as the request asks'
   source_ids: [SYS_1@1.1.1, SYS_5@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_36
   object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
   object_text: 'format: answer as JSON or as CSV, as the request asks'
   source_ids: [SYS_31@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_37
   object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
   object_text: 'refusal: refuse a request with a parameter it does not know, or a value it cannot
     answer, with the reason (422); say that the data are not there yet, or that the data source cannot
     be read, as such (503)'
   source_ids: [SYS_29@1.1.1, SYS_34@1.1.1, SYS_37@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_38
   object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
   object_text: 'scope names: hand the names of every scope - organizations, requirements projects and
     their subsystems, releases, libraries'
   source_ids: [SYS_9@2.1.1, SYS_20@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_39
   object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
   object_text: 'baselines: hand each baseline with its project, start and end, and for a library the
     release it was delivered into'
   source_ids: [SYS_17@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_40
   object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
   object_text: 'objects: hand every object with its scope, its key, its level by key and its state,
     as read and mapped'
   source_ids: [SYS_1@1.1.1, SYS_5@1.1.1, SYS_8@1.1.1, SYS_20@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_41
   object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
   object_text: 'links: hand the links downward between every two types the trace joins, each object
     once however many link to it'
   source_ids: [SYS_1@1.1.1, SYS_2@1.1.1, SYS_6@1.1.1, SYS_12@1.1.1, SYS_13@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_42
   object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
   object_text: 'kinds of test: hand test cases, test procedures and test results as kinds apart'
   source_ids: [SYS_8@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_43
   object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
   object_text: 'narrowing: hand on every level function, feature, priority, safety class, platform,
     launch and stream'
   source_ids: [SYS_9@2.1.1, SYS_11@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_44
   object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
   object_text: 'verification: hand per requirement its verification method, and per level of the
     head whether it is verified'
   source_ids: [SYS_2@1.1.1, SYS_73@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_45
   object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
   object_text: 'components: hand per object its component and unit, and the components with their
     units'
   source_ids: [SYS_1@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_46
   object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
   object_text: 'head: hand per requirements project its head - the levels in order, with key, name and
     views'
   source_ids: [SYS_14@1.1.1, SYS_49@1.2.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_47
   object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
   object_text: 'work products: hand the work products with baseline, revision, level, kind and
     store, and the stores with their work products'
   source_ids: [SYS_15@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_48
   object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
   object_text: 'read error: say a read that fails, with the error, apart from a read that found no
     data'
   source_ids: [SYS_29@1.1.1, SYS_37@1.1.1, SYS_38@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_49
   object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
   object_text: 'pending: say while the data set is still being filled'
   source_ids: [SYS_34@1.1.1, SYS_54@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_50
   object_version: '1.2.1'
+  component: trace/storage
   object_text: 'derived values again: make the derived values of a stored data set again on request
     when a rule changes, back in time, without fetching the data from the source systems again'
   source_ids: [ARCD_3@3.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_53
   object_version: '1.1.1'
@@ -289,224 +343,273 @@ requirements:
   verification_method: [test]
 - object_key: ARC_56
   object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
   object_text: 'baseline: answer a request that names no release (`*`) from the newest release of the
     project and the newest library that release delivered'
   source_ids: [SYS_9@2.1.1]
   rationale: whoever opens a view looks at the newest first
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_57
   object_version: '1.1.1'
+  component: extractor-system
+  interface: system access
   object_text: 'baselines: list the baselines the system holds - for a file-based system its tags
     and branches - each with its identity in the system and its date'
   source_ids: [SYS_17@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_58
   object_version: '1.1.1'
+  component: extractor-system
+  interface: system access
   object_text: 'listing and fetching: list and fetch what a baseline holds, as it is in that
     baseline, with its identity in the system - revision, commit'
   source_ids: [SYS_15@1.1.1, SYS_22@1.1.1, SYS_24@2.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_59
   object_version: '1.1.1'
+  component: extractor-system
+  interface: system access
   object_text: 'count of its own: count what a baseline holds per kind by a query of its own, in
     code apart from the listing and fetching'
   source_ids: [SYS_23@2.1.1, ARCD_1@2.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_60
   object_version: '1.1.1'
+  component: extractor-system
+  interface: system access
   object_text: 'read only: never write into the system'
   source_ids: [ARCR_1@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_61
   object_version: '1.1.1'
+  component: extractor-system
+  interface: system access
   object_text: 'access error: say a system that cannot be reached, or a fetch that fails, with the
     cause'
   source_ids: [SYS_22@1.1.1, SYS_38@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_62
   object_version: '1.1.1'
+  component: extractor-system
+  interface: files
   object_text: 'baseline first: name the baseline - its name and its date - before its files'
   source_ids: [SYS_8@1.1.1, SYS_17@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_63
   object_version: '1.1.1'
+  component: extractor-system
+  interface: files
   object_text: 'file: hand each file with its path, its content, its kind and its identity in the
     system - the system, the revision of the file'
   source_ids: [SYS_15@1.1.1, SYS_24@2.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_64
   object_version: '1.1.1'
+  component: extractor-system
+  interface: files
   object_text: 'end: say when the files of a baseline are all handed over, so that what spans
     several files - a link - is made after the last'
   source_ids: [SYS_2@1.1.1, SYS_12@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_65
   object_version: '1.1.1'
+  component: trace/extractor-content
+  interface: information
   object_text: 'objects: hand every object read - requirement, test case, test procedure, test
     result, piece of code - with its scope, key, level, state and the person responsible, as read;
     test cases, procedures and results as kinds apart'
   source_ids: [SYS_7@1.1.1, SYS_8@1.1.1, SYS_22@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_66
   object_version: '1.1.1'
+  component: trace/extractor-content
+  interface: information
   object_text: 'links: hand every link read, with its type and its two ends, also where an end is
     missing'
   source_ids: [SYS_2@1.1.1, SYS_12@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_67
   object_version: '1.1.1'
+  component: trace/extractor-content
+  interface: information
   object_text: 'work products: hand each file read as a work product with its baseline, revision,
     level, kind and store'
   source_ids: [SYS_15@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_68
   object_version: '1.1.1'
+  component: trace/extractor-content
+  interface: information
   object_text: 'reviews and findings: hand per work product its status, its approval and its reviews
     - criteria, result per criterion, reviewer, time, revision reviewed -, and every finding of the
     customer with its evaluation'
   source_ids: [SYS_72@1.1.1, SYS_74@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_69
   object_version: '2.1.1'
+  component: trace/extractor-content
+  interface: information
   object_text: 'as read: hand every value as the file holds it, an unknown value apart from an empty
     one, and beside it its mapped (`M`) and intermediate (`I`) value, which may be empty'
   source_ids: [SYS_28@1.1.1, ARCD_3@3.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_70
   object_version: '1.1.1'
+  component: trace/extractor-content
+  interface: information
   object_text: 'refused: name every object it could not read, with the reason'
   source_ids: [SYS_22@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_71
   object_version: '1.1.1'
+  component: trace/extractor-content
+  interface: information
   object_text: 'counted: hand per kind of object, per type of link and per state how many were read
     and how many refused'
   source_ids: [SYS_23@2.1.1, ARCD_2@2.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_72
   object_version: '1.1.1'
+  component: trace/extractor-content
+  interface: information
   object_text: 'errors: hand its errors and warnings with time and cause'
   source_ids: [SYS_38@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_73
   object_version: '1.1.1'
+  component: trace/storage
+  interface: import
   object_text: 'one import: take the information of every system the same way, into the model of
     ARC_21'
   source_ids: [SYS_22@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_74
   object_version: '1.1.1'
+  component: trace/storage
+  interface: import
   object_text: 'same data set: build from the same information the same data set on every import'
   source_ids: [SYS_24@2.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_75
   object_version: '1.1.1'
+  component: trace/storage
+  interface: import
   object_text: 'stored count: count what was stored from the storage after the import, apart from
     the counts handed in'
   source_ids: [SYS_23@2.1.1, ARCD_1@2.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_76
   object_version: '1.1.1'
+  component: trace/storage
+  interface: import
   object_text: 'being filled: mark the data set as being filled until the import is done'
   source_ids: [SYS_34@1.1.1, SYS_54@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_77
   object_version: '1.1.1'
+  component: trace/storage
+  interface: import
   object_text: 'time: import a data set of size large, with the checks of Integrity, within the time
     given'
   source_ids: [SYS_53@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_78
   object_version: '1.1.1'
+  component: extractor-system
+  interface: configuration
   object_text: 'sources: take the configuration from a file, from the command line and from the
     environment, each part from any of them'
   source_ids: [ARCD_6@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_79
   object_version: '1.1.1'
+  component: extractor-system
+  interface: configuration
   object_text: 'releases: name per release the libraries it delivers, of one subsystem or of several,
     in their order in time'
   source_ids: [SYS_17@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_80
   object_version: '1.1.1'
+  component: trace/extractor-content
   object_text: 'plug-ins: start a package for each kind of content as a program of its own'
   source_ids: [SYS_22@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_81
   object_version: '1.1.1'
@@ -527,6 +630,2080 @@ requirements:
   safety: ''
   status: draft
   verification_method: [test]
+- object_key: ARC_83
+  object_version: '1.1.1'
+  component: extractor-system
+  object_text: 'known content: hand every fault of a data set of known content as the system holds
+    it, unrepaired'
+  source_ids: [SYS_27@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_84
+  object_version: '1.1.1'
+  component: extractor-system
+  object_text: 'size large: list and fetch a data set of size large within its share of the time
+    given'
+  source_ids: [SYS_53@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_85
+  object_version: '1.1.1'
+  component: extractor-system
+  interface: configuration
+  object_text: 'configuration check: check a configuration against the data of its system before it
+    is used, and name every attribute and every value it does not map'
+  source_ids: [SYS_61@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_86
+  object_version: '1.1.1'
+  component: extractor-system
+  object_text: 'secure default: be delivered with a secure configuration by default'
+  source_ids: [SYS_64@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_87
+  object_version: '1.1.1'
+  component: trace/extractor-content
+  interface: information
+  object_text: 'carried attributes: hand per object its safety class, function, feature, priority,
+    platform and launch as the file holds them'
+  source_ids: [SYS_11@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_88
+  object_version: '1.1.1'
+  component: trace/extractor-content
+  interface: information
+  object_text: 'baseline: hand every object with the baseline its file was read in'
+  source_ids: [SYS_17@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_89
+  object_version: '1.1.1'
+  component: trace/extractor-content
+  object_text: 'same reading: read the same files to the same objects on every import'
+  source_ids: [SYS_24@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_90
+  object_version: '1.1.1'
+  component: trace/extractor-content
+  interface: information
+  object_text: 'known content: hand every fault of a data set of known content as the files hold it,
+    unrepaired'
+  source_ids: [SYS_27@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_91
+  object_version: '1.1.1'
+  component: trace/extractor-content
+  object_text: 'size large: read a data set of size large within its share of the time given'
+  source_ids: [SYS_53@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_92
+  object_version: '1.1.1'
+  component: trace/extractor-content
+  interface: configuration
+  object_text: 'mapping: map values by the configuration file of the customer, and by code of the
+    customer kept outside the core only where the configuration cannot say it'
+  source_ids: [SYS_60@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_93
+  object_version: '1.1.1'
+  component: trace/extractor-content
+  interface: configuration
+  object_text: 'place of the customer: read the configurations and catalogues of a customer from the
+    place the operator sets for it, apart from those of other customers and outside the
+    installation'
+  source_ids: [SYS_62@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_94
+  object_version: '1.1.1'
+  component: trace/extractor-content
+  object_text: 'secure default: be delivered with a secure configuration by default'
+  source_ids: [SYS_64@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_95
+  object_version: '1.1.1'
+  component: trace/extractor-content
+  interface: information
+  object_text: 'derived beside: hand a value it derives beside the value as read, under `M` or `I`,
+    never in its place'
+  source_ids: [SYS_68@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_96
+  object_version: '1.1.1'
+  component: trace/extractor-content
+  interface: information
+  object_text: 'plausibility apart: hand every object whatever a check of plausibility finds; a
+    check never stops or changes what is handed'
+  source_ids: [SYS_101@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_97
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: import
+  object_text: 'links: hand every link of an item, with its type and its two ends, also where an end
+    is missing'
+  source_ids: [SYS_2@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_98
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: import
+  object_text: 'person responsible: hand per object the person responsible, as the item holds it'
+  source_ids: [SYS_7@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_99
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: import
+  object_text: 'kinds of test: hand test cases, test procedures and test results as kinds apart'
+  source_ids: [SYS_8@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_100
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: import
+  object_text: 'carried attributes: hand per object its safety class, function, feature, priority,
+    platform and launch as the item holds them'
+  source_ids: [SYS_11@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_101
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: import
+  object_text: 'hazards: hand hazards, threats and their measures with their links, as the items
+    hold them'
+  source_ids: [SYS_12@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_102
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: import
+  object_text: 'work products: hand each item read as a work product with its baseline, revision,
+    level, kind and store'
+  source_ids: [SYS_15@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_103
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: import
+  object_text: 'baseline: hand every object with the baseline its item was read in'
+  source_ids: [SYS_17@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_104
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: import
+  object_text: 'refused: name every item it could not map, with the reason'
+  source_ids: [SYS_22@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_105
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: import
+  object_text: 'counted: hand per kind of object, per type of link and per state how many were read
+    and how many refused'
+  source_ids: [SYS_23@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_106
+  object_version: '1.1.1'
+  component: trace/converter
+  object_text: 'same mapping: map the same items by the same configuration to the same objects on
+    every import'
+  source_ids: [SYS_24@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_107
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: import
+  object_text: 'fingerprint: hand per object the fields that matter as the system holds them'
+  source_ids: [SYS_25@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_108
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: import
+  object_text: 'known content: hand every fault of a data set of known content as the items hold it,
+    unrepaired'
+  source_ids: [SYS_27@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_109
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: import
+  object_text: 'unknown: hand a value the item does not give as unknown, apart from an empty one'
+  source_ids: [SYS_28@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_110
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: import
+  object_text: 'errors: hand its errors and warnings with time and cause'
+  source_ids: [SYS_38@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_111
+  object_version: '1.1.1'
+  component: trace/converter
+  object_text: 'size large: map a data set of size large within its share of the time given'
+  source_ids: [SYS_53@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_112
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: configuration
+  object_text: 'mapping: map attributes and values by the configuration file of the customer per
+    system, and by code of the customer kept outside the core only where the configuration cannot
+    say it'
+  source_ids: [SYS_60@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_113
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: configuration
+  object_text: 'configuration check: check a configuration against the items of its system before it
+    is used, and name every attribute and every value it does not map'
+  source_ids: [SYS_61@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_114
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: configuration
+  object_text: 'place of the customer: read the configurations and catalogues of a customer from the
+    place the operator sets for it, apart from those of other customers and outside the
+    installation'
+  source_ids: [SYS_62@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_115
+  object_version: '1.1.1'
+  component: trace/converter
+  object_text: 'secure default: be delivered with a secure configuration by default'
+  source_ids: [SYS_64@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_116
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: import
+  object_text: 'as read: hand every value as the item holds it, and beside it its mapped (`M`) and
+    intermediate (`I`) value, which may be empty'
+  source_ids: [SYS_68@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_117
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: import
+  object_text: 'findings: hand every finding of the customer with its evaluation, as the items hold
+    it'
+  source_ids: [SYS_72@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_118
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: import
+  object_text: 'verification method: hand per requirement its verification method, as the item holds
+    it'
+  source_ids: [SYS_73@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_119
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: import
+  object_text: 'reviews: hand per work product its status, its approval and its reviews - criteria,
+    result per criterion, reviewer, time, revision reviewed'
+  source_ids: [SYS_74@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_120
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: import
+  object_text: 'plausibility apart: hand every object whatever a check of plausibility finds; a
+    check never stops or changes what is handed'
+  source_ids: [SYS_101@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_121
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'not verified: hand per release the requirements that have no passed test result'
+  source_ids: [SYS_3@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_122
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'per feature: hand per feature the state of every level below it, per release'
+  source_ids: [SYS_4@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_123
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'person responsible: hand per person responsible the requirements assigned to them
+    that have no implementation or no test'
+  source_ids: [SYS_7@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_124
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'changes: hand what changed between two baselines - objects and documents added,
+    removed or changed'
+  source_ids: [SYS_16@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_125
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'source: hand with every answer the data set, its revision and the build of the
+    storage'
+  source_ids: [SYS_18@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_126
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'same answer: hand the same answer for the same data set, revision and build'
+  source_ids: [SYS_19@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_127
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: import
+  object_text: 'fingerprint: compare at every import the fingerprint of the fields that matter of
+    each object handed with the object as stored, and name every object that differs'
+  source_ids: [SYS_25@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_128
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'completeness: mark every data set as complete, incomplete or unverified by its
+    import, and hand the mark with every answer'
+  source_ids: [SYS_26@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_129
+  object_version: '1.1.1'
+  component: trace/storage
+  object_text: 'known content: generate a data set of known content with every fault built in - a
+    missing object, a missing link, an unknown value, a spelling that differs'
+  source_ids: [SYS_27@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_130
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'unknown: store and hand a value that is unknown as unknown, distinct from zero,
+    empty or passed'
+  source_ids: [SYS_28@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_131
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: audit trail
+  object_text: 'export: hand the records with their history, complete, for an export'
+  source_ids: [SYS_32@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_132
+  object_version: '1.1.1'
+  component: trace/storage
+  object_text: 'operation: be installed and started from a release by its part of the operator
+    manual'
+  source_ids: [SYS_35@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_133
+  object_version: '1.1.1'
+  component: trace/storage
+  object_text: 'migration: keep the content of the data unchanged when moved to a new version; where
+    it cannot, say before the move which data the new version cannot read'
+  source_ids: [SYS_36@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_134
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: audit trail
+  object_text: 'report record: keep for every report who produced it, when, from which data set and
+    revision, and with which parameters'
+  source_ids: [SYS_40@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_135
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: audit trail
+  object_text: 'import record: keep every import and change of data - who, when, what - and the
+    state before it; for an import its source system and revision, the time, who started it, the
+    version of the converter, the counts, the objects refused with their reason, the fingerprints
+    and the completeness'
+  source_ids: [SYS_41@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_136
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: audit trail
+  object_text: 'retention: keep the records and their history for the period set, readable
+    throughout'
+  source_ids: [SYS_42@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_137
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: audit trail
+  object_text: 'report identity: keep for every report its identity and the fingerprint of the data
+    it was made from'
+  source_ids: [SYS_43@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_138
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: audit trail
+  object_text: 'purpose: keep what users did only for the purposes set, and hand it for nothing
+    else'
+  source_ids: [SYS_44@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_139
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'maturity: compute per requirement the share of the steps of the longest chain
+    reached in a row, and hand it'
+  source_ids: [SYS_45@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_140
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'maturity of a group: compute per group the share of its steps reached, and hand it'
+  source_ids: [SYS_46@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_141
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'passed only: count a test result as reached only when it passed'
+  source_ids: [SYS_47@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_142
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'every branch: count a step as reached only when every branch below the requirement
+    reaches it'
+  source_ids: [SYS_48@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_143
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'mean maturity: compute the maturity of a level, a feature or a release as the mean
+    of its requirements, and hand it'
+  source_ids: [SYS_50@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_144
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'size large: hold a data set of size large and answer from it'
+  source_ids: [SYS_51@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_145
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'time: hand the data of a view of a data set of size large within its share of the
+    time given'
+  source_ids: [SYS_52@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_146
+  object_version: '1.1.1'
+  component: trace/storage
+  object_text: 'secure default: be delivered with a secure configuration by default'
+  source_ids: [SYS_64@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_147
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'derived beside: store every value as handed and its derived value beside it under
+    `M` or `I`, and hand both'
+  source_ids: [SYS_68@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_148
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'findings: hand every finding of the customer in a baseline with its evaluation'
+  source_ids: [SYS_72@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_149
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'reviews: hand per work product its status, its approval and its reviews in their
+    order, with the change since the review before'
+  source_ids: [SYS_74@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_150
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'inspection: count a passed review of the realization of a requirement as its
+    verification, where its verification method is inspection'
+  source_ids: [SYS_76@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_151
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'code states: count the states of the code - source code and object code apart - per
+    release and library, and hand them'
+  source_ids: [SYS_77@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_152
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'reference models: hold the levels and chains of ASPICE, DO-178C, EN 50716, IEC
+    62304, IEC 61508 and ISO/IEC/IEEE 12207'
+  source_ids: [SYS_78@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_153
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'empty steps: leave out of the chain every step whose level holds no object in the
+    release'
+  source_ids: [SYS_79@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_154
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'parts: hand how a project is split into subsystems, components and units'
+  source_ids: [SYS_82@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_155
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'narrowing: narrow requirements, tests and code by function, feature, priority and
+    safety class, and count what it leaves out'
+  source_ids: [SYS_83@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_156
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'per feature: hand the data grouped by feature, one group per feature'
+  source_ids: [SYS_84@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_157
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'granted data: hand only the data of the organizations and projects named in the
+    request'
+  source_ids: [SYS_88@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_158
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: audit trail
+  object_text: 'deletion: delete the record of what users did after the period set'
+  source_ids: [SYS_89@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_159
+  object_version: '1.1.1'
+  component: trace/storage
+  object_text: 'backup: back up the data while it runs, and restore them from a backup after a loss'
+  source_ids: [SYS_92@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_160
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'process of the customer: take the levels, their names and the chain of their steps
+    from a configuration, in place of a reference model'
+  source_ids: [SYS_94@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_161
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'source of a report: hand with every answer for a report the data set, its revision
+    and the build of the storage'
+  source_ids: [SYS_95@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_162
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'counts: hand with every answer how many objects of each kind it holds'
+  source_ids: [SYS_96@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_163
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'counts of a report: hand with every answer for a report how many objects of each
+    kind it was made from'
+  source_ids: [SYS_97@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_164
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'gaps: answer every place of the trace where a link, a test case or a test result is
+    missing as a gap, never as covered'
+  source_ids: [SYS_2@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_165
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'not verified: answer per release the requirements that are not yet verified by a
+    passed test result'
+  source_ids: [SYS_3@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_166
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'per feature: answer per feature its state on every level below it, per release'
+  source_ids: [SYS_4@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_167
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'verified on: answer for a requirement on which other levels it is verified, and by
+    which tests'
+  source_ids: [SYS_6@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_168
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'person responsible: answer per person responsible the requirements assigned to them
+    that have no implementation or no test'
+  source_ids: [SYS_7@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_169
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'test states: answer the states of the tests of each level - test cases, test
+    procedures and test results apart - per release and library'
+  source_ids: [SYS_8@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_170
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'filters: answer with every request the filters in effect'
+  source_ids: [SYS_10@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_171
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'carried down: answer the safety class, function, feature, priority, platform and
+    launch carried down the trace'
+  source_ids: [SYS_11@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_172
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'hazards: answer each hazard and threat over its measures to the requirements and
+    test results, and mark one with no measure or no passed result'
+  source_ids: [SYS_12@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_173
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'compliance: answer per clause of a chosen standard the requirements that meet it,
+    and whether it is open, addressed or verified'
+  source_ids: [SYS_13@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_174
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'work products: answer per baseline its work products with their revision, their kind
+    and their store'
+  source_ids: [SYS_15@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_175
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'changes: answer what changed between two baselines'
+  source_ids: [SYS_16@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_176
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'baselines: answer the baselines of a project over time - its releases and libraries'
+  source_ids: [SYS_17@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_177
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'source: answer with every request the data set, its revision and the build of the
+    system'
+  source_ids: [SYS_18@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_178
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'completeness: answer with every request whether its data set is complete, incomplete
+    or unverified'
+  source_ids: [SYS_26@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_179
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'known content: answer every fault built into a data set of known content as the
+    trace shows it'
+  source_ids: [SYS_27@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_180
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'unknown: answer a value that is unknown as unknown, distinct from zero, empty or
+    passed'
+  source_ids: [SYS_28@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_181
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'chart and table: answer a chart and its table from the same rows'
+  source_ids: [SYS_30@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_182
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'export: answer the records with their history, readable by people and by machines'
+  source_ids: [SYS_32@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_183
+  object_version: '1.1.1'
+  component: trace/reporter
+  object_text: 'operation: be installed and started from a release by its part of the operator
+    manual'
+  source_ids: [SYS_35@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_184
+  object_version: '1.1.1'
+  component: trace/reporter
+  object_text: 'errors: record its errors and warnings with time and cause'
+  source_ids: [SYS_38@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_185
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: identity
+  object_text: 'roles: take the identity of every user from the proxy or the identity provider, and
+    grant every request by role'
+  source_ids: [SYS_39@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_186
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'report record: record for every report who produced it, when, from which data set
+    and revision, and with which parameters'
+  source_ids: [SYS_40@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_187
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'report identity: answer every report with an identity of its own and the fingerprint
+    of its data'
+  source_ids: [SYS_43@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_188
+  object_version: '1.1.1'
+  component: trace/reporter
+  object_text: 'purpose: record what users did only for the purposes set'
+  source_ids: [SYS_44@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_189
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'maturity: answer the maturity of the requirements of a scope'
+  source_ids: [SYS_45@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_190
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'maturity of a group: answer the maturity of each group'
+  source_ids: [SYS_46@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_191
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'passed only: answer a test result as reached only when it passed'
+  source_ids: [SYS_47@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_192
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'every branch: answer a step as reached only when every branch below the requirement
+    reaches it'
+  source_ids: [SYS_48@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_193
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'chain: answer from the longest chain of the process reference model in use - ASPICE
+    with 20 steps where none is chosen'
+  source_ids: [SYS_49@1.2.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_194
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'mean maturity: answer the maturity of a level, a feature or a release'
+  source_ids: [SYS_50@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_195
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'size large: answer from a data set of size large'
+  source_ids: [SYS_51@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_196
+  object_version: '1.1.1'
+  component: trace/reporter
+  object_text: 'start: be ready to answer within the time given after it was started'
+  source_ids: [SYS_54@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_197
+  object_version: '1.1.1'
+  component: trace/reporter
+  object_text: 'resources: run within the memory and the processor time given, where it answers from
+    a data file or from data in memory'
+  source_ids: [SYS_55@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_198
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'users at once: serve the number of users given at once, each within the time of
+    SYS_52'
+  source_ids: [SYS_56@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_199
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'licence: check on every request to a licensed feature the licence of the
+    installation, and refuse it with the reason where it is missing'
+  source_ids: [SYS_58@1.1.1]
+  priority: 'later'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_200
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'licensed features: answer which features the installation is licensed for'
+  source_ids: [SYS_59@1.1.1]
+  priority: 'later'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_201
+  object_version: '1.1.1'
+  component: trace/reporter
+  object_text: 'secure default: be delivered with a secure configuration by default'
+  source_ids: [SYS_64@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_202
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'as read or derived: answer every value as read and its derived value beside it, and
+    say which of the two a view shows'
+  source_ids: [SYS_68@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_203
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'plausibility: analyse a data set against the rules of plausibility, as a report,
+    without changing it'
+  source_ids: [SYS_70@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_204
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'findings of plausibility: answer every finding of SYS_70 with its rule and its
+    objects'
+  source_ids: [SYS_71@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_205
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'findings: answer every finding of the customer in a baseline with its evaluation'
+  source_ids: [SYS_72@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_206
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'verification method: answer for every requirement its verification method, and
+    expect no test case where it is inspection or analysis'
+  source_ids: [SYS_73@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_207
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'reviews: answer for every work product its status, its approval and its reviews in
+    their order'
+  source_ids: [SYS_74@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_208
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'reviewed revision: count a review of a work product only for the revision it
+    reviewed'
+  source_ids: [SYS_75@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_209
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'inspection: answer a passed inspection of the realization of a requirement as its
+    verification'
+  source_ids: [SYS_76@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_210
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'code states: answer the states of the code - source code and object code apart - per
+    release and library'
+  source_ids: [SYS_77@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_211
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'reference models: take in a request any of ASPICE, DO-178C, EN 50716, IEC 62304, IEC
+    61508 and ISO/IEC/IEEE 12207'
+  source_ids: [SYS_78@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_212
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'empty steps: answer the chain without the steps whose level holds no object in the
+    release'
+  source_ids: [SYS_79@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_213
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'chain of a report: answer with every report the chain it used and the steps it left
+    out'
+  source_ids: [SYS_80@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_214
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'same narrowing: narrow the table and the chart of a view by the same parameters'
+  source_ids: [SYS_81@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_215
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'per feature: answer the data grouped by feature, one group per feature'
+  source_ids: [SYS_84@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_216
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'report: make a report of the views chosen as a document, readable without the
+    system'
+  source_ids: [SYS_85@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_217
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'granted data: answer every user only from the organizations and projects their role
+    grants'
+  source_ids: [SYS_88@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_218
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'record of users: answer the record of what users did only to the roles allowed to
+    see it'
+  source_ids: [SYS_90@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_219
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'version: answer the version of treporting in use'
+  source_ids: [SYS_91@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_220
+  object_version: '1.1.1'
+  component: trace/reporter
+  object_text: 'licence texts: carry in its container the licence texts and notices of every
+    component it contains'
+  source_ids: [SYS_93@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_221
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'process of the customer: answer in the levels, names and chain of the process of the
+    customer where one is configured'
+  source_ids: [SYS_94@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_222
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'source of a report: answer with every report its data set, revision and the build of
+    the system'
+  source_ids: [SYS_95@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_223
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'counts: answer with every request how many objects of each kind it answers from'
+  source_ids: [SYS_96@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_224
+  object_version: '1.1.1'
+  component: trace/reporter
+  interface: REST API
+  object_text: 'counts of a report: answer with every report how many objects of each kind it was
+    made from'
+  source_ids: [SYS_97@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_225
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'trace: show the trace from any level chosen up and down to the test results, per
+    release and library'
+  source_ids: [SYS_1@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_226
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'gaps: mark every gap of the trace as such, never as covered'
+  source_ids: [SYS_2@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_227
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'not verified: show per release the requirements not yet verified by a passed test
+    result'
+  source_ids: [SYS_3@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_228
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'per feature: show per feature its state on every level below it, per release'
+  source_ids: [SYS_4@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_229
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'requirement states: show the states of the requirements of each level per release
+    and library'
+  source_ids: [SYS_5@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_230
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'verified on: show for a requirement on which other levels it is verified, and by
+    which tests'
+  source_ids: [SYS_6@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_231
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'person responsible: show per person responsible the requirements that have no
+    implementation or no test'
+  source_ids: [SYS_7@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_232
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'test states: show the states of the tests of each level, test cases, procedures and
+    results apart'
+  source_ids: [SYS_8@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_233
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'narrowing: narrow every view by organization, project, baseline or span of
+    baselines, platform, launch and stream, and show what it is narrowed to'
+  source_ids: [SYS_9@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_234
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'filters: show on every view the filters in effect'
+  source_ids: [SYS_10@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_235
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'hazards: show each hazard and threat over its measures, and mark one with no measure
+    or no passed result'
+  source_ids: [SYS_12@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_236
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'compliance: show per clause of a chosen standard the requirements that meet it, and
+    whether it is open, addressed or verified'
+  source_ids: [SYS_13@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_237
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'process: show the data in the vocabulary of the process reference model chosen'
+  source_ids: [SYS_14@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_238
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'work products: list per baseline its work products with their revision, their kind
+    and their store'
+  source_ids: [SYS_15@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_239
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'changes: show what changed between two baselines'
+  source_ids: [SYS_16@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_240
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'baselines: show the baselines of a project over time'
+  source_ids: [SYS_17@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_241
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'source: show on every view the data set, its revision and the build of the system it
+    answers from'
+  source_ids: [SYS_18@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_242
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'completeness: show on every view whether its data set is complete, incomplete or
+    unverified'
+  source_ids: [SYS_26@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_243
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'known content: show every fault of a data set of known content where the trace shows
+    it'
+  source_ids: [SYS_27@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_244
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'unknown: show a value that is unknown as unknown, distinct from zero, empty or
+    passed'
+  source_ids: [SYS_28@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_245
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'refusal: show a refused request with its reason, rather than an empty view'
+  source_ids: [SYS_29@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_246
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'chart and table: count in a chart exactly what the table beside it shows'
+  source_ids: [SYS_30@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_247
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'export: export every table in a machine-readable format and every chart as a
+    picture'
+  source_ids: [SYS_31@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_248
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'start: say on the first screen what it does and where to start, and lead back there
+    from any view'
+  source_ids: [SYS_33@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_249
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'loading: show while a view is loading, or the data is not there yet, that it is, and
+    fill the view when the data arrives'
+  source_ids: [SYS_34@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_250
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'operation: be installed and started from a release by its part of the operator
+    manual'
+  source_ids: [SYS_35@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_251
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'not available: tell the user when it, or a part of it, is not available, and why'
+  source_ids: [SYS_37@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_252
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'errors: record its errors and warnings with time and cause'
+  source_ids: [SYS_38@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_253
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'sign-in: lead a user without an identity to the sign-in, and show only what the role
+    grants'
+  source_ids: [SYS_39@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_254
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'time: show a view of a data set of size large within its share of the time given'
+  source_ids: [SYS_52@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_255
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'notices: carry a legal notice and a privacy notice on every page reachable from the
+    internet'
+  source_ids: [SYS_57@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_256
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'licence: show a request refused for a missing licence with its reason'
+  source_ids: [SYS_58@1.1.1]
+  priority: 'later'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_257
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'licensed features: show which features the installation is licensed for'
+  source_ids: [SYS_59@1.1.1]
+  priority: 'later'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_258
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'secure default: be delivered with a secure configuration by default'
+  source_ids: [SYS_64@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_259
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'vulnerabilities: name where a vulnerability is reported and how it is handled'
+  source_ids: [SYS_67@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_260
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'as read or derived: say on every view whether it shows the value as read or the one
+    derived'
+  source_ids: [SYS_68@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_261
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'findings of plausibility: show every finding of SYS_70 with its rule and its
+    objects, in a view of its own'
+  source_ids: [SYS_71@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_262
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'findings: show every finding of the customer in a baseline with its evaluation'
+  source_ids: [SYS_72@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_263
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'verification method: show for every requirement its verification method'
+  source_ids: [SYS_73@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_264
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'reviews: show for every work product its status, its approval and its reviews in
+    their order'
+  source_ids: [SYS_74@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_265
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'code states: show the states of the code - source code and object code apart - per
+    release and library'
+  source_ids: [SYS_77@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_266
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'reference models: offer ASPICE, DO-178C, EN 50716, IEC 62304, IEC 61508 and
+    ISO/IEC/IEEE 12207 to choose from'
+  source_ids: [SYS_78@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_267
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'chain of a report: state in every report the chain it used and the steps it left
+    out'
+  source_ids: [SYS_80@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_268
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'same narrowing: narrow the table and the chart of a view the same way'
+  source_ids: [SYS_81@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_269
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'parts: show how a project is split into subsystems, components and units'
+  source_ids: [SYS_82@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_270
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'narrowing: narrow requirements, tests and code by function, feature, priority and
+    safety class, and say what it hides'
+  source_ids: [SYS_83@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_271
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'per feature: show the data grouped by feature, one group per feature'
+  source_ids: [SYS_84@2.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_272
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'report: let the user choose views, tables and charts for a report'
+  source_ids: [SYS_85@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_273
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'link: give every view a link that opens it for another user with the same narrowing'
+  source_ids: [SYS_86@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_274
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'chart title: give every chart a title that names the objects it counts'
+  source_ids: [SYS_87@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_275
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'record of users: show the record of what users did only to the roles allowed to see
+    it'
+  source_ids: [SYS_90@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_276
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'version: show the version of treporting in use'
+  source_ids: [SYS_91@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_277
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'licence texts: carry in its container the licence texts and notices of every
+    component it contains'
+  source_ids: [SYS_93@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_278
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'process of the customer: show the levels, names and chain of the process of the
+    customer where one is configured'
+  source_ids: [SYS_94@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_279
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'source of a report: show in every report its data set, revision and the build of the
+    system'
+  source_ids: [SYS_95@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_280
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'counts: show on every view how many objects of each kind it answers from'
+  source_ids: [SYS_96@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_281
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'counts of a report: show in every report how many objects of each kind it was made
+    from'
+  source_ids: [SYS_97@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_282
+  object_version: '1.1.1'
+  component: trace/viewer
+  object_text: 'drill down: open from each part of a chart the table of the objects it counts, with
+    the filters set to them'
+  source_ids: [SYS_98@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_283
+  object_version: '1.1.1'
+  component: trace/extractor-content
+  interface: configuration
+  object_text: 'sources: take the configuration from a file, from the command line and from the
+    environment, each part from any of them'
+  source_ids: [ARCD_6@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_284
+  object_version: '1.1.1'
+  component: trace/converter
+  interface: configuration
+  object_text: 'sources: take the configuration from a file, from the command line and from the
+    environment, each part from any of them'
+  source_ids: [ARCD_6@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
 elements:
 - object_key: ARC_1
   object_version: '1.3.1'
@@ -534,19 +2711,9 @@ elements:
   repo: trace/viewer
   object_text: 'single page application: shows what the reporter answers - tables, charts, the trace -
     with filters, and hands tables and charts on'
-  allocated: [SYS_1@1.1.1, SYS_2@1.1.1, SYS_3@1.1.1, SYS_4@1.1.1, SYS_5@1.1.1, SYS_6@1.1.1,
-    SYS_7@1.1.1, SYS_8@1.1.1, SYS_9@2.1.1, SYS_10@1.1.1, SYS_12@1.1.1, SYS_13@1.1.1, SYS_14@1.1.1,
-    SYS_15@1.1.1, SYS_16@1.1.1, SYS_17@1.1.1, SYS_18@2.1.1, SYS_26@2.1.1, SYS_27@1.1.1,
-    SYS_28@1.1.1, SYS_29@1.1.1, SYS_30@1.1.1, SYS_31@1.1.1, SYS_33@1.1.1, SYS_34@1.1.1,
-    SYS_35@1.1.1, SYS_37@1.1.1, SYS_38@1.1.1, SYS_39@1.1.1, SYS_52@1.1.1, SYS_57@1.1.1,
-    SYS_58@1.1.1, SYS_59@1.1.1, SYS_64@1.1.1, SYS_67@1.1.1, SYS_68@2.1.1, SYS_71@1.1.1,
-    SYS_72@1.1.1, SYS_73@1.1.1, SYS_74@1.1.1, SYS_77@1.1.1, SYS_78@1.1.1, SYS_80@1.1.1,
-    SYS_81@1.1.1, SYS_82@1.1.1, SYS_83@1.1.1, SYS_84@2.1.1, SYS_85@1.1.1, SYS_86@1.1.1,
-    SYS_87@1.1.1, SYS_90@1.1.1, SYS_91@1.1.1, SYS_93@1.1.1, SYS_94@1.1.1, SYS_95@1.1.1,
-    SYS_96@1.1.1, SYS_97@1.1.1, SYS_98@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [analysis]
 - object_key: ARC_2
   object_version: '1.4.1'
@@ -554,23 +2721,9 @@ elements:
   repo: trace/reporter
   object_text: 'REST API: answers trace, states, maturity and compliance from one data set; takes the
     identity from the proxy or the identity provider and checks the role; records every report'
-  allocated: [SYS_1@1.1.1, SYS_2@1.1.1, SYS_3@1.1.1, SYS_4@1.1.1, SYS_5@1.1.1, SYS_6@1.1.1,
-    SYS_7@1.1.1, SYS_8@1.1.1, SYS_9@2.1.1, SYS_10@1.1.1, SYS_11@1.1.1, SYS_12@1.1.1, SYS_13@1.1.1,
-    SYS_14@1.1.1, SYS_15@1.1.1, SYS_16@1.1.1, SYS_17@1.1.1, SYS_18@2.1.1, SYS_19@1.1.1,
-    SYS_20@1.1.1, SYS_26@2.1.1, SYS_27@1.1.1, SYS_28@1.1.1, SYS_29@1.1.1, SYS_30@1.1.1,
-    SYS_31@1.1.1, SYS_32@1.1.1, SYS_34@1.1.1, SYS_35@1.1.1, SYS_37@1.1.1, SYS_38@1.1.1,
-    SYS_39@1.1.1, SYS_40@1.1.1, SYS_43@1.1.1, SYS_44@1.1.1, SYS_45@2.1.1, SYS_46@1.1.1,
-    SYS_47@1.1.1, SYS_48@1.1.1, SYS_49@1.2.1, SYS_50@1.1.1, SYS_51@1.1.1, SYS_52@1.1.1,
-    SYS_54@1.1.1, SYS_55@1.1.1, SYS_56@1.1.1, SYS_58@1.1.1, SYS_59@1.1.1, SYS_64@1.1.1,
-    SYS_68@2.1.1, SYS_70@2.1.1, SYS_71@1.1.1, SYS_72@1.1.1, SYS_73@1.1.1, SYS_74@1.1.1,
-    SYS_75@1.1.1, SYS_76@1.1.1, SYS_77@1.1.1, SYS_78@1.1.1, SYS_79@1.1.1, SYS_80@1.1.1,
-    SYS_81@1.1.1, SYS_82@1.1.1, SYS_83@1.1.1, SYS_84@2.1.1, SYS_85@1.1.1, SYS_88@1.1.1,
-    SYS_90@1.1.1, SYS_91@1.1.1, SYS_93@1.1.1, SYS_94@1.1.1, SYS_95@1.1.1, SYS_96@1.1.1,
-    SYS_97@1.1.1,
-    ARC_23@1.1.1, ARC_24@1.1.1, ARC_25@1.1.1, ARC_26@1.1.1, ARC_27@1.1.1, ARC_28@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [analysis]
 - object_key: ARC_3
   object_version: '2.4.1'
@@ -580,21 +2733,9 @@ elements:
     data or a data file; the generator of data of known content; the import, the same for every system:
     counts what was stored, fingerprints it, stores every value as it is handed, sets the state and
     keeps the import record; the audit trail'
-  allocated: [SYS_1@1.1.1, SYS_2@1.1.1, SYS_3@1.1.1, SYS_4@1.1.1, SYS_5@1.1.1, SYS_6@1.1.1,
-    SYS_7@1.1.1, SYS_8@1.1.1, SYS_9@2.1.1, SYS_11@1.1.1, SYS_12@1.1.1, SYS_13@1.1.1, SYS_14@1.1.1,
-    SYS_15@1.1.1, SYS_16@1.1.1, SYS_17@1.1.1, SYS_18@2.1.1, SYS_19@1.1.1, SYS_20@1.1.1,
-    SYS_21@1.1.1, SYS_22@1.1.1, SYS_23@2.1.1, SYS_24@2.1.1, SYS_25@2.1.1, SYS_26@2.1.1,
-    SYS_27@1.1.1, SYS_28@1.1.1, SYS_32@1.1.1, SYS_35@1.1.1, SYS_36@1.1.1, SYS_38@1.1.1,
-    SYS_40@1.1.1, SYS_41@2.1.1, SYS_42@1.1.1, SYS_43@1.1.1, SYS_44@1.1.1, SYS_45@2.1.1,
-    SYS_46@1.1.1, SYS_47@1.1.1, SYS_48@1.1.1, SYS_49@1.2.1, SYS_50@1.1.1, SYS_51@1.1.1,
-    SYS_52@1.1.1, SYS_53@1.1.1, SYS_54@1.1.1, SYS_55@1.1.1, SYS_64@1.1.1, SYS_68@2.1.1,
-    SYS_72@1.1.1, SYS_73@1.1.1, SYS_74@1.1.1, SYS_76@1.1.1, SYS_77@1.1.1, SYS_78@1.1.1,
-    SYS_79@1.1.1, SYS_82@1.1.1, SYS_83@1.1.1, SYS_84@2.1.1, SYS_88@1.1.1, SYS_89@1.1.1,
-    SYS_92@1.1.1, SYS_94@1.1.1, SYS_95@1.1.1, SYS_96@1.1.1, SYS_97@1.1.1,
-    ARC_23@1.1.1, ARC_24@1.1.1, ARC_25@1.1.1, ARC_26@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [analysis]
 - object_key: ARC_4
   object_version: '1.4.1'
@@ -602,13 +2743,9 @@ elements:
   repo: trace/converter
   object_text: maps the customized attributes of an attribute-based system to the model, by a configuration
     file of the customer; one general mechanism for all of them
-  allocated: [SYS_2@1.1.1, SYS_7@1.1.1, SYS_8@1.1.1, SYS_11@1.1.1, SYS_12@1.1.1, SYS_15@1.1.1,
-    SYS_17@1.1.1, SYS_22@1.1.1, SYS_23@2.1.1, SYS_24@2.1.1, SYS_25@2.1.1, SYS_27@1.1.1,
-    SYS_28@1.1.1, SYS_38@1.1.1, SYS_53@1.1.1, SYS_60@1.1.1, SYS_61@1.1.1, SYS_62@1.1.1,
-    SYS_64@1.1.1, SYS_68@2.1.1, SYS_72@1.1.1, SYS_73@1.1.1, SYS_74@1.1.1, SYS_101@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [analysis]
 - object_key: ARC_5
   object_version: '3.4.1'
@@ -619,14 +2756,9 @@ elements:
     them to a package for each kind of content, each a plug-in, a program of its own that
     extractor-content starts. The package annotations reads `@implements` and `@verifies` from Go
     files; it is the repo reporter-annotations today'
-  allocated: [SYS_2@1.1.1, SYS_7@1.1.1, SYS_8@1.1.1, SYS_11@1.1.1, SYS_12@1.1.1, SYS_15@1.1.1,
-    SYS_17@1.1.1, SYS_22@1.1.1, SYS_23@2.1.1, SYS_24@2.1.1, SYS_27@1.1.1, SYS_28@1.1.1,
-    SYS_38@1.1.1, SYS_53@1.1.1, SYS_60@1.1.1, SYS_62@1.1.1, SYS_64@1.1.1, SYS_68@2.1.1,
-    SYS_72@1.1.1, SYS_74@1.1.1, SYS_101@1.1.1,
-    ARC_80@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [analysis]
 - object_key: ARC_6
   object_version: '1.2.1'
@@ -635,11 +2767,9 @@ elements:
   object_text: 'one per system, such as extractor-git or extractor-codebeamer: connects to it, lists and
     fetches what it holds with its identity in the system - revision, commit - and counts it by a query
     of its own'
-  allocated: [SYS_15@1.1.1, SYS_17@1.1.1, SYS_22@1.1.1, SYS_23@2.1.1, SYS_24@2.1.1, SYS_27@1.1.1,
-    SYS_38@1.1.1, SYS_53@1.1.1, SYS_61@1.1.1, SYS_64@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [analysis]
 - object_key: ARC_51
   object_version: '1.2.1'
@@ -647,10 +2777,9 @@ elements:
   repo: trace/mcp
   object_text: 'answers an assistant what the viewer shows, from the reporter over the REST API; names
     with every answer the view and the filters that show the same'
-  allocated: [SYS_35@1.1.1, SYS_99@1.1.1, SYS_100@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [analysis]
 - object_key: ARC_11
   object_version: '1.2.1'
@@ -658,35 +2787,27 @@ elements:
   object_text: REST API
   between: viewer, mcp → reporter
   contract: swagger of the reporter
-  allocated: [ARC_27@1.1.1, ARC_29@1.1.1, ARC_30@1.1.1, ARC_31@1.1.1, ARC_32@1.1.1, ARC_33@1.1.1,
-    ARC_34@1.1.1, ARC_35@1.1.1, ARC_36@1.1.1, ARC_37@1.1.1, ARC_56@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [analysis]
 - object_key: ARC_12
   object_version: '1.1.1'
   kind: interface
   object_text: '`StorageSource`'
   between: reporter → storage
-  contract: Go interface of the storage
-  allocated: [ARC_23@1.1.1, ARC_24@1.1.1, ARC_25@1.1.1, ARC_26@1.1.1, ARC_27@1.1.1, ARC_38@1.1.1,
-    ARC_39@1.1.1, ARC_40@1.1.1, ARC_41@1.1.1, ARC_42@1.1.1, ARC_43@1.1.1, ARC_44@1.1.1, ARC_45@1.1.1,
-    ARC_46@1.1.1, ARC_47@1.1.1, ARC_48@1.1.1, ARC_49@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [analysis]
 - object_key: ARC_13
   object_version: '1.1.1'
   kind: interface
   object_text: import
   between: converter, extractor-content → storage
-  contract: Go interface of the storage
-  allocated: [ARC_73@1.1.1, ARC_74@1.1.1, ARC_75@1.1.1, ARC_76@1.1.1, ARC_77@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [analysis]
 - object_key: ARC_14
   object_version: '1.1.1'
@@ -694,10 +2815,9 @@ elements:
   object_text: system access
   between: extractor-SYSTEM → system
   contract: 'per system: listing and fetching, and a query of its own for counting'
-  allocated: [ARC_57@1.1.1, ARC_58@1.1.1, ARC_59@1.1.1, ARC_60@1.1.1, ARC_61@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [analysis]
 - object_key: ARC_15
   object_version: '1.1.1'
@@ -705,10 +2825,9 @@ elements:
   object_text: files
   between: extractor-SYSTEM → extractor-content
   contract: a file with its kind and its identity in the system
-  allocated: [ARC_62@1.1.1, ARC_63@1.1.1, ARC_64@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [analysis]
 - object_key: ARC_16
   object_version: '1.2.1'
@@ -716,11 +2835,9 @@ elements:
   object_text: information
   between: extractor-content → storage
   contract: the information extracted, per kind, over ARC_13; for annotations the format of formats.md
-  allocated: [ARC_65@1.1.1, ARC_66@1.1.1, ARC_67@1.1.1, ARC_68@1.1.1, ARC_69@2.1.1, ARC_70@1.1.1,
-    ARC_71@1.1.1, ARC_72@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [analysis]
 - object_key: ARC_17
   object_version: '1.1.1'
@@ -737,7 +2854,6 @@ elements:
   kind: interface
   object_text: audit trail
   between: reporter → storage
-  contract: Go interface of the storage
   priority: 'medium'
   safety: ''
   status: draft
@@ -758,10 +2874,9 @@ elements:
   object_text: configuration
   between: customer → extractor-SYSTEM, extractor-content, converter
   contract: the mapping of attributes and of values; where a file, one per customer
-  allocated: [ARC_78@1.1.1, ARC_79@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [analysis]
 - object_key: ARC_52
   object_version: '1.4.1'
@@ -769,10 +2884,9 @@ elements:
   object_text: Model Context Protocol
   between: assistant → mcp
   contract: the tools of the MCP server, one per view
-  allocated: [ARC_53@1.1.1, ARC_54@1.1.1, ARC_55@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [analysis]
 - object_key: ARC_21
   object_version: '1.5.1'
@@ -780,18 +2894,9 @@ elements:
   object_text: the information model - the common language of converter, storage and reporter; the common
     contract of ARC_12, ARC_13 and ARC_18
   contract: architecture/attributes.md
-  allocated: [SYS_1@1.1.1, SYS_2@1.1.1, SYS_3@1.1.1, SYS_4@1.1.1, SYS_5@1.1.1, SYS_6@1.1.1,
-    SYS_7@1.1.1, SYS_8@1.1.1, SYS_9@2.1.1, SYS_11@1.1.1, SYS_12@1.1.1, SYS_13@1.1.1, SYS_14@1.1.1,
-    SYS_15@1.1.1, SYS_16@1.1.1, SYS_17@1.1.1, SYS_18@2.1.1, SYS_20@1.1.1, SYS_22@1.1.1,
-    SYS_23@2.1.1, SYS_25@2.1.1, SYS_26@2.1.1, SYS_28@1.1.1, SYS_32@1.1.1, SYS_36@1.1.1,
-    SYS_40@1.1.1, SYS_41@2.1.1, SYS_43@1.1.1, SYS_45@2.1.1, SYS_47@1.1.1, SYS_49@1.2.1,
-    SYS_68@2.1.1, SYS_70@2.1.1, SYS_72@1.1.1, SYS_73@1.1.1, SYS_74@1.1.1,
-    SYS_75@1.1.1, SYS_76@1.1.1, SYS_77@1.1.1, SYS_82@1.1.1, SYS_83@1.1.1, SYS_84@2.1.1,
-    SYS_88@1.1.1, SYS_94@1.1.1, SYS_95@1.1.1,
-    ARC_50@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [analysis]
 - object_key: ARC_22
   object_version: '2.1.3'
