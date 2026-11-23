@@ -767,7 +767,7 @@ requirements:
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_70
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   feature: Plausibility
   object_text: analyse a data set, as a report, against rules of plausibility - a child with a lower safety
     class than its parent and no decomposition, an unclassified child under a classified parent, a passed
@@ -775,7 +775,7 @@ requirements:
   source_ids: [UN_SAFETY_1@1.1.1, REG_ISO26262-9_1@1.1.1, REG_ARP4754B_1@1.1.1, REG_DO178C_2@1.1.1, REG_IEC61508-4_1@1.1.1, REG_IEC61508-1_1@1.1.1, REG_IEC61508-2_1@1.1.1, REG_IEC62304_1@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_71
@@ -1101,6 +1101,6 @@ requirements:
   source_ids: [UN_SAFETY_1@1.1.1, REG_ISO26262-9_1@1.1.1, REG_ARP4754B_1@1.1.1, REG_DO178C_2@1.1.1, REG_IEC61508-4_1@1.1.1, REG_IEC61508-1_1@1.1.1, REG_IEC61508-2_1@1.1.1, REG_IEC62304_1@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
