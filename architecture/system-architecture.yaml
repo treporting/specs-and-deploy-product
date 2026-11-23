@@ -725,7 +725,7 @@ elements:
   status: draft
   verification_method: [analysis]
 - object_key: ARC_20
-  object_version: '1.1.1'
+  object_version: '1.1.2'
   kind: interface
   object_text: configuration
   between: customer → extractor-SYSTEM, extractor-content, converter
@@ -733,7 +733,7 @@ elements:
   allocated: [ARC_78@1.1.1, ARC_79@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_52
   object_version: '1.4.1'
