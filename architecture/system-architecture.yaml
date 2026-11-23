@@ -135,7 +135,7 @@ requirements:
   status: approved
   verification_method: [test]
 - object_key: ARC_35
-  object_version: '2.1.1'
+  object_version: '3.1.1'
   component: trace/reporter
   interface: REST API
   object_text: 'keys: send each cell as the keys of its objects with their states, or as the count
@@ -143,7 +143,7 @@ requirements:
   source_ids: [SYS_1@1.1.1, SYS_5@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_36
   object_version: '2.1.1'
@@ -1485,14 +1485,14 @@ requirements:
   status: approved
   verification_method: [test]
 - object_key: ARC_164
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/reporter
   interface: REST API
   object_text: 'gaps: answer the gaps of the trace as the storage marks them, never as covered'
   source_ids: [SYS_2@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_165
   object_version: '1.1.1'
@@ -1516,7 +1516,7 @@ requirements:
   status: approved
   verification_method: [test]
 - object_key: ARC_167
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/reporter
   interface: REST API
   object_text: 'verified on: answer for a requirement the levels and tests it is verified by, as the
@@ -1524,7 +1524,7 @@ requirements:
   source_ids: [SYS_6@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_168
   object_version: '1.1.1'
@@ -1538,7 +1538,7 @@ requirements:
   status: approved
   verification_method: [test]
 - object_key: ARC_169
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/reporter
   interface: REST API
   object_text: 'test states: answer the states of the tests of each level as the storage counts them
@@ -1546,7 +1546,7 @@ requirements:
   source_ids: [SYS_8@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_170
   object_version: '1.1.1'
@@ -1570,7 +1570,7 @@ requirements:
   status: approved
   verification_method: [test]
 - object_key: ARC_172
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/reporter
   interface: REST API
   object_text: 'hazards: answer each hazard and threat over its measures as the storage traces and
@@ -1578,7 +1578,7 @@ requirements:
   source_ids: [SYS_12@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_173
   object_version: '1.1.1'
@@ -2712,7 +2712,7 @@ requirements:
   source_ids: [SYS_1@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_286
   object_version: '1.1.1'
@@ -2723,7 +2723,7 @@ requirements:
   source_ids: [SYS_2@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_287
   object_version: '1.1.1'
@@ -2734,7 +2734,7 @@ requirements:
   source_ids: [SYS_5@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_288
   object_version: '1.1.1'
@@ -2745,7 +2745,7 @@ requirements:
   source_ids: [SYS_6@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_289
   object_version: '1.1.1'
@@ -2756,7 +2756,7 @@ requirements:
   source_ids: [SYS_8@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_290
   object_version: '1.1.1'
@@ -2767,7 +2767,7 @@ requirements:
   source_ids: [SYS_12@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 elements:
 - object_key: ARC_1
