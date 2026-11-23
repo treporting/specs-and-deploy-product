@@ -771,12 +771,11 @@ requirements:
   feature: Plausibility
   object_text: analyse a data set, as a report, against rules of plausibility - a child with a lower safety
     class than its parent and no decomposition, an unclassified child under a classified parent, a passed
-    test result without a test case, a cycle in the trace, a link into another baseline; the import reads
-    the data as it is and is never stopped or changed by such a finding
+    test result without a test case, a cycle in the trace, a link into another baseline
   source_ids: [UN_SAFETY_1@1.1.1, REG_ISO26262-9_1@1.1.1, REG_ARP4754B_1@1.1.1, REG_DO178C_2@1.1.1, REG_IEC61508-4_1@1.1.1, REG_IEC61508-1_1@1.1.1, REG_IEC61508-2_1@1.1.1, REG_IEC62304_1@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
 - object_key: SYS_71
@@ -1092,5 +1091,16 @@ requirements:
   priority: 'medium'
   safety: ''
   status: approved
+  verification_method: [test]
+  platform_launch: treporting = 2_selfhosted, 1_demo
+- object_key: SYS_101
+  object_version: '1.1.1'
+  feature: Plausibility
+  object_text: import the data unaffected by a check of plausibility - never stopped, never changed -
+    whether the check runs during the import or apart from it
+  source_ids: [UN_SAFETY_1@1.1.1, REG_ISO26262-9_1@1.1.1, REG_ARP4754B_1@1.1.1, REG_DO178C_2@1.1.1, REG_IEC61508-4_1@1.1.1, REG_IEC61508-1_1@1.1.1, REG_IEC61508-2_1@1.1.1, REG_IEC62304_1@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
   verification_method: [test]
   platform_launch: treporting = 2_selfhosted, 1_demo
