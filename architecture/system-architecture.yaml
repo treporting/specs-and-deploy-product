@@ -255,14 +255,18 @@ requirements:
   verification_method: [test]
 - object_key: ARC_53
   object_version: '1.1.1'
+  component: trace/mcp
+  interface: Model Context Protocol
   object_text: 'tools: offer an assistant one tool per view of the viewer'
   source_ids: [SYS_99@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_54
   object_version: '1.1.1'
+  component: trace/mcp
+  interface: Model Context Protocol
   object_text: 'limit: answer at most as many rows as the assistant names, 100 where it names none,
     and say how many rows were left out'
   source_ids: [SYS_99@1.1.1]
@@ -270,16 +274,18 @@ requirements:
     assistant can read
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_55
   object_version: '1.1.1'
+  component: trace/mcp
+  interface: Model Context Protocol
   object_text: 'organization: answer an assistant from the one organization the server is started
     with, and never ask the assistant for it'
   source_ids: [SYS_88@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_56
   object_version: '1.1.1'
@@ -501,6 +507,25 @@ requirements:
   priority: 'medium'
   safety: ''
   status: approved
+  verification_method: [test]
+- object_key: ARC_81
+  object_version: '1.1.1'
+  component: trace/mcp
+  object_text: 'views: name with every answer the view and the filters that show the same'
+  source_ids: [SYS_100@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_82
+  object_version: '1.1.1'
+  component: trace/mcp
+  object_text: 'operation: be installed and started from a release by its part of the operator
+    manual'
+  source_ids: [SYS_35@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
   verification_method: [test]
 elements:
 - object_key: ARC_1
