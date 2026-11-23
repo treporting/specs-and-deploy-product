@@ -6,7 +6,7 @@ level: r3
 documents: [architecture/system-architecture.md, architecture/attributes.md]
 requirements:
 - object_key: ARC_23
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/storage
   interface: StorageSource
   object_text: 'mode database: keep the data sets in a database server of their own, which the
@@ -14,10 +14,10 @@ requirements:
   source_ids: [SYS_20@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_24
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/storage
   interface: StorageSource
   object_text: 'mode database with the reporter: keep the data sets in a database run together with
@@ -25,10 +25,10 @@ requirements:
   source_ids: [SYS_20@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_25
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/storage
   interface: StorageSource
   object_text: 'mode file: answer from a data file the reporter reads, where no database server can
@@ -36,10 +36,10 @@ requirements:
   source_ids: [SYS_21@1.1.1, SYS_55@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_26
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/storage
   interface: StorageSource
   object_text: 'mode memory: answer from generated data in the memory of the reporter, for the demo
@@ -47,29 +47,29 @@ requirements:
   source_ids: [SYS_20@1.1.1, SYS_55@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_27
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/reporter
   interface: REST API
   object_text: 'read every mode through `StorageSource`, and serve the viewer the same API from each'
   source_ids: [SYS_19@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_28
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/reporter
   object_text: 'answer, in a running reporter, from one mode only, chosen at its start'
   source_ids: [SYS_20@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_29
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/reporter
   interface: REST API
   object_text: 'scope: name in every request the organization, the project, one subsystem and the
@@ -78,10 +78,10 @@ requirements:
   source_ids: [SYS_9@2.1.1, SYS_20@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_30
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/reporter
   interface: REST API
   object_text: 'process: take in a request the process reference model the data are read as, and name
@@ -89,10 +89,10 @@ requirements:
   source_ids: [SYS_14@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_31
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/reporter
   interface: REST API
   object_text: 'narrowing: narrow the rows by function, feature, priority, safety class, platform,
@@ -100,10 +100,10 @@ requirements:
   source_ids: [SYS_9@2.1.1, SYS_83@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_32
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/reporter
   interface: REST API
   object_text: 'level: take in a request the level the trace starts at, or the level counted, by its
@@ -111,20 +111,20 @@ requirements:
   source_ids: [SYS_1@1.1.1, SYS_5@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_33
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/reporter
   interface: REST API
   object_text: 'component: narrow a request on the code by component and by unit of the design'
   source_ids: [SYS_1@1.1.1, SYS_82@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_34
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/reporter
   interface: REST API
   object_text: 'above: send the levels above each row, up to the roots, only where the request asks
@@ -132,10 +132,10 @@ requirements:
   source_ids: [SYS_1@1.1.1, SYS_52@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_35
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/reporter
   interface: REST API
   object_text: 'keys: send each cell as the keys of its objects with their states, or as the count per
@@ -143,20 +143,20 @@ requirements:
   source_ids: [SYS_1@1.1.1, SYS_5@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_36
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/reporter
   interface: REST API
   object_text: 'format: answer as JSON or as CSV, as the request asks'
   source_ids: [SYS_31@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_37
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/reporter
   interface: REST API
   object_text: 'refusal: refuse a request with a parameter it does not know, or a value it cannot
@@ -165,10 +165,10 @@ requirements:
   source_ids: [SYS_29@1.1.1, SYS_34@1.1.1, SYS_37@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_38
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/storage
   interface: StorageSource
   object_text: 'scope names: hand the names of every scope - organizations, requirements projects and
@@ -176,10 +176,10 @@ requirements:
   source_ids: [SYS_9@2.1.1, SYS_20@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_39
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/storage
   interface: StorageSource
   object_text: 'baselines: hand each baseline with its project, start and end, and for a library the
@@ -187,10 +187,10 @@ requirements:
   source_ids: [SYS_17@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_40
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/storage
   interface: StorageSource
   object_text: 'objects: hand every object with its scope, its key, its level by key and its state,
@@ -198,10 +198,10 @@ requirements:
   source_ids: [SYS_1@1.1.1, SYS_5@1.1.1, SYS_8@1.1.1, SYS_20@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_41
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/storage
   interface: StorageSource
   object_text: 'links: hand the links downward between every two types the trace joins, each object
@@ -209,20 +209,20 @@ requirements:
   source_ids: [SYS_1@1.1.1, SYS_2@1.1.1, SYS_6@1.1.1, SYS_12@1.1.1, SYS_13@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_42
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/storage
   interface: StorageSource
   object_text: 'kinds of test: hand test cases, test procedures and test results as kinds apart'
   source_ids: [SYS_8@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_43
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/storage
   interface: StorageSource
   object_text: 'narrowing: hand on every level function, feature, priority, safety class, platform,
@@ -230,10 +230,10 @@ requirements:
   source_ids: [SYS_9@2.1.1, SYS_11@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_44
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/storage
   interface: StorageSource
   object_text: 'verification: hand per requirement its verification method, and per level of the
@@ -241,10 +241,10 @@ requirements:
   source_ids: [SYS_2@1.1.1, SYS_73@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_45
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/storage
   interface: StorageSource
   object_text: 'components: hand per object its component and unit, and the components with their
@@ -252,10 +252,10 @@ requirements:
   source_ids: [SYS_1@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_46
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/storage
   interface: StorageSource
   object_text: 'head: hand per requirements project its head - the levels in order, with key, name and
@@ -263,10 +263,10 @@ requirements:
   source_ids: [SYS_14@1.1.1, SYS_49@1.2.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_47
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/storage
   interface: StorageSource
   object_text: 'work products: hand the work products with baseline, revision, level, kind and
@@ -274,10 +274,10 @@ requirements:
   source_ids: [SYS_15@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_48
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/storage
   interface: StorageSource
   object_text: 'read error: say a read that fails, with the error, apart from a read that found no
@@ -285,40 +285,40 @@ requirements:
   source_ids: [SYS_29@1.1.1, SYS_37@1.1.1, SYS_38@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_49
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/storage
   interface: StorageSource
   object_text: 'pending: say while the data set is still being filled'
   source_ids: [SYS_34@1.1.1, SYS_54@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_50
-  object_version: '1.2.1'
+  object_version: '2.1.1'
   component: trace/storage
   object_text: 'derived values again: make the derived values of a stored data set again on request
     when a rule changes, back in time, without fetching the data from the source systems again'
   source_ids: [ARCD_3@3.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_53
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/mcp
   interface: Model Context Protocol
   object_text: 'tools: offer an assistant one tool per view of the viewer'
   source_ids: [SYS_99@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_54
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/mcp
   interface: Model Context Protocol
   object_text: 'limit: answer at most as many rows as the assistant names, 100 where it names none,
@@ -328,10 +328,10 @@ requirements:
     assistant can read
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_55
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/mcp
   interface: Model Context Protocol
   object_text: 'organization: answer an assistant from the one organization the server is started
@@ -339,10 +339,10 @@ requirements:
   source_ids: [SYS_88@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_56
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/reporter
   interface: REST API
   object_text: 'baseline: answer a request that names no release (`*`) from the newest release of the
@@ -351,10 +351,10 @@ requirements:
   rationale: whoever opens a view looks at the newest first
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_57
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: extractor-system
   interface: system access
   object_text: 'baselines: list the baselines the system holds - for a file-based system its tags
@@ -362,10 +362,10 @@ requirements:
   source_ids: [SYS_17@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_58
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: extractor-system
   interface: system access
   object_text: 'listing and fetching: list and fetch what a baseline holds, as it is in that
@@ -373,10 +373,10 @@ requirements:
   source_ids: [SYS_15@1.1.1, SYS_22@1.1.1, SYS_24@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_59
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: extractor-system
   interface: system access
   object_text: 'count of its own: count what a baseline holds per kind by a query of its own, in
@@ -384,20 +384,20 @@ requirements:
   source_ids: [SYS_23@2.1.1, ARCD_1@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_60
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: extractor-system
   interface: system access
   object_text: 'read only: never write into the system'
   source_ids: [ARCR_1@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_61
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: extractor-system
   interface: system access
   object_text: 'access error: say a system that cannot be reached, or a fetch that fails, with the
@@ -405,20 +405,20 @@ requirements:
   source_ids: [SYS_22@1.1.1, SYS_38@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_62
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: extractor-system
   interface: files
   object_text: 'baseline first: name the baseline - its name and its date - before its files'
   source_ids: [SYS_8@1.1.1, SYS_17@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_63
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: extractor-system
   interface: files
   object_text: 'file: hand each file with its path, its content, its kind and its identity in the
@@ -426,10 +426,10 @@ requirements:
   source_ids: [SYS_15@1.1.1, SYS_24@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_64
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: extractor-system
   interface: files
   object_text: 'end: say when the files of a baseline are all handed over, so that what spans
@@ -437,10 +437,10 @@ requirements:
   source_ids: [SYS_2@1.1.1, SYS_12@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_65
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/extractor-content
   interface: information
   object_text: 'objects: hand every object read - requirement, test case, test procedure, test
@@ -449,10 +449,10 @@ requirements:
   source_ids: [SYS_7@1.1.1, SYS_8@1.1.1, SYS_22@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_66
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/extractor-content
   interface: information
   object_text: 'links: hand every link read, with its type and its two ends, also where an end is
@@ -460,10 +460,10 @@ requirements:
   source_ids: [SYS_2@1.1.1, SYS_12@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_67
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/extractor-content
   interface: information
   object_text: 'work products: hand each file read as a work product with its baseline, revision,
@@ -471,10 +471,10 @@ requirements:
   source_ids: [SYS_15@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_68
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/extractor-content
   interface: information
   object_text: 'reviews and findings: hand per work product its status, its approval and its reviews
@@ -483,10 +483,10 @@ requirements:
   source_ids: [SYS_72@1.1.1, SYS_74@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_69
-  object_version: '2.1.1'
+  object_version: '3.1.1'
   component: trace/extractor-content
   interface: information
   object_text: 'as read: hand every value as the file holds it, an unknown value apart from an empty
@@ -494,20 +494,20 @@ requirements:
   source_ids: [SYS_28@1.1.1, ARCD_3@3.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_70
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/extractor-content
   interface: information
   object_text: 'refused: name every object it could not read, with the reason'
   source_ids: [SYS_22@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_71
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/extractor-content
   interface: information
   object_text: 'counted: hand per kind of object, per type of link and per state how many were read
@@ -515,20 +515,20 @@ requirements:
   source_ids: [SYS_23@2.1.1, ARCD_2@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_72
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/extractor-content
   interface: information
   object_text: 'errors: hand its errors and warnings with time and cause'
   source_ids: [SYS_38@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_73
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/storage
   interface: import
   object_text: 'one import: take the information of every system the same way, into the model of
@@ -536,20 +536,20 @@ requirements:
   source_ids: [SYS_22@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_74
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/storage
   interface: import
   object_text: 'same data set: build from the same information the same data set on every import'
   source_ids: [SYS_24@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_75
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/storage
   interface: import
   object_text: 'stored count: count what was stored from the storage after the import, apart from
@@ -557,20 +557,20 @@ requirements:
   source_ids: [SYS_23@2.1.1, ARCD_1@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_76
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/storage
   interface: import
   object_text: 'being filled: mark the data set as being filled until the import is done'
   source_ids: [SYS_34@1.1.1, SYS_54@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_77
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/storage
   interface: import
   object_text: 'time: import a data set of size large, with the checks of Integrity, within the time
@@ -578,10 +578,10 @@ requirements:
   source_ids: [SYS_53@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_78
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: extractor-system
   interface: configuration
   object_text: 'sources: take the configuration from a file, from the command line and from the
@@ -589,10 +589,10 @@ requirements:
   source_ids: [ARCD_6@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_79
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: extractor-system
   interface: configuration
   object_text: 'releases: name per release the libraries it delivers, of one subsystem or of several,
@@ -600,16 +600,16 @@ requirements:
   source_ids: [SYS_17@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_80
-  object_version: '1.1.1'
+  object_version: '2.1.1'
   component: trace/extractor-content
   object_text: 'plug-ins: start a package for each kind of content as a program of its own'
   source_ids: [SYS_22@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_81
   object_version: '1.1.1'
@@ -618,7 +618,7 @@ requirements:
   source_ids: [SYS_100@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_82
   object_version: '1.1.1'
@@ -628,7 +628,7 @@ requirements:
   source_ids: [SYS_35@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_83
   object_version: '1.1.1'
@@ -648,7 +648,7 @@ requirements:
   source_ids: [SYS_53@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_85
   object_version: '1.1.1'
@@ -659,7 +659,7 @@ requirements:
   source_ids: [SYS_61@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_86
   object_version: '1.1.1'
@@ -679,7 +679,7 @@ requirements:
   source_ids: [SYS_11@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_88
   object_version: '1.1.1'
@@ -689,7 +689,7 @@ requirements:
   source_ids: [SYS_17@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_89
   object_version: '1.1.1'
@@ -698,7 +698,7 @@ requirements:
   source_ids: [SYS_24@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_90
   object_version: '1.1.1'
@@ -718,7 +718,7 @@ requirements:
   source_ids: [SYS_53@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_92
   object_version: '1.1.1'
@@ -729,7 +729,7 @@ requirements:
   source_ids: [SYS_60@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_93
   object_version: '1.1.1'
@@ -741,7 +741,7 @@ requirements:
   source_ids: [SYS_62@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_94
   object_version: '1.1.1'
@@ -761,7 +761,7 @@ requirements:
   source_ids: [SYS_68@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_96
   object_version: '1.1.1'
@@ -772,7 +772,7 @@ requirements:
   source_ids: [SYS_101@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_97
   object_version: '1.1.1'
@@ -783,7 +783,7 @@ requirements:
   source_ids: [SYS_2@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_98
   object_version: '1.1.1'
@@ -793,7 +793,7 @@ requirements:
   source_ids: [SYS_7@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_99
   object_version: '1.1.1'
@@ -803,7 +803,7 @@ requirements:
   source_ids: [SYS_8@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_100
   object_version: '1.1.1'
@@ -814,7 +814,7 @@ requirements:
   source_ids: [SYS_11@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_101
   object_version: '1.1.1'
@@ -825,7 +825,7 @@ requirements:
   source_ids: [SYS_12@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_102
   object_version: '1.1.1'
@@ -836,7 +836,7 @@ requirements:
   source_ids: [SYS_15@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_103
   object_version: '1.1.1'
@@ -846,7 +846,7 @@ requirements:
   source_ids: [SYS_17@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_104
   object_version: '1.1.1'
@@ -856,7 +856,7 @@ requirements:
   source_ids: [SYS_22@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_105
   object_version: '1.1.1'
@@ -867,7 +867,7 @@ requirements:
   source_ids: [SYS_23@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_106
   object_version: '1.1.1'
@@ -877,7 +877,7 @@ requirements:
   source_ids: [SYS_24@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_107
   object_version: '1.1.1'
@@ -887,7 +887,7 @@ requirements:
   source_ids: [SYS_25@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_108
   object_version: '1.1.1'
@@ -908,7 +908,7 @@ requirements:
   source_ids: [SYS_28@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_110
   object_version: '1.1.1'
@@ -918,7 +918,7 @@ requirements:
   source_ids: [SYS_38@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_111
   object_version: '1.1.1'
@@ -927,7 +927,7 @@ requirements:
   source_ids: [SYS_53@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_112
   object_version: '1.1.1'
@@ -939,7 +939,7 @@ requirements:
   source_ids: [SYS_60@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_113
   object_version: '1.1.1'
@@ -950,7 +950,7 @@ requirements:
   source_ids: [SYS_61@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_114
   object_version: '1.1.1'
@@ -962,7 +962,7 @@ requirements:
   source_ids: [SYS_62@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_115
   object_version: '1.1.1'
@@ -982,7 +982,7 @@ requirements:
   source_ids: [SYS_68@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_117
   object_version: '1.1.1'
@@ -993,7 +993,7 @@ requirements:
   source_ids: [SYS_72@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_118
   object_version: '1.1.1'
@@ -1004,7 +1004,7 @@ requirements:
   source_ids: [SYS_73@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_119
   object_version: '1.1.1'
@@ -1015,7 +1015,7 @@ requirements:
   source_ids: [SYS_74@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_120
   object_version: '1.1.1'
@@ -1026,7 +1026,7 @@ requirements:
   source_ids: [SYS_101@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_121
   object_version: '1.1.1'
@@ -1036,7 +1036,7 @@ requirements:
   source_ids: [SYS_3@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_122
   object_version: '1.1.1'
@@ -1046,7 +1046,7 @@ requirements:
   source_ids: [SYS_4@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_123
   object_version: '1.1.1'
@@ -1057,7 +1057,7 @@ requirements:
   source_ids: [SYS_7@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_124
   object_version: '1.1.1'
@@ -1068,7 +1068,7 @@ requirements:
   source_ids: [SYS_16@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_125
   object_version: '1.1.1'
@@ -1079,7 +1079,7 @@ requirements:
   source_ids: [SYS_18@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_126
   object_version: '1.1.1'
@@ -1089,7 +1089,7 @@ requirements:
   source_ids: [SYS_19@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_127
   object_version: '1.1.1'
@@ -1100,7 +1100,7 @@ requirements:
   source_ids: [SYS_25@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_128
   object_version: '1.1.1'
@@ -1111,7 +1111,7 @@ requirements:
   source_ids: [SYS_26@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_129
   object_version: '1.1.1'
@@ -1132,7 +1132,7 @@ requirements:
   source_ids: [SYS_28@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_131
   object_version: '1.1.1'
@@ -1142,7 +1142,7 @@ requirements:
   source_ids: [SYS_32@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_132
   object_version: '1.1.1'
@@ -1152,7 +1152,7 @@ requirements:
   source_ids: [SYS_35@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_133
   object_version: '1.1.1'
@@ -1162,7 +1162,7 @@ requirements:
   source_ids: [SYS_36@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_134
   object_version: '1.1.1'
@@ -1173,7 +1173,7 @@ requirements:
   source_ids: [SYS_40@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_135
   object_version: '1.1.1'
@@ -1186,7 +1186,7 @@ requirements:
   source_ids: [SYS_41@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_136
   object_version: '1.1.1'
@@ -1197,7 +1197,7 @@ requirements:
   source_ids: [SYS_42@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_137
   object_version: '1.1.1'
@@ -1208,7 +1208,7 @@ requirements:
   source_ids: [SYS_43@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_138
   object_version: '1.1.1'
@@ -1219,7 +1219,7 @@ requirements:
   source_ids: [SYS_44@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_139
   object_version: '1.1.1'
@@ -1230,7 +1230,7 @@ requirements:
   source_ids: [SYS_45@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_140
   object_version: '1.1.1'
@@ -1240,7 +1240,7 @@ requirements:
   source_ids: [SYS_46@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_141
   object_version: '1.1.1'
@@ -1250,7 +1250,7 @@ requirements:
   source_ids: [SYS_47@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_142
   object_version: '1.1.1'
@@ -1261,7 +1261,7 @@ requirements:
   source_ids: [SYS_48@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_143
   object_version: '1.1.1'
@@ -1272,7 +1272,7 @@ requirements:
   source_ids: [SYS_50@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_144
   object_version: '1.1.1'
@@ -1282,7 +1282,7 @@ requirements:
   source_ids: [SYS_51@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_145
   object_version: '1.1.1'
@@ -1293,7 +1293,7 @@ requirements:
   source_ids: [SYS_52@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_146
   object_version: '1.1.1'
@@ -1313,7 +1313,7 @@ requirements:
   source_ids: [SYS_68@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_148
   object_version: '1.1.1'
@@ -1323,7 +1323,7 @@ requirements:
   source_ids: [SYS_72@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_149
   object_version: '1.1.1'
@@ -1334,7 +1334,7 @@ requirements:
   source_ids: [SYS_74@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_150
   object_version: '1.1.1'
@@ -1345,7 +1345,7 @@ requirements:
   source_ids: [SYS_76@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_151
   object_version: '1.1.1'
@@ -1356,7 +1356,7 @@ requirements:
   source_ids: [SYS_77@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_152
   object_version: '1.1.1'
@@ -1367,7 +1367,7 @@ requirements:
   source_ids: [SYS_78@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_153
   object_version: '1.1.1'
@@ -1378,7 +1378,7 @@ requirements:
   source_ids: [SYS_79@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_154
   object_version: '1.1.1'
@@ -1388,7 +1388,7 @@ requirements:
   source_ids: [SYS_82@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_155
   object_version: '1.1.1'
@@ -1399,7 +1399,7 @@ requirements:
   source_ids: [SYS_83@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_156
   object_version: '1.1.1'
@@ -1409,7 +1409,7 @@ requirements:
   source_ids: [SYS_84@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_157
   object_version: '1.1.1'
@@ -1420,7 +1420,7 @@ requirements:
   source_ids: [SYS_88@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_158
   object_version: '1.1.1'
@@ -1430,7 +1430,7 @@ requirements:
   source_ids: [SYS_89@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_159
   object_version: '1.1.1'
@@ -1439,7 +1439,7 @@ requirements:
   source_ids: [SYS_92@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_160
   object_version: '1.1.1'
@@ -1450,7 +1450,7 @@ requirements:
   source_ids: [SYS_94@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_161
   object_version: '1.1.1'
@@ -1461,7 +1461,7 @@ requirements:
   source_ids: [SYS_95@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_162
   object_version: '1.1.1'
@@ -1471,7 +1471,7 @@ requirements:
   source_ids: [SYS_96@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_163
   object_version: '1.1.1'
@@ -1482,7 +1482,7 @@ requirements:
   source_ids: [SYS_97@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_164
   object_version: '1.1.1'
@@ -1493,7 +1493,7 @@ requirements:
   source_ids: [SYS_2@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_165
   object_version: '1.1.1'
@@ -1504,7 +1504,7 @@ requirements:
   source_ids: [SYS_3@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_166
   object_version: '1.1.1'
@@ -1514,7 +1514,7 @@ requirements:
   source_ids: [SYS_4@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_167
   object_version: '1.1.1'
@@ -1525,7 +1525,7 @@ requirements:
   source_ids: [SYS_6@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_168
   object_version: '1.1.1'
@@ -1536,7 +1536,7 @@ requirements:
   source_ids: [SYS_7@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_169
   object_version: '1.1.1'
@@ -1547,7 +1547,7 @@ requirements:
   source_ids: [SYS_8@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_170
   object_version: '1.1.1'
@@ -1557,7 +1557,7 @@ requirements:
   source_ids: [SYS_10@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_171
   object_version: '1.1.1'
@@ -1568,7 +1568,7 @@ requirements:
   source_ids: [SYS_11@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_172
   object_version: '1.1.1'
@@ -1579,7 +1579,7 @@ requirements:
   source_ids: [SYS_12@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_173
   object_version: '1.1.1'
@@ -1590,7 +1590,7 @@ requirements:
   source_ids: [SYS_13@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_174
   object_version: '1.1.1'
@@ -1601,7 +1601,7 @@ requirements:
   source_ids: [SYS_15@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_175
   object_version: '1.1.1'
@@ -1611,7 +1611,7 @@ requirements:
   source_ids: [SYS_16@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_176
   object_version: '1.1.1'
@@ -1621,7 +1621,7 @@ requirements:
   source_ids: [SYS_17@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_177
   object_version: '1.1.1'
@@ -1632,7 +1632,7 @@ requirements:
   source_ids: [SYS_18@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_178
   object_version: '1.1.1'
@@ -1643,7 +1643,7 @@ requirements:
   source_ids: [SYS_26@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_179
   object_version: '1.1.1'
@@ -1665,7 +1665,7 @@ requirements:
   source_ids: [SYS_28@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_181
   object_version: '1.1.1'
@@ -1675,7 +1675,7 @@ requirements:
   source_ids: [SYS_30@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_182
   object_version: '1.1.1'
@@ -1685,7 +1685,7 @@ requirements:
   source_ids: [SYS_32@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_183
   object_version: '1.1.1'
@@ -1695,7 +1695,7 @@ requirements:
   source_ids: [SYS_35@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_184
   object_version: '1.1.1'
@@ -1704,7 +1704,7 @@ requirements:
   source_ids: [SYS_38@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_185
   object_version: '1.1.1'
@@ -1715,7 +1715,7 @@ requirements:
   source_ids: [SYS_39@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_186
   object_version: '1.1.1'
@@ -1726,7 +1726,7 @@ requirements:
   source_ids: [SYS_40@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_187
   object_version: '1.1.1'
@@ -1737,7 +1737,7 @@ requirements:
   source_ids: [SYS_43@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_188
   object_version: '1.1.1'
@@ -1746,7 +1746,7 @@ requirements:
   source_ids: [SYS_44@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_189
   object_version: '1.1.1'
@@ -1756,7 +1756,7 @@ requirements:
   source_ids: [SYS_45@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_190
   object_version: '1.1.1'
@@ -1766,7 +1766,7 @@ requirements:
   source_ids: [SYS_46@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_191
   object_version: '1.1.1'
@@ -1776,7 +1776,7 @@ requirements:
   source_ids: [SYS_47@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_192
   object_version: '1.1.1'
@@ -1787,7 +1787,7 @@ requirements:
   source_ids: [SYS_48@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_193
   object_version: '1.1.1'
@@ -1798,7 +1798,7 @@ requirements:
   source_ids: [SYS_49@1.2.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_194
   object_version: '1.1.1'
@@ -1808,7 +1808,7 @@ requirements:
   source_ids: [SYS_50@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_195
   object_version: '1.1.1'
@@ -1818,7 +1818,7 @@ requirements:
   source_ids: [SYS_51@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_196
   object_version: '1.1.1'
@@ -1827,7 +1827,7 @@ requirements:
   source_ids: [SYS_54@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_197
   object_version: '1.1.1'
@@ -1837,7 +1837,7 @@ requirements:
   source_ids: [SYS_55@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_198
   object_version: '1.1.1'
@@ -1848,7 +1848,7 @@ requirements:
   source_ids: [SYS_56@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_199
   object_version: '1.1.1'
@@ -1859,7 +1859,7 @@ requirements:
   source_ids: [SYS_58@1.1.1]
   priority: 'later'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_200
   object_version: '1.1.1'
@@ -1869,7 +1869,7 @@ requirements:
   source_ids: [SYS_59@1.1.1]
   priority: 'later'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_201
   object_version: '1.1.1'
@@ -1889,7 +1889,7 @@ requirements:
   source_ids: [SYS_68@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_203
   object_version: '1.1.1'
@@ -1900,7 +1900,7 @@ requirements:
   source_ids: [SYS_70@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_204
   object_version: '1.1.1'
@@ -1911,7 +1911,7 @@ requirements:
   source_ids: [SYS_71@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_205
   object_version: '1.1.1'
@@ -1921,7 +1921,7 @@ requirements:
   source_ids: [SYS_72@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_206
   object_version: '1.1.1'
@@ -1932,7 +1932,7 @@ requirements:
   source_ids: [SYS_73@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_207
   object_version: '1.1.1'
@@ -1943,7 +1943,7 @@ requirements:
   source_ids: [SYS_74@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_208
   object_version: '1.1.1'
@@ -1954,7 +1954,7 @@ requirements:
   source_ids: [SYS_75@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_209
   object_version: '1.1.1'
@@ -1965,7 +1965,7 @@ requirements:
   source_ids: [SYS_76@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_210
   object_version: '1.1.1'
@@ -1976,7 +1976,7 @@ requirements:
   source_ids: [SYS_77@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_211
   object_version: '1.1.1'
@@ -1987,7 +1987,7 @@ requirements:
   source_ids: [SYS_78@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_212
   object_version: '1.1.1'
@@ -1998,7 +1998,7 @@ requirements:
   source_ids: [SYS_79@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_213
   object_version: '1.1.1'
@@ -2009,7 +2009,7 @@ requirements:
   source_ids: [SYS_80@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_214
   object_version: '1.1.1'
@@ -2019,7 +2019,7 @@ requirements:
   source_ids: [SYS_81@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_215
   object_version: '1.1.1'
@@ -2029,7 +2029,7 @@ requirements:
   source_ids: [SYS_84@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_216
   object_version: '1.1.1'
@@ -2040,7 +2040,7 @@ requirements:
   source_ids: [SYS_85@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_217
   object_version: '1.1.1'
@@ -2051,7 +2051,7 @@ requirements:
   source_ids: [SYS_88@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_218
   object_version: '1.1.1'
@@ -2062,7 +2062,7 @@ requirements:
   source_ids: [SYS_90@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_219
   object_version: '1.1.1'
@@ -2072,7 +2072,7 @@ requirements:
   source_ids: [SYS_91@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_220
   object_version: '1.1.1'
@@ -2082,7 +2082,7 @@ requirements:
   source_ids: [SYS_93@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_221
   object_version: '1.1.1'
@@ -2093,7 +2093,7 @@ requirements:
   source_ids: [SYS_94@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_222
   object_version: '1.1.1'
@@ -2104,7 +2104,7 @@ requirements:
   source_ids: [SYS_95@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_223
   object_version: '1.1.1'
@@ -2114,7 +2114,7 @@ requirements:
   source_ids: [SYS_96@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_224
   object_version: '1.1.1'
@@ -2125,7 +2125,7 @@ requirements:
   source_ids: [SYS_97@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_225
   object_version: '1.1.1'
@@ -2135,7 +2135,7 @@ requirements:
   source_ids: [SYS_1@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_226
   object_version: '1.1.1'
@@ -2144,7 +2144,7 @@ requirements:
   source_ids: [SYS_2@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_227
   object_version: '1.1.1'
@@ -2154,7 +2154,7 @@ requirements:
   source_ids: [SYS_3@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_228
   object_version: '1.1.1'
@@ -2163,7 +2163,7 @@ requirements:
   source_ids: [SYS_4@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_229
   object_version: '1.1.1'
@@ -2173,7 +2173,7 @@ requirements:
   source_ids: [SYS_5@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_230
   object_version: '1.1.1'
@@ -2183,7 +2183,7 @@ requirements:
   source_ids: [SYS_6@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_231
   object_version: '1.1.1'
@@ -2193,7 +2193,7 @@ requirements:
   source_ids: [SYS_7@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_232
   object_version: '1.1.1'
@@ -2203,7 +2203,7 @@ requirements:
   source_ids: [SYS_8@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_233
   object_version: '1.1.1'
@@ -2213,7 +2213,7 @@ requirements:
   source_ids: [SYS_9@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_234
   object_version: '1.1.1'
@@ -2222,7 +2222,7 @@ requirements:
   source_ids: [SYS_10@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_235
   object_version: '1.1.1'
@@ -2232,7 +2232,7 @@ requirements:
   source_ids: [SYS_12@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_236
   object_version: '1.1.1'
@@ -2242,7 +2242,7 @@ requirements:
   source_ids: [SYS_13@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_237
   object_version: '1.1.1'
@@ -2251,7 +2251,7 @@ requirements:
   source_ids: [SYS_14@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_238
   object_version: '1.1.1'
@@ -2261,7 +2261,7 @@ requirements:
   source_ids: [SYS_15@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_239
   object_version: '1.1.1'
@@ -2270,7 +2270,7 @@ requirements:
   source_ids: [SYS_16@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_240
   object_version: '1.1.1'
@@ -2279,7 +2279,7 @@ requirements:
   source_ids: [SYS_17@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_241
   object_version: '1.1.1'
@@ -2289,7 +2289,7 @@ requirements:
   source_ids: [SYS_18@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_242
   object_version: '1.1.1'
@@ -2299,7 +2299,7 @@ requirements:
   source_ids: [SYS_26@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_243
   object_version: '1.1.1'
@@ -2319,7 +2319,7 @@ requirements:
   source_ids: [SYS_28@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_245
   object_version: '1.1.1'
@@ -2328,7 +2328,7 @@ requirements:
   source_ids: [SYS_29@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_246
   object_version: '1.1.1'
@@ -2337,7 +2337,7 @@ requirements:
   source_ids: [SYS_30@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_247
   object_version: '1.1.1'
@@ -2347,7 +2347,7 @@ requirements:
   source_ids: [SYS_31@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_248
   object_version: '1.1.1'
@@ -2357,7 +2357,7 @@ requirements:
   source_ids: [SYS_33@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_249
   object_version: '1.1.1'
@@ -2367,7 +2367,7 @@ requirements:
   source_ids: [SYS_34@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_250
   object_version: '1.1.1'
@@ -2377,7 +2377,7 @@ requirements:
   source_ids: [SYS_35@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_251
   object_version: '1.1.1'
@@ -2386,7 +2386,7 @@ requirements:
   source_ids: [SYS_37@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_252
   object_version: '1.1.1'
@@ -2395,7 +2395,7 @@ requirements:
   source_ids: [SYS_38@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_253
   object_version: '1.1.1'
@@ -2405,7 +2405,7 @@ requirements:
   source_ids: [SYS_39@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_254
   object_version: '1.1.1'
@@ -2414,7 +2414,7 @@ requirements:
   source_ids: [SYS_52@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_255
   object_version: '1.1.1'
@@ -2433,7 +2433,7 @@ requirements:
   source_ids: [SYS_58@1.1.1]
   priority: 'later'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_257
   object_version: '1.1.1'
@@ -2442,7 +2442,7 @@ requirements:
   source_ids: [SYS_59@1.1.1]
   priority: 'later'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_258
   object_version: '1.1.1'
@@ -2460,7 +2460,7 @@ requirements:
   source_ids: [SYS_67@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_260
   object_version: '1.1.1'
@@ -2470,7 +2470,7 @@ requirements:
   source_ids: [SYS_68@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_261
   object_version: '1.1.1'
@@ -2480,7 +2480,7 @@ requirements:
   source_ids: [SYS_71@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_262
   object_version: '1.1.1'
@@ -2489,7 +2489,7 @@ requirements:
   source_ids: [SYS_72@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_263
   object_version: '1.1.1'
@@ -2498,7 +2498,7 @@ requirements:
   source_ids: [SYS_73@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_264
   object_version: '1.1.1'
@@ -2508,7 +2508,7 @@ requirements:
   source_ids: [SYS_74@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_265
   object_version: '1.1.1'
@@ -2518,7 +2518,7 @@ requirements:
   source_ids: [SYS_77@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_266
   object_version: '1.1.1'
@@ -2528,7 +2528,7 @@ requirements:
   source_ids: [SYS_78@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_267
   object_version: '1.1.1'
@@ -2538,7 +2538,7 @@ requirements:
   source_ids: [SYS_80@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_268
   object_version: '1.1.1'
@@ -2547,7 +2547,7 @@ requirements:
   source_ids: [SYS_81@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_269
   object_version: '1.1.1'
@@ -2556,7 +2556,7 @@ requirements:
   source_ids: [SYS_82@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_270
   object_version: '1.1.1'
@@ -2566,7 +2566,7 @@ requirements:
   source_ids: [SYS_83@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_271
   object_version: '1.1.1'
@@ -2575,7 +2575,7 @@ requirements:
   source_ids: [SYS_84@2.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_272
   object_version: '1.1.1'
@@ -2584,7 +2584,7 @@ requirements:
   source_ids: [SYS_85@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_273
   object_version: '1.1.1'
@@ -2593,7 +2593,7 @@ requirements:
   source_ids: [SYS_86@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_274
   object_version: '1.1.1'
@@ -2602,7 +2602,7 @@ requirements:
   source_ids: [SYS_87@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_275
   object_version: '1.1.1'
@@ -2612,7 +2612,7 @@ requirements:
   source_ids: [SYS_90@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_276
   object_version: '1.1.1'
@@ -2621,7 +2621,7 @@ requirements:
   source_ids: [SYS_91@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_277
   object_version: '1.1.1'
@@ -2631,7 +2631,7 @@ requirements:
   source_ids: [SYS_93@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_278
   object_version: '1.1.1'
@@ -2641,7 +2641,7 @@ requirements:
   source_ids: [SYS_94@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_279
   object_version: '1.1.1'
@@ -2651,7 +2651,7 @@ requirements:
   source_ids: [SYS_95@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_280
   object_version: '1.1.1'
@@ -2660,7 +2660,7 @@ requirements:
   source_ids: [SYS_96@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_281
   object_version: '1.1.1'
@@ -2670,7 +2670,7 @@ requirements:
   source_ids: [SYS_97@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_282
   object_version: '1.1.1'
@@ -2680,7 +2680,7 @@ requirements:
   source_ids: [SYS_98@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_283
   object_version: '1.1.1'
@@ -2691,7 +2691,7 @@ requirements:
   source_ids: [ARCD_6@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 - object_key: ARC_284
   object_version: '1.1.1'
@@ -2702,31 +2702,31 @@ requirements:
   source_ids: [ARCD_6@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [test]
 elements:
 - object_key: ARC_1
-  object_version: '1.3.1'
+  object_version: '1.4.1'
   kind: subsystem
   repo: trace/viewer
   object_text: 'single page application: shows what the reporter answers - tables, charts, the trace -
     with filters, and hands tables and charts on'
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_2
-  object_version: '1.4.1'
+  object_version: '1.5.1'
   kind: subsystem
   repo: trace/reporter
   object_text: 'REST API: answers trace, states, maturity and compliance from one data set; takes the
     identity from the proxy or the identity provider and checks the role; records every report'
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_3
-  object_version: '2.4.1'
+  object_version: '2.5.1'
   kind: subsystem
   repo: trace/storage
   object_text: 'the model, the data sets and the `StorageSource` interface over them - a database branch, generated
@@ -2735,20 +2735,20 @@ elements:
     keeps the import record; the audit trail'
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_4
-  object_version: '1.4.1'
+  object_version: '1.5.1'
   kind: subsystem
   repo: trace/converter
   object_text: maps the customized attributes of an attribute-based system to the model, by a configuration
     file of the customer; one general mechanism for all of them
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_5
-  object_version: '3.4.1'
+  object_version: '3.5.1'
   kind: subsystem
   repo: trace/extractor-content
   object_text: 'extracts the information the files of a file-based system hold - requirements, test
@@ -2758,10 +2758,10 @@ elements:
     files; it is the repo reporter-annotations today'
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_6
-  object_version: '1.2.1'
+  object_version: '1.3.1'
   kind: subsystem
   repo: extractor-system
   object_text: 'one per system, such as extractor-git or extractor-codebeamer: connects to it, lists and
@@ -2769,75 +2769,75 @@ elements:
     of its own'
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_51
-  object_version: '1.2.1'
+  object_version: '1.3.1'
   kind: subsystem
   repo: trace/mcp
   object_text: 'answers an assistant what the viewer shows, from the reporter over the REST API; names
     with every answer the view and the filters that show the same'
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_11
-  object_version: '1.2.1'
+  object_version: '1.3.1'
   kind: interface
   object_text: REST API
   between: viewer, mcp → reporter
   contract: swagger of the reporter
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_12
-  object_version: '1.1.1'
+  object_version: '1.2.1'
   kind: interface
   object_text: '`StorageSource`'
   between: reporter → storage
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_13
-  object_version: '1.1.1'
+  object_version: '1.2.1'
   kind: interface
   object_text: import
   between: converter, extractor-content → storage
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_14
-  object_version: '1.1.1'
+  object_version: '1.2.1'
   kind: interface
   object_text: system access
   between: extractor-SYSTEM → system
   contract: 'per system: listing and fetching, and a query of its own for counting'
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_15
-  object_version: '1.1.1'
+  object_version: '1.2.1'
   kind: interface
   object_text: files
   between: extractor-SYSTEM → extractor-content
   contract: a file with its kind and its identity in the system
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_16
-  object_version: '1.2.1'
+  object_version: '1.3.1'
   kind: interface
   object_text: information
   between: extractor-content → storage
   contract: the information extracted, per kind, over ARC_13; for annotations the format of formats.md
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_17
   object_version: '1.1.1'
@@ -2856,7 +2856,7 @@ elements:
   between: reporter → storage
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_19
   object_version: '1.1.1'
@@ -2869,34 +2869,34 @@ elements:
   status: draft
   verification_method: [analysis]
 - object_key: ARC_20
-  object_version: '1.1.2'
+  object_version: '1.2.1'
   kind: interface
   object_text: configuration
   between: customer → extractor-SYSTEM, extractor-content, converter
   contract: the mapping of attributes and of values; where a file, one per customer
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_52
-  object_version: '1.4.1'
+  object_version: '1.5.1'
   kind: interface
   object_text: Model Context Protocol
   between: assistant → mcp
   contract: the tools of the MCP server, one per view
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_21
-  object_version: '1.5.1'
+  object_version: '1.6.1'
   kind: model
   object_text: the information model - the common language of converter, storage and reporter; the common
     contract of ARC_12, ARC_13 and ARC_18
   contract: architecture/attributes.md
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_22
   object_version: '2.1.3'
