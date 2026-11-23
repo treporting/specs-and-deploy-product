@@ -548,7 +548,7 @@ elements:
   status: approved
   verification_method: [analysis]
 - object_key: ARC_3
-  object_version: '2.1.1'
+  object_version: '2.2.1'
   kind: subsystem
   repo: trace/storage
   object_text: 'the model, the data sets and the `StorageSource` interface over them - a database branch, generated
@@ -570,7 +570,7 @@ elements:
     ARC_23@1.1.1, ARC_24@1.1.1, ARC_25@1.1.1, ARC_26@1.1.1]
   priority: 'medium'
   safety: ''
-  status: draft
+  status: approved
   verification_method: [analysis]
 - object_key: ARC_4
   object_version: '1.2.1'
