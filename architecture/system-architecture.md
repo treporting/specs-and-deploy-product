@@ -31,7 +31,6 @@ flowchart LR
   conf -. ARC_20 .-> exsys
   conf -. ARC_20 .-> excon
   conf -. ARC_20 .-> conv
-  conf -. ARC_20 .-> stor
   excon -- ARC_16 --> stor
   conv -- ARC_13 --> stor
   stor -- ARC_12 --> rep
@@ -215,11 +214,11 @@ the counts handed in (ARC_75); until the import is done the data set is marked a
 (ARC_77). This section holds the part of extractor-content; the part of the converter is not written
 yet.
 
-### ARC_20 configuration (customer → extractor-SYSTEM, extractor-content, converter, storage)
+### ARC_20 configuration (customer → extractor-SYSTEM, extractor-content, converter)
 
-The configuration of the customer is used on both ways into the storage. Each of the four uses it
+The configuration of the customer is used on both ways into the storage. Each of the three uses it
 for what it does itself: the extractor-SYSTEM in reading the system, extractor-content and the
-converter in mapping, the storage in deriving the values. The way of the file-based systems maps
+converter in mapping. The way of the file-based systems maps
 too: that our own YAML matches the model is chance. The configuration is taken from a file, from
 the command line and from the environment (ARC_78, ARCD_6), and it names per release the libraries
 it delivers (ARC_79).
@@ -230,15 +229,15 @@ it delivers (ARC_79).
 way 1 - file-based (SHAREPOINT, SVN, GIT, JFROG)
 
   system ──ARC_14──▶ extractor-SYSTEM ──ARC_15──▶ extractor-content ──ARC_16──▶ storage (import)
-                          ▲                             ▲                          ▲
-  customer ──▶ config ────┴────────────ARC_20───────────┴──────────────────────────┘
+                          ▲                             ▲
+  customer ──▶ config ────┴────────────ARC_20───────────┘
 
 
 way 2 - attribute-based (DOORS, JIRA, DMS, CODEBEAMER)
 
   system ──ARC_14──▶ extractor-SYSTEM ──ARC_19──▶ converter ──ARC_13──▶ storage (import)
-                          ▲                          ▲                     ▲
-  customer ──▶ config ────┴────────────ARC_20────────┴─────────────────────┘
+                          ▲                          ▲
+  customer ──▶ config ────┴────────────ARC_20────────┘
 ```
 
 ### ARC_52 Model Context Protocol (assistant → mcp-trace)
@@ -476,3 +475,4 @@ architecture to the subsystems and interfaces, is the field `allocated` of each 
 | 22.1.1 | 2026-11-22 | ARC_5: extractor-content starts its packages as plug-ins | #72 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 23.1.1 | 2026-11-22 | ARC_5: its requirement ARC_80, the plug-ins | #74 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 24.1.1 | 2026-11-22 | the derived values are made by the converter or extractor-content and stored as handed: ARC_3, ARC_69, ARCD_3, ARCD_4; ARC_50 realized by no subsystem yet | #76 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 25.1.1 | 2026-11-23 | ARC_20: the storage takes nothing from the configuration any more | #89 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
