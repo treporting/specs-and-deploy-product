@@ -154,8 +154,8 @@ server of its own (ARC_23), in a database run together with the reporter (ARC_24
 (ARC_25), or as generated data in the memory of the reporter (ARC_26). The reporter answers the
 same from each (ARC_27), and from one mode only while it runs (ARC_28).
 
-The storage hands the reporter the data of a scope; what a route makes of them - the states, the
-counting, the trace - is the reporter's, the same for every mode.
+The storage makes of the data of a scope the trace, the states, their counting and the maturity,
+and hands them to the reporter, the same for every mode.
 
 **Table source** - what goes from the storage to the reporter, and what it is needed for
 
@@ -476,3 +476,4 @@ architecture to the subsystems and interfaces, is the field `allocated` of each 
 | 23.1.1 | 2026-11-22 | ARC_5: its requirement ARC_80, the plug-ins | #74 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 24.1.1 | 2026-11-22 | the derived values are made by the converter or extractor-content and stored as handed: ARC_3, ARC_69, ARCD_3, ARCD_4; ARC_50 realized by no subsystem yet | #76 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
 | 25.1.1 | 2026-11-23 | ARC_20: the storage takes nothing from the configuration any more | #89 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
+| 26.1.1 | 2026-11-23 | ARC_12: the trace, the states, their counting and the maturity are the storage's | #92 | Claude Opus 5.5, author; Mathias Fischer, reviewer |
