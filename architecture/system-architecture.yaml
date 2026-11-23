@@ -138,12 +138,12 @@ requirements:
   object_version: '2.1.1'
   component: trace/reporter
   interface: REST API
-  object_text: 'keys: send each cell as the keys of its objects with their states, or as the count per
-    state, as the request asks'
+  object_text: 'keys: send each cell as the keys of its objects with their states, or as the count
+    per state the storage hands, as the request asks'
   source_ids: [SYS_1@1.1.1, SYS_5@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_36
   object_version: '2.1.1'
@@ -1488,12 +1488,11 @@ requirements:
   object_version: '1.1.1'
   component: trace/reporter
   interface: REST API
-  object_text: 'gaps: answer every place of the trace where a link, a test case or a test result is
-    missing as a gap, never as covered'
+  object_text: 'gaps: answer the gaps of the trace as the storage marks them, never as covered'
   source_ids: [SYS_2@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_165
   object_version: '1.1.1'
@@ -1520,12 +1519,12 @@ requirements:
   object_version: '1.1.1'
   component: trace/reporter
   interface: REST API
-  object_text: 'verified on: answer for a requirement on which other levels it is verified, and by
-    which tests'
+  object_text: 'verified on: answer for a requirement the levels and tests it is verified by, as the
+    storage hands them'
   source_ids: [SYS_6@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_168
   object_version: '1.1.1'
@@ -1542,12 +1541,12 @@ requirements:
   object_version: '1.1.1'
   component: trace/reporter
   interface: REST API
-  object_text: 'test states: answer the states of the tests of each level - test cases, test
-    procedures and test results apart - per release and library'
+  object_text: 'test states: answer the states of the tests of each level as the storage counts them
+    - test cases, test procedures and test results apart - per release and library'
   source_ids: [SYS_8@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_170
   object_version: '1.1.1'
@@ -1574,12 +1573,12 @@ requirements:
   object_version: '1.1.1'
   component: trace/reporter
   interface: REST API
-  object_text: 'hazards: answer each hazard and threat over its measures to the requirements and
-    test results, and mark one with no measure or no passed result'
+  object_text: 'hazards: answer each hazard and threat over its measures as the storage traces and
+    marks it'
   source_ids: [SYS_12@1.1.1]
   priority: 'medium'
   safety: ''
-  status: approved
+  status: draft
   verification_method: [test]
 - object_key: ARC_173
   object_version: '1.1.1'
@@ -2703,6 +2702,72 @@ requirements:
   priority: 'medium'
   safety: ''
   status: approved
+  verification_method: [test]
+- object_key: ARC_285
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'trace: build the trace of a scope from any level chosen, up and down to the test
+    results, and hand it'
+  source_ids: [SYS_1@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_286
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'gaps: mark every place of the trace where a link, a test case or a test result is
+    missing as a gap, never as covered, and hand it'
+  source_ids: [SYS_2@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_287
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'requirement states: count the states of the requirements of each level per release
+    and library, and hand them'
+  source_ids: [SYS_5@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_288
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'verified on: find per requirement the other levels it is verified on and the tests
+    that verify it, and hand them'
+  source_ids: [SYS_6@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_289
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'test states: count the states of the tests of each level - test cases, test
+    procedures and test results apart - per release and library, and hand them'
+  source_ids: [SYS_8@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
+  verification_method: [test]
+- object_key: ARC_290
+  object_version: '1.1.1'
+  component: trace/storage
+  interface: StorageSource
+  object_text: 'hazards: trace each hazard and threat over its measures to the requirements and test
+    results, mark one with no measure or no passed result, and hand it'
+  source_ids: [SYS_12@1.1.1]
+  priority: 'medium'
+  safety: ''
+  status: draft
   verification_method: [test]
 elements:
 - object_key: ARC_1
