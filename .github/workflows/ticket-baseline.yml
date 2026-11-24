@@ -17,10 +17,10 @@ permissions:
 jobs:
   baseline:
     if: github.event.label.name == 'baseline'
-    uses: treporting/tools/.github/workflows/baseline.yml@0398e569b70945026ffc604211022110421fbcca # T0471.0
+    uses: treporting/tools/.github/workflows/baseline.yml@3b2ecdcfffb080d9f4f82977ee6febf7293ddead # T048.0
     with:
-      tools-ref: T0471.0
+      tools-ref: T048.0
       go-version-file: .build-steps/go.mod
       above: treporting/specs-and-deploy-process
-      above-ref: T0471
+      above-ref: T048
     secrets: inherit
